@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcefce7625a343d5bd1a142582dd88cb, type: 3}
+  m_Name: TrainingScenario
+  m_EditorClassIdentifier: Assembly-CSharp::Swift.Game.ScenarioData
+  Transactions:
+  - Id: SIM-001
+    OriginBank: BANCO ANDINO (ficticio)
+    Beneficiary: Taller Nube Azul
+    Account: FIC-SIM-001
+    IntermediaryBank: Banco Pacifico Insular (ficticio)
+    Date: 05/02/2016 (simulada)
+    RegisteredName: Taller Nube Azul
+    Amount: 1200
+    Anomalies: 0
+    SimulatedFraud: 0
+  - Id: SIM-002
+    OriginBank: BANCO ANDINO (ficticio)
+    Beneficiary: Cooperativa Loma Clara
+    Account: FIC-SIM-002
+    IntermediaryBank: 
+    Date: 05/02/2016 (simulada)
+    RegisteredName: Cooperativa Loma Clara
+    Amount: 8200
+    Anomalies: 1
+    SimulatedFraud: 0
+  - Id: SIM-003
+    OriginBank: BANCO ANDINO (ficticio)
+    Beneficiary: Fundacion Horizonte de Papell
+    Account: FIC-SIM-003
+    IntermediaryBank: Banco Pacifico Insular (ficticio)
+    Date: 05/02/2016 (simulada)
+    RegisteredName: Fundacion Horizonte de Papel
+    Amount: 20000
+    Anomalies: 2
+    SimulatedFraud: 1
+  - Id: SIM-004
+    OriginBank: BANCO ANDINO (ficticio)
+    Beneficiary: Servicios Isla Inventada
+    Account: FIC-SIM-004
+    IntermediaryBank: Banco Pacifico Insular (ficticio)
+    Date: 05/02/2016 (simulada)
+    RegisteredName: Servicios Isla Inventada
+    Amount: 45000
+    Anomalies: 4
+    SimulatedFraud: 1
+  - Id: SIM-005
+    OriginBank: BANCO ANDINO (ficticio)
+    Beneficiary: Comercio Brisa Ficticia
+    Account: FIC-SIM-005
+    IntermediaryBank: Banco Pacifico Insular (ficticio)
+    Date: 05/02/2016 (simulada)
+    RegisteredName: Comercio Brisa Ficticia
+    Amount: 900000
+    Anomalies: 8
+    SimulatedFraud: 1
+  - Id: SIM-006
+    OriginBank: BANCO ANDINO (ficticio)
+    Beneficiary: Asociacion Faro de Tinta
+    Account: FIC-SIM-006
+    IntermediaryBank: Banco Pacifico Insular (ficticio)
+    Date: 05/02/2016 (simulada)
+    RegisteredName: Asociacion Faro de Tinta
+    Amount: 7000
+    Anomalies: 16
+    SimulatedFraud: 0
+  HistoricalContext: 'CONTEXTO 2016 (resumen del material docente)
+
+    36 ordenes
+    / US$951 millones; 30 (~US$850 millones) bloqueadas; 4 (US$81 millones) pagadas
+    a Manila; 1 (US$20 millones) detenida/devuelta en Sri Lanka; 1 no reenviada.
+
+    Las
+    seis ordenes jugables son inventadas y no reproducen esas transferencias.'

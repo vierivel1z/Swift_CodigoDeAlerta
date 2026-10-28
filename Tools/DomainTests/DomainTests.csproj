@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net10.0</TargetFramework><EnableDefaultCompileItems>false</EnableDefaultCompileItems><Nullable>disable</Nullable><RestoreIgnoreFailedSources>true</RestoreIgnoreFailedSources></PropertyGroup>
+  <ItemGroup><Compile Include="Program.cs"/><Compile Include="../../Assets/_Project/Scripts/Banking/BankingDomain.cs" Link="BankingDomain.cs"/></ItemGroup>
+</Project>

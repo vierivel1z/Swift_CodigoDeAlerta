@@ -73,3 +73,61 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Project-specific rules preserved
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Bb]uild/
+/[Bb]uilds/
+/Artifacts/
+/ValidationProject/
+/.vs/
+/.idea/
+*.csproj
+*.sln
+*.slnx
+*.user
+*.pidb
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.apk
+*.aab
+*.keystore
+*.jks
+.DS_Store
+Thumbs.db
+
+**/bin/
+**/obj/
+
+!/Tools/DomainTests/DomainTests.csproj
+
+# Unity ignores verified against github/gitignore Unity template (2026-10-28)
+/ExternalAssets/
+/External Assets/
+/PruebaVR/
+.gradle/
+.utmp/
+*.log
+*.suo
+*.tmp
+*.userprefs
+*.DotSettings.user
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+sysinfo.txt
+mono_crash.*
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+**/*_BurstDebugInformation_DoNotShip/
+**/*_BackUpThisFolder_ButDontShipItWithYourGame/
+
+# Retain Desktop bootstrap repository locally; its history is adopted in the project root.
+/Swift_CodigoDeAlerta/
+
