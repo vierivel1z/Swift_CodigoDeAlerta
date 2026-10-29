@@ -1,5 +1,11 @@
 # SWIFT: Código de Alerta
 
+Diseño de escenas y revisión desde el celular: [guía de capturas y GitHub](Docs/VisualReview/README.md),
+[opciones Unity MCP para Codex local](Docs/VisualReview/UNITY_MCP.md) y
+[skill unity-scene-designer](.agents/skills/unity-scene-designer/SKILL.md).
+Las capturas nuevas requieren Unity local instalado y activado; [Docs/Previews](Docs/Previews/README.md)
+contiene el punto de entrada para las revisiones.
+
 Simulador educativo VR del Banco Corresponsal Internacional, desarrollado en Unity 6
 con Google Cardboard. Equipo 05 — A Toda Olla.
 
