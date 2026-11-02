@@ -1,5 +1,15 @@
 # Créditos de modelos — Oficina bancaria (2026-10-28)
 
+## Artes suministrados por el equipo — integración 2026-11-02
+
+- `Assets/_Project/Art/WallGraphics/ART_BankWallGraphic.png`: gráfica institucional ficticia proporcionada por el usuario, identificada en su solicitud como arte generado con IA. Original conservado; usado en un cuadro mate URP de geometría propia.
+- `Assets/_Project/Art/Prologue/Reference/`: storyboard e imágenes individuales proporcionados por el usuario, identificados como generados con IA. Se usan los dos primeros individuales con recorte UV del relleno; el compuesto y la tercera ilustración se conservan como referencias. No se atribuye una licencia comercial externa no aportada.
+- `Assets/_Project/Art/Integrated/Prologue_BancoReal.png`: render derivado de BancoCorresponsal en Unity, generado localmente para el tercer momento. Conserva las atribuciones y licencias de los modelos que aparecen, detalladas abajo. No es una fotografía ni evidencia de un banco real.
+
+Informe y evidencia: [ART_INTEGRATION_REPORT.md](ART_INTEGRATION_REPORT.md).
+
+## Modelos originales
+
 ZIP originales conservados en `External Assets/` (nombre real con espacio). Inventario
 completo y hashes en `Artifacts/Office20261028/`. Cada paquete compatible se extrajo en
 su propia carpeta de `Assets/Models/`, conservando OBJ/MTL/texturas y nombres originales.

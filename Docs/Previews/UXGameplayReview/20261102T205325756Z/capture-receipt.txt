@@ -1,0 +1,16 @@
+2026-11-02T20:53:26.0157795Z 01-menu-tutorial.png Unity=6000.3.24f1 Play=True NOT_ANDROID
+2026-11-02T20:53:27.5068968Z 02-mirada-progreso.png Unity=6000.3.24f1 Play=True NOT_ANDROID
+2026-11-02T20:53:29.4394923Z 03-mirada-confirmacion.png Unity=6000.3.24f1 Play=True NOT_ANDROID
+2026-11-02T20:53:29.9862859Z 04-mirada-rearme.png Unity=6000.3.24f1 Play=True NOT_ANDROID
+2026-11-02T20:53:35.0520007Z 05-tutorial-decision.png Unity=6000.3.24f1 Play=True NOT_ANDROID
+2026-11-02T20:53:36.5519208Z 06-tutorial-completo.png Unity=6000.3.24f1 Play=True NOT_ANDROID
+2026-11-02T20:53:36.6694346Z 07-expediente-ux.png Unity=6000.3.24f1 Play=True NOT_ANDROID
+2026-11-02T20:53:37.0466249Z 08-resultados-ux.png Unity=6000.3.24f1 Play=True NOT_ANDROID
+2026-11-02T20:57:49.3255989Z 01-menu-tutorial.png Unity=6000.3.24f1 Play=True NOT_ANDROID
+2026-11-02T20:57:50.2540990Z 02-mirada-progreso.png Unity=6000.3.24f1 Play=True NOT_ANDROID
+2026-11-02T20:57:52.4022258Z 03-mirada-confirmacion.png Unity=6000.3.24f1 Play=True NOT_ANDROID
+2026-11-02T20:57:52.9269536Z 04-mirada-rearme.png Unity=6000.3.24f1 Play=True NOT_ANDROID
+2026-11-02T20:57:58.0451520Z 05-tutorial-decision.png Unity=6000.3.24f1 Play=True NOT_ANDROID
+2026-11-02T20:57:59.5635670Z 06-tutorial-completo.png Unity=6000.3.24f1 Play=True NOT_ANDROID
+2026-11-02T20:57:59.7776273Z 07-expediente-ux.png Unity=6000.3.24f1 Play=True NOT_ANDROID
+2026-11-02T20:58:00.2406752Z 08-resultados-ux.png Unity=6000.3.24f1 Play=True NOT_ANDROID

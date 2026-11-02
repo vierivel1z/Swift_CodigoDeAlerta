@@ -1,0 +1,11 @@
+{
+  "platform": "Unity Editor / PC; Android NOT TESTED",
+  "results": {
+    "review": "PASS review 2026-11-02T20:58:00.2627084Z Editor only; Android NOT TESTED",
+    "flow": "PASS flow 2026-11-02T21:06:38.1113514Z Editor only; Android NOT TESTED",
+    "office": "PASS office 2026-11-02T20:59:02.6204488Z Editor only; Android NOT TESTED",
+    "smoke": "PASS smoke 2026-11-02T20:59:53.0222301Z Editor only; Android NOT TESTED",
+    "save": "PASS save 2026-11-02T21:04:53.0579100Z Editor only; Android NOT TESTED",
+    "domain": "PASS six unique fictional records\r\nPASS legitimate approves\r\nPASS missing intermediary returns\r\nPASS risk requires review\r\nPASS alert match can be legitimate\r\nPASS cannot finish incomplete turn\r\nPASS attack cannot enable defense\r\nPASS evidence deduplicates\r\nPASS blank evidence rejected\r\nPASS attack decision SIM-001\r\nPASS attack decision SIM-002\r\nPASS attack decision SIM-003\r\nPASS attack decision SIM-004\r\nPASS attack decision SIM-005\r\nPASS attack decision SIM-006\r\nPASS simulated loss tracked separately from historical totals\r\nPASS finished turn immutable\r\nPASS defense enables once\r\nPASS controls prevent simulated fraudulent approvals\r\nPASS controls preserve legitimate approval\r\nPASS controls distinguish format\r\nPASS alert held without confirming fraud\r\nPASS defense can finish\r\nPASS recommended decisions score correctly\r\nPASS source data unmodified by sessions\r\nPASS invalid decision rejected without advancing\r\nPASS historical summary remains fixed\r\nTOTAL 27 checks passed\r\n"
+  }
+}

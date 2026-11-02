@@ -131,3 +131,10 @@ mono_crash.*
 # Retain Desktop bootstrap repository locally; its history is adopted in the project root.
 /Swift_CodigoDeAlerta/
 
+# Local recovery copies and superseded screenshot iterations; retain them on disk.
+/Assets/_Project/Art/Integrated/Snapshots/
+/Assets/_Project/Art/Integrated/Snapshots.meta
+/Assets/_Project/Scenes/Backups/BancoCorresponsal_LightingRecovery*.unity
+/Assets/_Project/Scenes/Backups/BancoCorresponsal_LightingRecovery*.unity.meta
+/Docs/Previews/**/iteration-*/
+

@@ -121,3 +121,69 @@ Licencias completas incluidas en Resources/ThirdPartyNotices.txt.
   cachés y APK. Assets/Models, prefabs, texturas y .meta se incluyen.
 
 GitHub Desktop creó durante la tarea un repositorio anidado con el commit inicial 6ba7e8d71b7b5bf3579b5079719701d5836a26c1. Se conserva la carpeta y se adopta ese historial en la raíz del proyecto, reutilizando el remoto privado existente sin duplicarlo ni forzar push.
+
+## Arte UI y base de prólogo — 2026-10-29
+- Docs/ArtPrompts: tres propuestas de pantallas/botones/estados y prompts del prólogo. Solo texto, sin imágenes generadas ni recursos externos nuevos.
+- Docs/Context/TWO_MODES.md: alcance, flujo y aceptación de ataque/defensa según material disponible. K01 continúa bloqueado por pestañas docentes no recibidas.
+- IntroSequence: storyboard runtime de tres momentos, papel animado, subtítulos, duración aproximada 12 s y omisión por mirada/clic. Se abre la primera vez desde un portal; inicia el modo elegido al terminar/omitir. No mueve cámara ni modifica escena guardada. Base provisional, no cinemática final.
+- BankInteractable: ignora acciones del banco/teletransporte durante el prólogo; mantiene SkipIntro operativo. Enumeración extendida al final para conservar valores serializados.
+- UIManager: oculta decisiones sin expediente y al finalizar; las restaura al iniciar otro turno. Resultados con más espacio y texto mayor, feedback separado. Créditos breves reconocen modelos actuales.
+- GameplayFlowProbe/GameplayFlowValidation: prueba de omisión, final temporizado, resultados de ambos modos, comparación y estados de botones; método para copia aislada Swift.EditorTools.GameplayFlowValidation.Run (sin -quit).
+- Evidencia: 27 pruebas de dominio PASS. Compilación C# contra bibliotecas locales Unity: 0 errores; advertencia por referencia al proyecto de samples ausente en la copia del csproj de comprobación. Esto no acredita Play Mode ni Android.
+- Primera importación Unity aislada detenida al permanecer en Initial Refresh; segundo intento sin render registrado en Artifacts/Gameplay20261029/play.log. Consultar informe final para resultado; no dar aceptación VR por estas comprobaciones.
+- Conservados cambios locales previos en ProjectSettings y documentación/capturas. No se cambió escena, pipeline, XR ni paquetes del proyecto principal.
+
+### Resultado final de comprobación
+- Artifacts/Gameplay20261029/code-check.txt: compilación final de scripts contra bibliotecas locales Unity, 0 errores y 0 advertencias (retirada la referencia innecesaria al proyecto de samples solo en el csproj temporal de comprobación).
+- 27 comprobaciones de dominio aprobadas.
+- Dos intentos de Unity sobre copia aislada, con y sin render, permanecieron en AssetDatabase Initial Refresh. Se detuvieron exclusivamente los procesos de validación creados para esta tarea. Play Mode, final temporizado real, disposición visual y visor quedan PENDIENTES; no existe resultado PASS de GameplayFlowProbe en esta sesión.
+- No se guardó ni reconstruyó BancoCorresponsal. El Editor original del usuario permanece abierto.
+
+## Cierre del prototipo funcional — 2026-11-02 (estado posterior a PROJECT_STATUS_AUDIT)
+
+Se conserva todo el historial anterior. Informe: [FUNCTIONAL_PROTOTYPE_VALIDATION.md](FUNCTIONAL_PROTOTYPE_VALIDATION.md). Prueba física pendiente: [HONOR_TEST_CHECKLIST.md](HONOR_TEST_CHECKLIST.md).
+
+| ID | Estado vigente | Evidencia y alcance |
+|---|---|---|
+| N01 / K02 | HECHO | BancoCorresponsal primera y única escena habilitada. HelloCardboard y SampleScene conservadas como pruebas deshabilitadas; lista verificada en disco y build. |
+| N02 / K07–K16 | HECHO para pruebas automatizadas Unity/PC | GameplayFlowProbe PASS: omisión y final real de 12 s, ambos modos, comparación y tres decisiones 6/6. BankOfficeProbe PASS: cinco funciones, nueve roles con raycasts y cuatro destinos. PrototypeSmokeProbe PASS: dwell/latch/rearme. No certifica visor ni revisión humana de controles PC. |
+| Corrección de interacción | HECHO en Play Mode | El collider de computadora bloqueaba los botones; UIManager coloca el panel por delante en runtime. Raycasts desde inspección llegan a Aprobar/Retener/Devolver. Escena guardada intacta. |
+| N03 / K19 | HECHO para generación APK; K19 EN_PROGRESO | Nueva APK 48851914 bytes, Unity Succeeded, 0 errores/1 advertencia de símbolos de diagnóstico, firma v2 válida. APK anterior conservada. Instalación/ejecución en teléfono pendientes. |
+| N04 / K04 / K19 | PENDIENTE | Instalar APK nueva en HONOR y verificar banco, estéreo, sensores, QR/recenter, pausa/reanudación, audio y final. |
+| N07–N09 / K07–K16 | PENDIENTE en dispositivo | Mirada física, cuatro pads, cinco funciones, tres decisiones y ambos resultados. No cerrar por las pruebas PC. |
+| N05 / K01 | BLOQUEADO | Continúan ausentes las pestañas particulares completas del escenario 5. |
+| N06 / K03 | PENDIENTE | Revisar/versionar el conjunto de cambios del equipo en una sesión autorizada; no hubo commit, merge ni push. |
+
+APK: `Artifacts/Functional-20261102-083259/SWIFT-BancoCorresponsal-current.apk`.
+SHA256: `F59EA07AE5019C2C67A1B6025E9B8DB993DB7E67B7B2B4DD39012DD6C793FB6E`.
+Logs, resultados y copia de seguridad: `Artifacts/Functional-20261102-083259/`.
+Siguiente: N04, N07, N08 y N09 en el HONOR; después legibilidad/audio/rendimiento y material docente. No se añadieron niveles, modelos ni decoración.
+
+## Documentos bancarios / Propuesta C — 2026-11-02
+
+- HECHO en Editor: expediente y registro reconstruidos con UI/TMP, seguidos de alertas existentes, cuatro pasos de procedimiento, resultados y contexto/créditos. Se usaron las cinco imágenes únicamente como referencias de composición.
+- HECHO en Editor: pruebas de la presentación sin desbordes/solapamientos de bloques, raycasts desde inspección, tres decisiones, consultas, anillo y activación de mirada a 1,5 s con bloqueo/rearme. Prólogo y cuatro teletransportes sin regresión observada. 27 checks de dominio PASS.
+- Evidencia: [DOCUMENT_UI_IMPLEMENTATION.md](DOCUMENT_UI_IMPLEMENTATION.md) y `Docs/Previews/DocumentUIReview/20261102T143810058Z/README.md`.
+- PENDIENTE N03/K19 para este cambio: generar otra APK que incluya la UI nueva. La APK funcional documentada anteriormente sigue siendo válida como evidencia de aquella compilación, pero no contiene estos cambios posteriores.
+- PENDIENTE N04/N07–N09: instalar esa futura APK en HONOR; leer las cinco pantallas en ambos ojos, probar retícula/anillo/1,5 s y todas las pestañas/decisiones. Medir comodidad angular, FPS, memoria y temperatura.
+- PENDIENTE: aceptación visual del usuario y audio según ART_AUDIO_NEEDS.md. N05/K01 mantiene su bloqueo por material docente ausente. Sin commit/push.
+
+## Artes restantes — 2026-11-02
+
+- HECHO en Editor: único cuadro institucional mate en pared oeste, entre bienvenida y archivo, sin colliders ni cambios de mobiliario/teletransportes. Proporción original preservada.
+- HECHO en Editor: prólogo con los dos individuales de impresora y un render real del banco/UI actual como tercer momento; UV sin franjas de relleno, proporción conservada, fade suave, TMP y Omitir. Se mantienen 3 × 4 s, cámara libre e inicio único del modo seleccionado.
+- HECHO en Editor: revisión específica PASS, 27 checks de dominio PASS y nuevas ejecuciones PASS de GameplayFlowProbe, BankOfficeProbe y PrototypeSmokeProbe. Las aserciones de estas sondas se conservaron; solo se añadió una opción para evitar cerrar el Editor durante la revisión.
+- Evidencia: [ART_INTEGRATION_REPORT.md](ART_INTEGRATION_REPORT.md), `Docs/Previews/ArtIntegrationReview/20261102T145831568Z/README.md` y `Artifacts/ArtIntegrationReview/`.
+- PENDIENTE N03/K19: nueva APK con UI y artes actuales; no se compiló una APK durante esta tarea. La APK anterior permanece conservada.
+- PENDIENTE N04/N07–N09/N12/N18: HONOR/Cardboard, legibilidad y confort del prólogo/cuadro, mirada física de 1,5 s, inicio único, botones/recorrido y mediciones térmicas/rendimiento. Sin validación Android ni aprobación visual del usuario.
+- Recursos: no faltan imágenes imprescindibles; opcionales dos ilustraciones 16:9 sin relleno si se quiere más altura de imagen. Audio sigue como tarea separada. N05/K01 conserva su dependencia docente; sin commit, merge o push.
+
+
+## UX VR y preparación de publicación — 2026-11-02
+
+- HECHO en Editor: retícula con contraste, progreso de 1,5 s, confirmación y aviso de rearme; controles grandes y campos TMP; tutorial opcional de cinco pasos sin puntuación; audio por categorías y eventos, con tonos TEMP identificados.
+- PASS: DomainTests 27, revisión UX, GameplayFlowProbe, BankOfficeProbe y PrototypeSmokeProbe. Prólogo omitido/automático, ambos modos, decisiones, cuatro teletransportes y raycasts comprobados. Android NO probado.
+- Escena guardada mediante Unity, referencias nativas, scripts y lightmaps comprobados; sin generadores de oficina. Respaldo externo conservado.
+- N06/K03: conjunto revisado preparado para commit y push autorizados únicamente a feature/vr-visual-improvements. No se autoriza merge ni cambios en main; ver PULL_REQUEST_DRAFT.md y REPRODUCIBILITY.md.
+- Pendientes N03/K19 y N04/N07–N09: APK nueva y validación HONOR con UI/artes/UX actuales. Sustituir audios TEMP y comprobar confort/rendimiento. El bloqueo docente N05/K01 se conserva.
+- Evidencia: UX_GAMEPLAY_PROGRESS.md y Docs/Previews/UXGameplayReview/20261102T205325756Z/.

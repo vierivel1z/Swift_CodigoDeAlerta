@@ -1,0 +1,143 @@
+{
+  "utc": "2026-11-02T15:24:55.568973+00:00",
+  "unity": "6000.3.24f1",
+  "urp": "17.3.0",
+  "scene": "Assets/_Project/Scenes/BancoCorresponsal.unity",
+  "sceneSha256": "49732a91cd0b00f3a3a7dd4fb1784b574517ae92b1db04744a8c6fe75c264218",
+  "base": "3bef77be8ea73637f37e150b4884d67905609735",
+  "branch": "review/unity-scene-designer",
+  "width": 1600,
+  "height": 1000,
+  "androidTested": false,
+  "note": "Real Unity renders, mixed Edit/Play states recorded per file; no stereo or performance certification.",
+  "captures": [
+    {
+      "file": "01-grafica-pared.png",
+      "mode": "Edicion",
+      "description": "Grafica institucional final en pared oeste, entre bienvenida y archivadores, sin bloquear recorrido.",
+      "utc": "2026-11-02T15:04:52.637685+00:00",
+      "bytes": 578442,
+      "sha256": "bc2ffa6b8b076fd3b7ded3bd53eaf0bd378107c4debc17228956ff5968ea7f60"
+    },
+    {
+      "file": "02-prologo-impresora.png",
+      "mode": "Play Mode",
+      "description": "Momento 1: impresora en banco de origen; area util original mediante UV, subtitulos TMP y Omitir.",
+      "utc": "2026-11-02T15:16:26.876065+00:00",
+      "bytes": 434981,
+      "sha256": "5069b78a073ce359fa4dfde44ec06a0aadb97c476054b23da6a8e687a92b24d1"
+    },
+    {
+      "file": "03-prologo-detenida.png",
+      "mode": "Play Mode",
+      "description": "Momento 2: impresora detenida y empleado generico del banco de origen.",
+      "utc": "2026-11-02T15:16:30.847914+00:00",
+      "bytes": 431500,
+      "sha256": "30cc76e55a761ab6a33838199902eacbb3b36375ba92eba3a4b8b2a3d2ec55e7"
+    },
+    {
+      "file": "04-prologo-banco-real.png",
+      "mode": "Play Mode",
+      "description": "Momento 3: render real del banco con la interfaz actual, en lugar de la oficina conceptual.",
+      "utc": "2026-11-02T15:16:34.848193+00:00",
+      "bytes": 399792,
+      "sha256": "351632c6e2405006f30cc306a6fc65f3325f348e1395f3f13d7b0bf026aeef0a"
+    },
+    {
+      "file": "05-oficina-partida.png",
+      "mode": "Play Mode",
+      "description": "Oficina despues del inicio unico de defensa: expediente activo, cuadro e interacciones existentes.",
+      "utc": "2026-11-02T15:16:38.202704+00:00",
+      "bytes": 474282,
+      "sha256": "b932dd5b510f6584b8c9e2aa3e2a5ebd4652f44942fff90325dc0a684b046362"
+    },
+    {
+      "file": "06-oficina-general.png",
+      "mode": "Edicion",
+      "description": "Vista general de entrada, cuadro, escritorio y circulacion.",
+      "utc": "2026-11-02T15:04:52.737682+00:00",
+      "bytes": 551426,
+      "sha256": "426ec805e10b72f343192420cd02e25dfa33edf720a440510463d22fb4b91314"
+    },
+    {
+      "file": "07-escritorio.png",
+      "mode": "Edicion",
+      "description": "Relacion del nuevo cuadro con el escritorio y mobiliario existente.",
+      "utc": "2026-11-02T15:04:52.827684+00:00",
+      "bytes": 671746,
+      "sha256": "f4020ad864e19fc031aad5ce8cc88c60d4c9d0b69f062d9e5be4a7cce58e4346"
+    },
+    {
+      "file": "08-computadora.png",
+      "mode": "Edicion",
+      "description": "Monitor serializado en Edicion; la UI nativa actual se muestra en las capturas de Play Mode.",
+      "utc": "2026-11-02T15:04:52.913683+00:00",
+      "bytes": 563408,
+      "sha256": "c4db2dea99beb3d65fecf9aff96b1bdbe843ca578210e1ce7ace2c987b9890c6"
+    },
+    {
+      "file": "09-distribucion-superior.png",
+      "mode": "Edicion",
+      "description": "Distribucion y pads; techo oculto temporalmente solo para esta captura.",
+      "utc": "2026-11-02T15:04:53.002646+00:00",
+      "bytes": 260461,
+      "sha256": "e327a4a651176e4e4b3af9434bd61bd61aeab08365437533f37d6846b3651272"
+    }
+  ],
+  "tests": {
+    "wallfix": {
+      "result": "PASS wallfix 2026-11-02T15:04:53.0036159Z Editor only; Android NOT TESTED",
+      "sha256": "660cd1850d60ddacad9c147d919b3459c257b4e50930764f9322ecb5505ec958"
+    },
+    "prologue": {
+      "result": "PASS prologue 2026-11-02T15:16:38.2046744Z Editor only; Android NOT TESTED",
+      "sha256": "7f30215b77989116f11a192ce7927caf65ed1ebe4af98667c80aa270e6916237"
+    },
+    "flow": {
+      "result": "PASS flow 2026-11-02T15:18:11.1790091Z Editor only; Android NOT TESTED",
+      "sha256": "d1565cc96ea520d0f218f3152045b28591a67ea26af0e44e69e88137ca5a7c94"
+    },
+    "office": {
+      "result": "PASS office 2026-11-02T15:18:49.0894501Z Editor only; Android NOT TESTED",
+      "sha256": "f6c84bc2d25a839631056298161d0bc7781151ca350199684d695188f8f33a20"
+    },
+    "smoke": {
+      "result": "PASS smoke 2026-11-02T15:19:46.0885702Z Editor only; Android NOT TESTED",
+      "sha256": "e19b0ffc951e7b58ea1754de8c9213768f2ad4a5c99d5be45a793252fccdedbc"
+    }
+  },
+  "sources": [
+    {
+      "file": "Assets\\_Project\\Scripts\\Core\\IntroSequence.cs",
+      "sha256": "d0521883d80c835e08f89c106ec1d7f8090c1dce2a07ddc5bb1ad4beebabaa5f"
+    },
+    {
+      "file": "Assets\\_Project\\Editor\\ArtIntegrationReview.cs",
+      "sha256": "d78cf671792004783646833bcd4a217d8d16f718eeb4a7064c620ff2d7c90b15"
+    },
+    {
+      "file": "Assets\\_Project\\Art\\Integrated\\Prologue_BancoReal.png",
+      "sha256": "35d5139e4816b8e47ca4a83c80d0e5fda258413953aefc49ca7adb5c4c02e564"
+    },
+    {
+      "file": "Assets\\_Project\\Art\\WallGraphics\\ART_BankWallGraphic.png",
+      "sha256": "4ed175fecb547030b89a389e76c7699f8443805ab90bb251d9d11197bdda2ed3"
+    },
+    {
+      "file": "Assets\\_Project\\Art\\Prologue\\Reference\\prologo_01_impresora_origen.png",
+      "sha256": "314cd9de315c377b2eebf9851f5a72e1899f42e5949ff74de1fe9f0458c03d97"
+    },
+    {
+      "file": "Assets\\_Project\\Art\\Prologue\\Reference\\prologo_02_impresora_detenida.png",
+      "sha256": "7fedad8476a08a8fae8233ea3288b195b3603be484e851a52e05531bb5858d7d"
+    },
+    {
+      "file": "Assets\\_Project\\Art\\Prologue\\Reference\\prologo_03_banco_corresponsal.png",
+      "sha256": "3b07d3e2a032f5df2a219fe83f52ff367262cef3e6bbbe1876e76ee3ef43a66c"
+    },
+    {
+      "file": "Assets\\_Project\\Art\\Prologue\\Reference\\PROLOGUE_Storyboard_Reference.png",
+      "sha256": "480134c87d42074606df759d64f95cd0821495a7725998ad93d4e3d02a200304"
+    }
+  ]
+}

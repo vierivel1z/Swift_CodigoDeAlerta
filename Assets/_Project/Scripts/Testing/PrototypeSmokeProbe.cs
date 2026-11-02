@@ -9,6 +9,7 @@ namespace Swift.Testing
 {
     public sealed class PrototypeSmokeProbe : MonoBehaviour
     {
+        public bool ExitEditorOnComplete = true;
         int errors;
         void OnEnable() { Application.logMessageReceived += Log; }
         void OnDisable() { Application.logMessageReceived -= Log; }
@@ -22,7 +23,7 @@ namespace Swift.Testing
                 if (notices == null || !notices.text.Contains("SIL OPEN FONT LICENSE")) throw new Exception("Bundled license notices missing");
                 var game = FindFirstObjectByType<GameManager>();
                 if (game == null) throw new Exception("GameManager missing");
-                var texts = FindObjectsByType<TMPro.TextMeshProUGUI>(FindObjectsSortMode.None);
+                var texts = FindObjectsByType<TMPro.TextMeshProUGUI>(FindObjectsInactive.Include, FindObjectsSortMode.None);
                 if (texts.Length < 6 || texts.Any(x => x.font == null || x.font.characterTable.Count < 50)) throw new Exception("World Space TMP UI missing font or buttons");
                 if (texts.Count(x=>x.text == "APROBAR" || x.text == "RETENER" || x.text == "DEVOLVER") != 3) throw new Exception("Decision button labels missing");
                 game.StartScenario(ScenarioMode.Attack);
@@ -84,7 +85,7 @@ namespace Swift.Testing
             Debug.Log(result);
             yield return null;
 #if UNITY_EDITOR
-            UnityEditor.EditorApplication.Exit(result.StartsWith("PASS") ? 0 : 1);
+            if(ExitEditorOnComplete) UnityEditor.EditorApplication.Exit(result.StartsWith("PASS") ? 0 : 1);
 #endif
         }
     }

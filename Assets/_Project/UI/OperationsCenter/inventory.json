@@ -1,0 +1,205 @@
+{
+  "source": "Assets\\_Project\\Styles\\OperationsCenter_Original.png",
+  "dimensions": [
+    1586,
+    992
+  ],
+  "mode": "RGB",
+  "source_sha256": "d59b6308101dbe8f6b84efc3f722c09484004a8f59b788da0e511ee87a85214e",
+  "resources": [
+    {
+      "file": "Approve_Normal.png",
+      "box": [
+        14,
+        640,
+        262,
+        715
+      ],
+      "size": [
+        248,
+        75
+      ],
+      "mode": "RGB",
+      "alpha": "none; opaque background preserved",
+      "sha256": "2c60bc3cf51c73ebf1407ccbfb25966e629ff7f78340a3ca842400fb67a7e249"
+    },
+    {
+      "file": "Approve_Focus.png",
+      "box": [
+        269,
+        640,
+        528,
+        715
+      ],
+      "size": [
+        259,
+        75
+      ],
+      "mode": "RGB",
+      "alpha": "none; opaque background preserved",
+      "sha256": "0467f4ecc92d9c8cbc0cf924021453cd5392b5579fb1fc3509554848eca53edf"
+    },
+    {
+      "file": "Approve_Pressed.png",
+      "box": [
+        536,
+        640,
+        792,
+        715
+      ],
+      "size": [
+        256,
+        75
+      ],
+      "mode": "RGB",
+      "alpha": "none; opaque background preserved",
+      "sha256": "269448283f8389f85dbccd102d510211eaf0c585851609a97352d1d498f998de"
+    },
+    {
+      "file": "Approve_Disabled.png",
+      "box": [
+        798,
+        640,
+        1052,
+        715
+      ],
+      "size": [
+        254,
+        75
+      ],
+      "mode": "RGB",
+      "alpha": "none; opaque background preserved",
+      "sha256": "e136032845602de58a4a0e95caf4f281b88f7b48fee9aff18e1c40609953dbb9"
+    },
+    {
+      "file": "Hold_Normal.png",
+      "box": [
+        14,
+        718,
+        262,
+        793
+      ],
+      "size": [
+        248,
+        75
+      ],
+      "mode": "RGB",
+      "alpha": "none; opaque background preserved",
+      "sha256": "8c87186253a0a8b8c89fbd73758b4b3e2bd0e71f1e52452f66fd847791c0d4d5"
+    },
+    {
+      "file": "Hold_Focus.png",
+      "box": [
+        269,
+        718,
+        528,
+        793
+      ],
+      "size": [
+        259,
+        75
+      ],
+      "mode": "RGB",
+      "alpha": "none; opaque background preserved",
+      "sha256": "f7d37a43579ade0ca7602f1608e1d1dcbf266242b87866742f0cf20d309cf9a3"
+    },
+    {
+      "file": "Hold_Pressed.png",
+      "box": [
+        536,
+        718,
+        792,
+        793
+      ],
+      "size": [
+        256,
+        75
+      ],
+      "mode": "RGB",
+      "alpha": "none; opaque background preserved",
+      "sha256": "584b1f32e3a27bad4e9b67ac744a7737296cdedd0c5a05faf8472d90d24374b9"
+    },
+    {
+      "file": "Hold_Disabled.png",
+      "box": [
+        798,
+        718,
+        1052,
+        793
+      ],
+      "size": [
+        254,
+        75
+      ],
+      "mode": "RGB",
+      "alpha": "none; opaque background preserved",
+      "sha256": "756c0f14c1bb0a919d0889da01a6c4c323a322b7dace0afc9acb7f842182a6a4"
+    },
+    {
+      "file": "Return_Normal.png",
+      "box": [
+        14,
+        797,
+        262,
+        872
+      ],
+      "size": [
+        248,
+        75
+      ],
+      "mode": "RGB",
+      "alpha": "none; opaque background preserved",
+      "sha256": "cb8b1120062936a6d9bb8b0e352243c0728d50b871721d372902bacdf8e70b4f"
+    },
+    {
+      "file": "Return_Focus.png",
+      "box": [
+        269,
+        797,
+        528,
+        872
+      ],
+      "size": [
+        259,
+        75
+      ],
+      "mode": "RGB",
+      "alpha": "none; opaque background preserved",
+      "sha256": "18683ea2a8284692900093f59a0fde9ce620bc39889f31842222857bf209e1aa"
+    },
+    {
+      "file": "Return_Pressed.png",
+      "box": [
+        536,
+        797,
+        792,
+        872
+      ],
+      "size": [
+        256,
+        75
+      ],
+      "mode": "RGB",
+      "alpha": "none; opaque background preserved",
+      "sha256": "018b38716897260af2e53e2932b895adc595730add5c65616af48404ffdebcda"
+    },
+    {
+      "file": "Return_Disabled.png",
+      "box": [
+        798,
+        797,
+        1052,
+        872
+      ],
+      "size": [
+        254,
+        75
+      ],
+      "mode": "RGB",
+      "alpha": "none; opaque background preserved",
+      "sha256": "606af16d383c4b70d2a008be31be0dac0e4f236627d139baee00a828a030b5b3"
+    }
+  ],
+  "usage": "Reference controls only. Runtime panels/buttons rebuilt in Unity UI for scalable labels and gaze feedback.",
+  "excluded": "Six complete screens, baked text, icons and reticles with opaque backgrounds. No synthesized alpha."
+}

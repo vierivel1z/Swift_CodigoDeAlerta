@@ -12,6 +12,12 @@ namespace Swift.Interaction
         BankInteractable focused;
         float elapsed;
         bool activated;
+        public BankInteractable FocusedTarget => focused;
+        public bool IsGazeInput => !((Application.isEditor || !Application.isMobilePlatform) && !SimulateGazeInEditor);
+        public float DwellProgress => focused == null ? 0 : Mathf.Clamp01(elapsed / Mathf.Max(.2f,DwellSeconds));
+        public bool SelectionLatched => activated;
+        public float LastActivationTime { get; private set; } = float.NegativeInfinity;
+        public event System.Action<BankInteractable> Activated;
         void Update()
         {
             if (View == null) return;
@@ -26,7 +32,10 @@ namespace Swift.Interaction
                 bool clicked = pc && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame;
                 if (clicked || (!pc && !activated && elapsed >= Mathf.Max(0.2f, DwellSeconds))) {
                     // Latch before callback: callbacks can teleport or change the UI.
-                    activated = true; focused.Activate();
+                    activated = true;
+                    LastActivationTime = Time.unscaledTime;
+                    Activated?.Invoke(focused);
+                    focused.Activate();
                 }
             }
             if (Reticle != null) {

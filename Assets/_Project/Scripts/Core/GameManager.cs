@@ -11,6 +11,15 @@ namespace Swift.Game
         public long? LastAttackLoss { get; private set; }
         public long? LastDefenseLoss { get; private set; }
         public event Action Changed;
+        public bool IntroPlaying => GetComponent<IntroSequence>()?.IsPlaying == true;
+        public void EnterScenario(ScenarioMode mode)
+        {
+            if (IntroPlaying) return;
+            var intro = GetComponent<IntroSequence>() ?? gameObject.AddComponent<IntroSequence>();
+            if (intro.HasPlayed) StartScenario(mode);
+            else intro.Play(() => StartScenario(mode));
+        }
+        public void SkipIntro() { GetComponent<IntroSequence>()?.Skip(); }
         public void StartScenario(ScenarioMode mode)
         {
             Session = new GameSession(mode, Scenario != null ? Scenario.Transactions : TrainingData.Create());
@@ -18,7 +27,7 @@ namespace Swift.Game
         }
         public void Decide(Decision decision)
         {
-            if (Session == null || !Session.Decide(decision)) { Notify("Inicia un turno o consulta resultados."); return; }
+            if (IntroPlaying || Session == null || !Session.Decide(decision)) { Notify("Inicia un turno o consulta resultados."); return; }
             var records = Session.Transactions.Records;
             var last = System.Linq.Enumerable.Last(records, x => x.Status != TransactionStatus.Pending);
             Notify(last.DefenseOverride ? "Control reforzado: operacion enviada a revision/formato." : last.CorrectDecision == true ? "Decision coherente con la evidencia disponible." : "Revisa los criterios: formato se devuelve; riesgo se retiene.");
@@ -44,4 +53,3 @@ namespace Swift.Game
         public void Notify(string value) { Message = value; Changed?.Invoke(); }
     }
 }
-

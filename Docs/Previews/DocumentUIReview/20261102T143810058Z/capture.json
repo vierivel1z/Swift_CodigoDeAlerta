@@ -1,0 +1,74 @@
+{
+  "createdUtc": "2026-11-02T14:53:11.733325+00:00",
+  "unity": "6000.3.24f1",
+  "urp": "17.3.0",
+  "scene": "Assets/_Project/Scenes/BancoCorresponsal.unity",
+  "sceneSha256": "41467b15703bff8b588c7f36c6a76c684483b1f44ca3a315074961b59c3c3d92",
+  "branch": "review/unity-scene-designer",
+  "base": "3bef77be8ea73637f37e150b4884d67905609735",
+  "mode": "Unity Editor Play Mode / temporary review camera; NOT Android",
+  "resolution": [
+    1600,
+    1000
+  ],
+  "inspectionEye": [
+    0,
+    1.6,
+    -0.65
+  ],
+  "fieldOfView": 60,
+  "tests": "Artifacts/DocumentUIReview/final-editor-checks.txt",
+  "checksPassed": 1107,
+  "runtimeErrors": 0,
+  "androidTested": false,
+  "files": [
+    {
+      "file": "01-expediente-anterior.png",
+      "bytes": 374014,
+      "utc": "2026-11-02T14:38:10.239588+00:00",
+      "sha256": "e15e23f5626d0ee83447df54fb31d4cde01e679ebb37df5903666e1246827083"
+    },
+    {
+      "file": "02-expediente-mejorado.png",
+      "bytes": 366587,
+      "utc": "2026-11-02T14:48:55.552495+00:00",
+      "sha256": "19cf6ad9cede016177fd707f9fb6032ca1c5ca112d8ef70070b2ae00d287be11"
+    },
+    {
+      "file": "03-consulta-registros.png",
+      "bytes": 353249,
+      "utc": "2026-11-02T14:48:55.670644+00:00",
+      "sha256": "bf7882adc5c78abf893fad2cf314590d9660880e1fd170f2c55b5d39a54e5573"
+    },
+    {
+      "file": "04-panel-alertas.png",
+      "bytes": 337929,
+      "utc": "2026-11-02T14:48:56.448941+00:00",
+      "sha256": "ba9830b4dbf511166246d61d03707106e0bc20a89ec049d4d5fb464a9a0a9075"
+    },
+    {
+      "file": "05-procedimiento.png",
+      "bytes": 378369,
+      "utc": "2026-11-02T14:48:55.858176+00:00",
+      "sha256": "47ec82e92d1d6df0792c7d056f267e70abaab667e891044aac2fdc2f3292e077"
+    },
+    {
+      "file": "06-resultados.png",
+      "bytes": 383215,
+      "utc": "2026-11-02T14:48:56.690531+00:00",
+      "sha256": "b8f05f891de240fa8678a247f00b779852d870296d5985dfad084b9888f9431f"
+    },
+    {
+      "file": "07-contexto-creditos.png",
+      "bytes": 391301,
+      "utc": "2026-11-02T14:48:56.773532+00:00",
+      "sha256": "7967b38a17eaef7a5d0c4f08207da6fce20ddd893b12bd4c76e408f25746752d"
+    },
+    {
+      "file": "08-progreso-mirada-editor.png",
+      "bytes": 366765,
+      "utc": "2026-11-02T14:48:58.052080+00:00",
+      "sha256": "a0770d8ea8ff0093c1a918122b073194abe9bc872bad3c0857c0982f09d9b371"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "platform": "Unity Editor Play Mode, temporary camera, 1600x1000; not stereoscopic Android",
+  "sceneAtPublicationSHA256": "fde029b941dae441ad8c851e4de192c89a6d15187856da1d85ece421c5c8a485",
+  "images": [
+    {
+      "file": "01-menu-tutorial.png",
+      "sha256": "19ae4abeab7a827e376d7d0c84f439926739f0a451d7aa7c3ff5c4b781f2a1c1"
+    },
+    {
+      "file": "02-mirada-progreso.png",
+      "sha256": "b6e1d7613b8eb17f1e4cfbd18fcf0bb00ca32fa4041b93e7172332e56ad31d9c"
+    },
+    {
+      "file": "03-mirada-confirmacion.png",
+      "sha256": "f55b68bd0df26275a5e059d96a814057e13ebbf888b7806f8e3705649cbff9d7"
+    },
+    {
+      "file": "04-mirada-rearme.png",
+      "sha256": "af22d24b0c7f74267371580a4ae36f834983ea91a4eda6b557f2da2d32a89377"
+    },
+    {
+      "file": "05-tutorial-decision.png",
+      "sha256": "ed3c0feb81bd36096cad468070e136878dfee4f506624ba05270b4e08b2088d3"
+    },
+    {
+      "file": "06-tutorial-completo.png",
+      "sha256": "33bfeed3b5208a4a08d03e37d2d32156cce91382f4d1116820ef4e39bbcc34be"
+    },
+    {
+      "file": "07-expediente-ux.png",
+      "sha256": "b8cced9c23b0ec6344f01c5d5d637dad4532a5bb6e4150ae40d9dbfb9713a365"
+    },
+    {
+      "file": "08-resultados-ux.png",
+      "sha256": "7cd76b8544f6308dbfd04795660c1c3ae80a230af0e64841905b2ae9b9f717d3"
+    }
+  ]
+}

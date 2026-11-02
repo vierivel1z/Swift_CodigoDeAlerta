@@ -1,0 +1,52 @@
+﻿# Propuesta A — Terminal bancaria sobria
+
+## Pantalla de expedientes
+Crea un kit de fondos 2D para la computadora de SWIFT: Código de Alerta, videojuego educativo VR de oficina bancaria low poly. Estética de terminal profesional sobria, azul petróleo #102735, marfil #F0E8D5 y acento turquesa #49D6BF. Vista frontal ortográfica, sin perspectiva, sin monitor físico, sin escena ni mockup. Lienzo 1600x1000. Jerarquía clara: cabecera superior, ficha grande central con seis filas vacías para datos, columna lateral de registro/alertas, franja inferior para tres decisiones grandes. Bordes simples y amplias áreas uniformes. Sin textos generados ni números ni logos: Unity añadirá etiquetas y datos dinámicos. No colocar señales que revelen si una orden es fraudulenta. Contraste alto, sin ruido, reflejos, bloom, degradados intensos ni detalle diminuto. Entregar cada fondo individual como PNG opaco, sin marcos de presentación. Variantes: inicio, expediente activo, consulta de registro, consulta de alertas, controles de defensa y resultados comparativos. Mantener exactamente proporciones y paleta en todas.
+
+## Botones
+Crea sprites 2D individuales para los botones de un simulador bancario educativo VR, estilo terminal sobria azul petróleo/marfil/turquesa. Cada botón de 512x160, vista frontal, bordes redondeados discretos y centro vacío para etiqueta añadida en Unity. Producir variantes Aprobar, Retener, Devolver, Consultar, Registrar evidencia, Activar defensa, Continuar, Omitir y Reiniciar. Distinguir decisiones también con iconos: check, pausa/lupa y flecha de retorno; no depender solo del color. Estados separados: normal, enfocado por mirada, pulsado y deshabilitado. Mantener dimensiones y alineación idénticas. PNG con fondo transparente fuera del botón y margen de seguridad de 16 px. Sin letras, números, marcas ni sombras que se salgan del margen. No producir una hoja de contactos: un archivo por variante y estado.
+
+## Retícula
+Diseña retícula VR minimalista blanca y turquesa: punto central pequeño, anillo de progreso separado en una capa reutilizable y estado de enfoque. PNG transparente 256x256, centrado y simétrico, bordes suaves, sin glow. Sin animación incrustada ni texto; el progreso lo controlará Unity.
+
+
+----------------------------------------
+
+# Propuesta B — Archivo documental
+
+## Pantallas de la computadora
+Diseña fondos de interfaz 2D para SWIFT: Código de Alerta, simulador VR de revisión documental bancaria. Dirección artística: expediente de papel crema, tinta azul oscura, separadores geométricos y pestañas discretas, coherente con una oficina low poly. Evocar una herramienta de trabajo seria sin copiar Papers, Please ni su arte, tipografía o composición. Vista frontal plana 1600x1000, sin perspectiva. Cabecera, área central espaciosa de seis campos, lateral de registro/alertas y tres espacios inferiores para decisiones. Sin texto, cifras, firmas, sellos reales ni logos. Todos los datos se incorporan con TextMeshPro. Nada de suciedad o textura fuerte detrás de texto. Generar fondos separados de menú, expediente, registro, alertas, defensa y comparación final; espacios y tamaños consistentes. PNG opacos individuales.
+
+## Botones y tarjetas
+Genera un kit de botones 2D inspirado en pestañas y tarjetas documentales, fondo crema, contornos azul tinta y acentos verde azulado, ámbar y azul para tres decisiones distintas. Cada sprite 512x160 con centro vacío y un icono simple en el extremo izquierdo: aprobar/check, retener/lupa y devolver/flecha curva. Añade versiones de consultar, evidencia, activar defensa, continuar, omitir y reiniciar. Cuatro estados individuales por botón: normal, foco, pulsado, deshabilitado. Foco con contorno más grueso, no solo cambio cromático. Fondo exterior transparente, sin letras ni sellos que indiquen fraude confirmado. No crear composiciones con varios botones en una sola imagen.
+
+## Panel de cierre
+Fondo comparativo 1600x1000 con dos columnas equivalentes y un tercer bloque inferior para contexto histórico separado. Áreas vacías grandes, sin cifras o porcentajes pregrabados. Estética documental crema/azul. No sugerir que la columna de defensa cambió hechos del pasado. PNG frontal sin perspectiva.
+
+
+----------------------------------------
+
+# Propuesta C — Centro de operaciones
+
+## Pantallas de la computadora
+Crea una familia de fondos UI 2D para SWIFT: Código de Alerta, experiencia educativa VR Android de análisis de transferencias ficticias. Estilo centro de operaciones contemporáneo, azul noche #101B2D, superficies planas gris azulado, acentos cian suaves y ámbar reservado para atención. No estética hacker, código binario ni mapas de ataques. Vista frontal ortográfica 1600x1000, formas grandes, poco detalle. Reservar cabecera, seis campos amplios, consulta lateral y tres decisiones inferiores. Producir PNG individuales de inicio, expediente, registro, alertas, controles y resultados. No letras, cifras ni logos: se agregan dinámicamente en Unity. Sin transparencia en los fondos, sin brillo, partículas, reflejos ni bordes luminosos que dificulten lectura en Cardboard. Coherencia con mobiliario low poly.
+
+## Botones de mirada
+Genera botones UI 2D 512x160 para mirada VR. Formas rectangulares de esquina suave, iconos sólidos de check, lupa y flecha de devolución; variantes adicionales de archivo, evidencia, escudo, continuar, omitir y reiniciar. Mantener centro vacío para etiquetas. Estados normal, enfocado con contorno blanco grueso, pulsado y deshabilitado con icono atenuado. Archivo PNG independiente por botón y estado, fondo exterior transparente. No texto, números, logos ni animación. Legibilidad por silueta y contraste, sin depender solo de rojo/verde.
+
+## Separación de modos
+Dos fondos de cabecera con idéntica geometría: ataque con acento ámbar y defensa con acento turquesa, ambos con áreas vacías para nombre del modo. Ataque representa exposición al riesgo en un ejercicio educativo; no mostrar al jugador como autor de un delito. Defensa representa revisión y verificación, no destrucción de virus. PNG 1600x240, sin palabras.
+
+
+----------------------------------------
+
+# Prompts de arte — Prólogo de la impresora
+
+## Propuesta 1: storyboard low poly
+Crea un storyboard de tres planos independientes para el prólogo de SWIFT: Código de Alerta, videojuego educativo VR low poly. Plano 1: oficina ficticia del BANCO ANDINO, banco de origen, mañana, impresora de mensajes sobre mesa, bandeja vacía. Plano 2: misma impresora inactiva, empleado ficticio visto de espaldas observa la ausencia de comprobantes, postura contenida. Plano 3: oficina distinta del Banco Corresponsal Internacional con escritorio, monitor y expedientes, lista para el analista jugador. Misma paleta azul petróleo, crema y madera clara. Personas genéricas sin semejanza con personas reales. Imágenes 1920x1080 individuales, composición simple, sin textos ni logos ni interfaces ilegibles. No mostrar transferencias como comprobantes históricos reales. Sin armas, malware, pantallas de hackeo ni estereotipos nacionales. Son referencias conceptuales; no un render certificado del proyecto Unity.
+
+## Propuesta 2: capas para animación 2D
+Genera assets separados para una introducción 2D situada en un banco ficticio: fondo de oficina 1920x1080 sin personajes; impresora low poly frontal a tres cuartos; hoja de papel sin letras; indicador apagado; indicador de atención; silueta genérica de empleado de espaldas. Impresora, hoja, indicadores y empleado en PNG con transparencia, iluminación y perspectiva idénticas. Dejar espacio inferior limpio para subtítulos añadidos en Unity. No incluir textos, marcas, cifras de transferencias ni caras de personas reales. La impresora representa un intento de funcionamiento seguido de detención; no representa una impresión exitosa del ataque. No combinar assets en una sola lámina.
+
+## Propuesta 3: referencia de animación
+Produce una animación conceptual de 12 segundos basada en estos tres momentos: 0–4 s, impresora ficticia intenta alimentar una hoja; 4–8 s, mecanismo se detiene y bandeja queda sin comprobantes nuevos; 8–12 s, transición suave al puesto del analista de otro banco. Cámara fija, sin sacudidas ni desplazamiento forzado, ritmo pausado para VR. Estética low poly de oficina, luz uniforme, sin bloom. Sin texto o narración incrustada: los subtítulos se incorporan en Unity. Sin logos reales ni afirmación de reconstrucción histórica exacta. No representar al empleado del origen como analista del banco corresponsal. Entregar también primer y último fotograma. Referencia artística, no sustituto de la secuencia interactiva.
