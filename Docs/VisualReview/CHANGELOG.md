@@ -76,3 +76,11 @@ Estado: borrador / cambios solicitados / aprobado por el usuario:
 - N06/K03: conjunto revisado preparado para commit y push autorizados únicamente a feature/vr-visual-improvements. No se autoriza merge ni cambios en main; ver PULL_REQUEST_DRAFT.md y REPRODUCIBILITY.md.
 - Pendientes N03/K19 y N04/N07–N09: APK nueva y validación HONOR con UI/artes/UX actuales. Sustituir audios TEMP y comprobar confort/rendimiento. El bloqueo docente N05/K01 se conserva.
 - Evidencia: UX_GAMEPLAY_PROGRESS.md y Docs/Previews/UXGameplayReview/20261102T205325756Z/.
+
+## 2026-11-03 — Biblioteca de materiales y estudio neutro
+
+Preparación en review/environment-immersive / base1074fdd. Catálogo aislado: 12 materiales URP/Lit reutilizados, dos por familia; un gris neutro nuevo. Escena MaterialLibrary/Showcase/MaterialLibrary_Studio.unity, índice JSON, cubemap neutro 128 persistente y helper de Editor. Siete capturas finales reales; informe MATERIAL_LIBRARY_REPORT.md. Las iteraciones iniciales quedan solo en disco local.
+
+Las comprobaciones se realizaron durante la preparación anterior: 1058 archivos previos de Assets/Packages/ProjectSettings intactos. No se ejecutan nuevas pruebas Unity ni Android para este commit. BancoCorresponsal, URP y Cardboard no se modifican.
+
+Commit local autorizado por el usuario en la rama nueva feat/material-library-catalog. Se incluyen los 12 materiales y tres texturas compartidas necesarios para resolver referencias, con sus metas. Los demás cambios locales de la oficina siguen sin versionar. Sin push ni merge.

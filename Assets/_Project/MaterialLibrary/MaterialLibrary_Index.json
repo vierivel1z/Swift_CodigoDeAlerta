@@ -1,0 +1,213 @@
+{
+    "unity": "6000.3.24f1",
+    "urp": "17.3.0",
+    "scene": "Assets/_Project/MaterialLibrary/Showcase/MaterialLibrary_Studio.unity",
+    "materials": [
+        {
+            "name": "Wood_DesaturatedOak",
+            "path": "Assets/_Project/OfficeVisual/GraphicsPolishV2/Materials/Wood_DesaturatedOak.mat",
+            "status": "REUSED - GraphicsPolishV2",
+            "family": "MADERA",
+            "application": "Tableros y estanterias",
+            "shader": "Universal Render Pipeline/Lit",
+            "baseTexture": "Assets/_Project/OfficeVisual/VisualPolish/Textures/Oak_Grain_256.png",
+            "smoothness": 0.2800000011920929,
+            "metallic": 0.0,
+            "color": {
+                "r": 0.4599999189376831,
+                "g": 0.3649999797344208,
+                "b": 0.2749999761581421,
+                "a": 1.0
+            }
+        },
+        {
+            "name": "Wood_WalnutInset",
+            "path": "Assets/_Project/OfficeVisual/GraphicsPolishV2/Materials/Wood_WalnutInset.mat",
+            "status": "REUSED - GraphicsPolishV2",
+            "family": "MADERA",
+            "application": "Cajones e interiores",
+            "shader": "Universal Render Pipeline/Lit",
+            "baseTexture": "Assets/_Project/OfficeVisual/VisualPolish/Textures/Oak_Grain_256.png",
+            "smoothness": 0.23000000417232514,
+            "metallic": 0.0,
+            "color": {
+                "r": 0.29999998211860659,
+                "g": 0.25499996542930605,
+                "b": 0.2099999487400055,
+                "a": 1.0
+            }
+        },
+        {
+            "name": "Plastic_EquipmentMatte",
+            "path": "Assets/_Project/OfficeVisual/GraphicsPolishV2/Materials/Plastic_EquipmentMatte.mat",
+            "status": "REUSED - GraphicsPolishV2",
+            "family": "PLASTICO",
+            "application": "Monitor, PC e impresora",
+            "shader": "Universal Render Pipeline/Lit",
+            "baseTexture": "",
+            "smoothness": 0.18000000715255738,
+            "metallic": 0.0,
+            "color": {
+                "r": 0.07999997586011887,
+                "g": 0.09499996155500412,
+                "b": 0.11499997228384018,
+                "a": 1.0
+            }
+        },
+        {
+            "name": "Plastic_Keycaps",
+            "path": "Assets/_Project/OfficeVisual/GraphicsPolishV2/Materials/Plastic_Keycaps.mat",
+            "status": "REUSED - GraphicsPolishV2",
+            "family": "PLASTICO",
+            "application": "Teclados y controles fisicos",
+            "shader": "Universal Render Pipeline/Lit",
+            "baseTexture": "",
+            "smoothness": 0.11999999731779099,
+            "metallic": 0.0,
+            "color": {
+                "r": 0.2499999701976776,
+                "g": 0.2799999713897705,
+                "b": 0.29999998211860659,
+                "a": 1.0
+            }
+        },
+        {
+            "name": "Metal_GraphitePaint",
+            "path": "Assets/_Project/OfficeVisual/GraphicsPolishV2/Materials/Metal_GraphitePaint.mat",
+            "status": "REUSED - GraphicsPolishV2",
+            "family": "METAL PINTADO",
+            "application": "Marcos, soportes y patas",
+            "shader": "Universal Render Pipeline/Lit",
+            "baseTexture": "",
+            "smoothness": 0.3799999952316284,
+            "metallic": 0.3499999940395355,
+            "color": {
+                "r": 0.2699999511241913,
+                "g": 0.3099999725818634,
+                "b": 0.3399999737739563,
+                "a": 1.0
+            }
+        },
+        {
+            "name": "Metal_ArchiveEnamel",
+            "path": "Assets/_Project/OfficeVisual/GraphicsPolishV2/Materials/Metal_ArchiveEnamel.mat",
+            "status": "REUSED - GraphicsPolishV2",
+            "family": "METAL PINTADO",
+            "application": "Archivadores y gabinetes",
+            "shader": "Universal Render Pipeline/Lit",
+            "baseTexture": "",
+            "smoothness": 0.3199999928474426,
+            "metallic": 0.15000000596046449,
+            "color": {
+                "r": 0.47999995946884158,
+                "g": 0.5199999809265137,
+                "b": 0.5299999713897705,
+                "a": 1.0
+            }
+        },
+        {
+            "name": "Fabric_AcousticSlate",
+            "path": "Assets/_Project/OfficeVisual/GraphicsPolishV2/Materials/Fabric_AcousticSlate.mat",
+            "status": "REUSED - GraphicsPolishV2",
+            "family": "TELA",
+            "application": "Mamparas y separadores",
+            "shader": "Universal Render Pipeline/Lit",
+            "baseTexture": "Assets/_Project/OfficeVisual/VisualPolish/Textures/Acoustic_Weave_256.png",
+            "smoothness": 0.03999999910593033,
+            "metallic": 0.0,
+            "color": {
+                "r": 0.2699999511241913,
+                "g": 0.34999996423721316,
+                "b": 0.37999993562698367,
+                "a": 1.0
+            }
+        },
+        {
+            "name": "Fabric_SeatCharcoal",
+            "path": "Assets/_Project/OfficeVisual/GraphicsPolishV2/Materials/Fabric_SeatCharcoal.mat",
+            "status": "REUSED - GraphicsPolishV2",
+            "family": "TELA",
+            "application": "Sillas y sofa",
+            "shader": "Universal Render Pipeline/Lit",
+            "baseTexture": "Assets/_Project/OfficeVisual/VisualPolish/Textures/Acoustic_Weave_256.png",
+            "smoothness": 0.05999999865889549,
+            "metallic": 0.0,
+            "color": {
+                "r": 0.1199999526143074,
+                "g": 0.16999995708465577,
+                "b": 0.19999995827674867,
+                "a": 1.0
+            }
+        },
+        {
+            "name": "Paper_Ivory",
+            "path": "Assets/_Project/OfficeVisual/GraphicsPolishV2/Materials/Paper_Ivory.mat",
+            "status": "REUSED - GraphicsPolishV2",
+            "family": "PAPEL",
+            "application": "Hojas y libretas",
+            "shader": "Universal Render Pipeline/Lit",
+            "baseTexture": "",
+            "smoothness": 0.02500000037252903,
+            "metallic": 0.0,
+            "color": {
+                "r": 0.8299999833106995,
+                "g": 0.8100000023841858,
+                "b": 0.7350000143051148,
+                "a": 1.0
+            }
+        },
+        {
+            "name": "Paper_StackEdges",
+            "path": "Assets/_Project/OfficeVisual/GraphicsPolishV2/Materials/Paper_StackEdges.mat",
+            "status": "REUSED - GraphicsPolishV2",
+            "family": "PAPEL",
+            "application": "Pilas de documentos",
+            "shader": "Universal Render Pipeline/Lit",
+            "baseTexture": "",
+            "smoothness": 0.02500000037252903,
+            "metallic": 0.0,
+            "color": {
+                "r": 0.6599999666213989,
+                "g": 0.6649999618530273,
+                "b": 0.6200000047683716,
+                "a": 1.0
+            }
+        },
+        {
+            "name": "Architecture_Mineral",
+            "path": "Assets/_Project/OfficeVisual/GraphicsPolishV2/Materials/Architecture_Mineral.mat",
+            "status": "REUSED - GraphicsPolishV2",
+            "family": "ARQUITECTURA",
+            "application": "Paredes y revestimientos",
+            "shader": "Universal Render Pipeline/Lit",
+            "baseTexture": "",
+            "smoothness": 0.07999999821186066,
+            "metallic": 0.0,
+            "color": {
+                "r": 0.6000000238418579,
+                "g": 0.6399999260902405,
+                "b": 0.6599999666213989,
+                "a": 1.0
+            }
+        },
+        {
+            "name": "Architecture_CarpetSlate",
+            "path": "Assets/_Project/OfficeVisual/GraphicsPolishV2/Materials/Architecture_CarpetSlate.mat",
+            "status": "REUSED - GraphicsPolishV2",
+            "family": "ARQUITECTURA",
+            "application": "Suelo de puestos",
+            "shader": "Universal Render Pipeline/Lit",
+            "baseTexture": "Assets/_Project/OfficeVisual/VisualPolish/Textures/Carpet_Tile_256.png",
+            "smoothness": 0.014999999664723874,
+            "metallic": 0.0,
+            "color": {
+                "r": 0.2849999666213989,
+                "g": 0.32999998331069949,
+                "b": 0.3699999749660492,
+                "a": 1.0
+            }
+        }
+    ],
+    "studioMaterial": "Assets/_Project/MaterialLibrary/Materials/Studio_NeutralGrey_Matte.mat",
+    "studioStatus": "NEW - neutral calibration only"
+}

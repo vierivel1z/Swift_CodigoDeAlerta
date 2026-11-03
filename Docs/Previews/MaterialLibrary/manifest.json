@@ -1,0 +1,53 @@
+{
+  "utc": "2026-11-03T19:37:20.253618+00:00",
+  "unity": "6000.3.24f1",
+  "urp": "17.3.0",
+  "scene": "Assets/_Project/MaterialLibrary/Showcase/MaterialLibrary_Studio.unity",
+  "sceneSha256": "e129baff40b4b8cc6bbdcebe653cdcf0c79b59e7b54d4291cdb161c428bcc4f9",
+  "editorOnly": true,
+  "androidTested": false,
+  "captures": [
+    {
+      "path": "00-catalogo.png",
+      "sha256": "ff9166c9dd165cf381d5e152962849a6aa1454559b420a989530ef09e3660d9d",
+      "bytes": 338012
+    },
+    {
+      "path": "01-madera.png",
+      "sha256": "4f786cc6f615240968321f3cf788256a86f83e84be6e59b0bd9b321dcd1a4c28",
+      "bytes": 378452
+    },
+    {
+      "path": "02-plastico.png",
+      "sha256": "01a9eeb8d942f8fd3e988446f6094394e7eade84d21aeb2b9ebe264eebe56832",
+      "bytes": 247687
+    },
+    {
+      "path": "03-metal-pintado.png",
+      "sha256": "934ec82363736f26c9b2b5017962f0954aeeaaf9e18f597a3f302e6d15e2400d",
+      "bytes": 304288
+    },
+    {
+      "path": "04-tela.png",
+      "sha256": "b00d006ce4277257963d2dee5224ac35daf675177c0c8998169a441f2b14e8f5",
+      "bytes": 413535
+    },
+    {
+      "path": "05-papel.png",
+      "sha256": "35e4a20d0378585fb6c2e02d86bc44b138ecef894f6ddc5f589f2f084d8ff19c",
+      "bytes": 337632
+    },
+    {
+      "path": "06-arquitectura.png",
+      "sha256": "dfad1a350ee702816939c84ec79e443b040743e4520bbdf3a6c28510c5250542",
+      "bytes": 377463
+    }
+  ],
+  "integrity": {
+    "protectedFiles": 1058,
+    "modifiedExistingFiles": [],
+    "missingNewMetas": [],
+    "mainSceneSha256": "5ef111e123d32c543a9adf488a69ed45f83f417957fa49bcbaed0870beb0865a"
+  },
+  "validation": "PASS reopen 2026-11-03T19:36:49.5127810Z Unity=6000.3.24f1 EDITOR ONLY; ANDROID NOT TESTED"
+}
