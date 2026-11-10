@@ -1,0 +1,13 @@
+{
+  "platform": "Unity Editor/PC; Android NOT TESTED",
+  "results": {
+    "review": "PASS review 2026-11-02T21:47:16.5116389Z errors=0 Editor only; Android NOT TESTED",
+    "flow": "PASS flow 2026-11-02T21:45:04.1170971Z Editor only; Android NOT TESTED",
+    "office": "PASS office 2026-11-02T21:47:37.6608674Z Editor only; Android NOT TESTED",
+    "smoke": "PASS smoke 2026-11-02T21:49:38.8988025Z Editor only; Android NOT TESTED",
+    "bake": "PASS bake 2026-11-02T21:32:05.6151467Z errors=0 Editor only; Android NOT TESTED",
+    "after": "PASS after 2026-11-02T21:54:24.0170222Z errors=0 Editor only; Android NOT TESTED",
+    "legacy-validation": "PASS legacy-validation 2026-11-02T21:53:45.7400429Z errors=0 Editor only; Android NOT TESTED",
+    "domain": "PASS six unique fictional records\r\nPASS legitimate approves\r\nPASS missing intermediary returns\r\nPASS risk requires review\r\nPASS alert match can be legitimate\r\nPASS cannot finish incomplete turn\r\nPASS attack cannot enable defense\r\nPASS evidence deduplicates\r\nPASS blank evidence rejected\r\nPASS attack decision SIM-001\r\nPASS attack decision SIM-002\r\nPASS attack decision SIM-003\r\nPASS attack decision SIM-004\r\nPASS attack decision SIM-005\r\nPASS attack decision SIM-006\r\nPASS simulated loss tracked separately from historical totals\r\nPASS finished turn immutable\r\nPASS defense enables once\r\nPASS controls prevent simulated fraudulent approvals\r\nPASS controls preserve legitimate approval\r\nPASS controls distinguish format\r\nPASS alert held without confirming fraud\r\nPASS defense can finish\r\nPASS recommended decisions score correctly\r\nPASS source data unmodified by sessions\r\nPASS invalid decision rejected without advancing\r\nPASS historical summary remains fixed\r\nTOTAL 27 checks passed\r\n"
+  }
+}

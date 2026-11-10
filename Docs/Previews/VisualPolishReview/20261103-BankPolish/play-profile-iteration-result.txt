@@ -1,0 +1,3 @@
+FAIL play 2026-11-03T18:34:22.8179368Z System.IndexOutOfRangeException: Index was outside the bounds of the array.
+  at Swift.EditorTools.VisualPolishReview+<Play>d__55.MoveNext () [0x00774] in D:\UnityGames\SWIFT_CodigoDeAlerta\Assets\_Project\Editor\VisualPolishReview.cs:236 
+  at Swift.EditorTools.VisualPolishReview.Tick () [0x0001e] in D:\UnityGames\SWIFT_CodigoDeAlerta\Assets\_Project\Editor\VisualPolishReview.cs:30  EDITOR ONLY; ANDROID NOT TESTED

@@ -1,0 +1,102 @@
+{
+  "unity": "6000.3.24f1",
+  "renderer": "Existing URP 17.3.0, DX11 Editor, Android target",
+  "physical_android_test": false,
+  "resolution": [
+    1600,
+    900
+  ],
+  "comparison_pairs": [
+    {
+      "image": "01-idle-main.png",
+      "same_pose": true,
+      "before": {
+        "unity": "6000.3.24f1",
+        "eye": "(1.60, 1.60, -0.65)",
+        "forward": "(-0.57, -0.02, 0.82)"
+      },
+      "after": {
+        "unity": "6000.3.24f1",
+        "eye": "(1.60, 1.60, -0.65)",
+        "forward": "(-0.57, -0.02, 0.82)"
+      },
+      "size": [
+        1600,
+        900
+      ],
+      "aspect": "16:9",
+      "fieldOfView": 60
+    },
+    {
+      "image": "02-active-main.png",
+      "same_pose": true,
+      "before": {
+        "unity": "6000.3.24f1",
+        "eye": "(0.00, 1.25, 0.05)",
+        "forward": "(0.00, 0.17, 0.99)"
+      },
+      "after": {
+        "unity": "6000.3.24f1",
+        "eye": "(0.00, 1.25, 0.05)",
+        "forward": "(0.00, 0.17, 0.99)"
+      },
+      "size": [
+        1600,
+        900
+      ],
+      "aspect": "16:9",
+      "fieldOfView": 60
+    },
+    {
+      "image": "03-active-secondary.png",
+      "same_pose": true,
+      "before": {
+        "unity": "6000.3.24f1",
+        "eye": "(0.00, 1.25, 0.05)",
+        "forward": "(0.77, 0.11, 0.62)"
+      },
+      "after": {
+        "unity": "6000.3.24f1",
+        "eye": "(0.00, 1.25, 0.05)",
+        "forward": "(0.77, 0.11, 0.62)"
+      },
+      "size": [
+        1600,
+        900
+      ],
+      "aspect": "16:9",
+      "fieldOfView": 60
+    },
+    {
+      "image": "04-idle-secondary.png",
+      "same_pose": true,
+      "before": {
+        "unity": "6000.3.24f1",
+        "eye": "(1.60, 1.60, -0.65)",
+        "forward": "(-0.02, -0.06, 1.00)"
+      },
+      "after": {
+        "unity": "6000.3.24f1",
+        "eye": "(1.60, 1.60, -0.65)",
+        "forward": "(-0.02, -0.06, 1.00)"
+      },
+      "size": [
+        1600,
+        900
+      ],
+      "aspect": "16:9",
+      "fieldOfView": 60
+    }
+  ],
+  "results": {
+    "after-result": "PASS after 2026-11-04T13:27:02.0753400Z",
+    "before-result": "PASS before 2026-11-04T13:14:29.5678860Z",
+    "flow-result": "PASS flow 2026-11-04T13:21:12.2871832Z",
+    "office-result": "PASS office 2026-11-04T13:21:22.7745340Z",
+    "review-result": "PASS review 2026-11-04T13:27:49.8838602Z",
+    "smoke-result": "PASS smoke 2026-11-04T13:21:31.5506827Z",
+    "stationpc-result": "PASS stationpc 2026-11-04T13:28:02.1450767Z"
+  },
+  "protected_identical": 49,
+  "backup": "D:\\UnityGames\\SWIFT_Backups\\StationRefinement-20261104-080938"
+}

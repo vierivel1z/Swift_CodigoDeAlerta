@@ -1,0 +1,22 @@
+Platform=Android quality=PC Aniso=ForceEnable
+Active RP=Assets/Settings/PC_RPAsset.asset
+Graphics default=Assets/Settings/PC_RPAsset.asset
+Lightmaps=1 probes=81
+Key light Realtime 0.65
+Baked ceiling light 1 Baked 18
+Baked ceiling light 2 Baked 18
+Baked ceiling light 3 Baked 18
+Baked ceiling light 4 Baked 18
+Baked ceiling light 5 Baked 18
+Baked ceiling light 6 Baked 18
+Baked inspection soft fill Baked 16
+Rear baked ceiling 0 Baked 14
+Rear baked ceiling 1 Baked 14
+Reception baked luminaire 0 Baked 14
+Reception baked luminaire 1 Baked 14
+Baked analyst task light Baked 4
+Cubicle 1 warm work light Baked 2.2
+Cubicle 2 warm work light Baked 2.2
+Cubicle 3 warm work light Baked 2.2
+Cubicle 4 warm work light Baked 2.2
+Supervision work light Baked 3

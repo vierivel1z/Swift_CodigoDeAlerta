@@ -1,0 +1,20 @@
+{
+  "01-standing-desktop.png": "81033a6948630cca0705713b8299f156cf931d3be1ca12ca15d3593bc0cfd1aa",
+  "02-monitor-focused.png": "e12e337565bd86716e715c104970442f62b9435c41c25fbfed100ed1cbfd5c84",
+  "03-entry-half.png": "02046bd8f2f520402fa9a2ce9a2dc63a234a1a025b2f19c98949dcc63c3f2dd1",
+  "04-seated-expediente.png": "739e43293a54b8be060fef01471dd3cce7b84eadf16c2b13c36d57aa66a77923",
+  "04b-expediente.png": "666b129bad7c2c5ffb550708874e231085076efb6d93ba00c64744bff3797afe",
+  "05-registro.png": "8531fcedc92f76f688528d586154aaa7832b43a591eabe357f1b3084a74a40cb",
+  "06-alertas.png": "34b90c826bf84d42ae1ee0ccb3afb1eb7ba179f8221a21a4f0cd1e9e0f1e8e0c",
+  "07-procedimiento.png": "a7e26106b3bf66c618c0a1f28f2c0bf7d93803502fc6b05371257520d2913b3b",
+  "08-observaciones.png": "c8714d16ed5eb328e6af33edfa8074c0dbc06c68de27ba6c4f2470a5a6986a9d",
+  "09-exit-focused.png": "0f68e99b44abfe83a3a7dd63ab06d95adeb70e984100161b0d71754bc2e8fbad",
+  "10-after-exit.png": "124943fe01cf5cc8f6cafa69e1c21ddb5f602be4874c94250d9591e1e9bba192",
+  "11-secondary-monitor.png": "0d106f0e3ee83111eecf7e6725e6ad8614902c16a65526f5a126023cc159e95f",
+  "12-results.png": "67da4d8a481f3fded80d94799c02fb68cf39024084d24fb903c104296d2f71db",
+  "13-registro-cuenta-no-encontrada.png": "4c21203340e349fe070625ae4055e1c27e6c114cdb8debe3a3d557c912735cfa",
+  "14-monitor-spill-off.png": "910825cb146aa2fee4ec115e208eb6dfafbf0c3c384ecce85ec07e93a5c7f97f",
+  "15-monitor-spill-on.png": "81033a6948630cca0705713b8299f156cf931d3be1ca12ca15d3593bc0cfd1aa",
+  "16-standing-actual-exploration.png": "c4c8f39e9be1c8260c8b22744b169c46f181c324411bd0d61dc2ed51afc2d36d",
+  "17-monitor-focus-actual-gaze.png": "9a113917592623a7a74e8eb726ed31a5462021e464b81dfc3fed1474d98bbfc3"
+}

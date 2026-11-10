@@ -1,0 +1,288 @@
+{
+  "generatedUtc": "2026-11-03T19:19:25.584184+00:00",
+  "unity": "6000.3.24f1",
+  "urp": "17.3.0",
+  "scene": "Assets/_Project/Scenes/Review/BancoCorresponsal_GraphicsV2.unity",
+  "sceneSha256": "585407af780fe6180f5e4ee76c9ddd6b83612814190cd2ed9a3c27f54c15a738",
+  "mainSceneSha256": "5ef111e123d32c543a9adf488a69ed45f83f417957fa49bcbaed0870beb0865a",
+  "mainUnchanged": true,
+  "camera": "1600x900, vertical FOV60; identical Before/After, except orthographic top view size11",
+  "platform": "Unity Editor DX11; not Android VR",
+  "files": [
+    {
+      "path": "After/01-entrada.png",
+      "sha256": "9cc2ada13f4f5ac29b161ce22704892f8e95dc1b404392c95c85b89b9ca72df7",
+      "bytes": 674234,
+      "modifiedUtc": "2026-11-03T19:11:26.590617+00:00"
+    },
+    {
+      "path": "After/02-general.png",
+      "sha256": "d9e2c0b4bc48f9e3aa9229dd078889829aa55c435cc6c6af0785268399300190",
+      "bytes": 864973,
+      "modifiedUtc": "2026-11-03T19:11:26.734255+00:00"
+    },
+    {
+      "path": "After/03-cubiculos.png",
+      "sha256": "393c2567d15af2564b11aebf6b4581f7d6c280c97e17016f6472cfe16c4c409d",
+      "bytes": 774950,
+      "modifiedUtc": "2026-11-03T19:11:26.858885+00:00"
+    },
+    {
+      "path": "After/04-puesto.png",
+      "sha256": "3c32711f65a3865d769b73e2e080de17279520ab2caa3260c86cb103a14ab2ab",
+      "bytes": 830510,
+      "modifiedUtc": "2026-11-03T19:11:26.977509+00:00"
+    },
+    {
+      "path": "After/05-documentacion.png",
+      "sha256": "f7296819e2630fdecc5e8340e8c4010091b1dade0ea5400b61c0c7694906ff0e",
+      "bytes": 681343,
+      "modifiedUtc": "2026-11-03T19:11:27.094667+00:00"
+    },
+    {
+      "path": "After/06-supervision.png",
+      "sha256": "a23b7d33dcd2a64fdadcc2e24a697503717e33674b26fdeaf5926d9e5ad8841c",
+      "bytes": 713295,
+      "modifiedUtc": "2026-11-03T19:11:27.216260+00:00"
+    },
+    {
+      "path": "After/07-nocturna.png",
+      "sha256": "6a262abd0df77778cd69659463e1aca131f87047d281b9615a1d4684f94951c3",
+      "bytes": 744354,
+      "modifiedUtc": "2026-11-03T19:11:27.322620+00:00"
+    },
+    {
+      "path": "After/08-planta.png",
+      "sha256": "9f9df9d0bc709eb7e8c0bfceba5e137b72b4d295663cc0c5470f5d4e79b56774",
+      "bytes": 422212,
+      "modifiedUtc": "2026-11-03T19:11:27.442446+00:00"
+    },
+    {
+      "path": "Architecture/01-entrada.png",
+      "sha256": "8936f7797dcae4ef067444085621dc30138aa001025b5fc3c3bc136a62840587",
+      "bytes": 683570,
+      "modifiedUtc": "2026-11-03T19:04:18.478244+00:00"
+    },
+    {
+      "path": "Architecture/02-general.png",
+      "sha256": "233c955778459226ec2a55539c27b01e50fc6d7b45ff478a42b044bb2afc4ba7",
+      "bytes": 855423,
+      "modifiedUtc": "2026-11-03T19:04:18.609242+00:00"
+    },
+    {
+      "path": "Architecture/03-cubiculos.png",
+      "sha256": "47e82d5956e56bfd48d69c08ae367094ddd22d188d2c15db3d94ecd1be5e6e46",
+      "bytes": 760857,
+      "modifiedUtc": "2026-11-03T19:04:18.715243+00:00"
+    },
+    {
+      "path": "Architecture/04-puesto.png",
+      "sha256": "10a518ac4c153fed5b025c94ea5828defbbd86915e12312cd1c1d6efca52e784",
+      "bytes": 836843,
+      "modifiedUtc": "2026-11-03T19:04:18.837783+00:00"
+    },
+    {
+      "path": "Architecture/05-documentacion.png",
+      "sha256": "76f82ca395c2fbbe5c1f8da8ebdc36057b907954e3d047ae09f3ef3e2905342a",
+      "bytes": 688798,
+      "modifiedUtc": "2026-11-03T19:04:18.958293+00:00"
+    },
+    {
+      "path": "Architecture/06-supervision.png",
+      "sha256": "4ce3361ded4a59dc25d2fdf67ca9bd4743352cfdac2bc04f6995d8806c241e74",
+      "bytes": 706099,
+      "modifiedUtc": "2026-11-03T19:04:19.073293+00:00"
+    },
+    {
+      "path": "Architecture/07-nocturna.png",
+      "sha256": "fdd588cf36ffcfa2585ada3705a8625174c0a6c52178c9ef0a8566507902f799",
+      "bytes": 769651,
+      "modifiedUtc": "2026-11-03T19:04:19.178296+00:00"
+    },
+    {
+      "path": "Architecture/08-planta.png",
+      "sha256": "bd5552bb982dd5c6466c403ee0566490349366e6114447d5f107629fdb4a1970",
+      "bytes": 409231,
+      "modifiedUtc": "2026-11-03T19:04:19.262296+00:00"
+    },
+    {
+      "path": "Before/01-entrada.png",
+      "sha256": "b1056b3e524565363f6573485e854fcf4ab2440cc5d9696f1841fef0360da5bb",
+      "bytes": 642783,
+      "modifiedUtc": "2026-11-03T19:03:16.118201+00:00"
+    },
+    {
+      "path": "Before/02-general.png",
+      "sha256": "4a571b954398560282cd405961d515fe4276dc0bcb1c31bd74c68ddd4378538b",
+      "bytes": 825747,
+      "modifiedUtc": "2026-11-03T19:03:16.247231+00:00"
+    },
+    {
+      "path": "Before/03-cubiculos.png",
+      "sha256": "20ade0e0690a27b990b2528d33be7e4d62f9e1c40afacddf2dc325cc0d3fcc84",
+      "bytes": 770730,
+      "modifiedUtc": "2026-11-03T19:03:16.372802+00:00"
+    },
+    {
+      "path": "Before/04-puesto.png",
+      "sha256": "2af160a4b9a0d6028dbbfea59d0ab65104e3a9e04b9f5066546a9bbd8f7b7149",
+      "bytes": 808209,
+      "modifiedUtc": "2026-11-03T19:03:16.482803+00:00"
+    },
+    {
+      "path": "Before/05-documentacion.png",
+      "sha256": "6e6816d8c3fda821392619ac81c0c6ac3d06f41777566771731a6930832ec8fa",
+      "bytes": 688840,
+      "modifiedUtc": "2026-11-03T19:03:16.605804+00:00"
+    },
+    {
+      "path": "Before/06-supervision.png",
+      "sha256": "0debe5d9f33cec7f422f220c72657b237bc5ed5b015927a6d6272e31fdb82d1a",
+      "bytes": 698446,
+      "modifiedUtc": "2026-11-03T19:03:16.713314+00:00"
+    },
+    {
+      "path": "Before/07-nocturna.png",
+      "sha256": "816332b0e3d8caac9cada605a8591ea50981f0a40e74da9996826bac166a6dfa",
+      "bytes": 725952,
+      "modifiedUtc": "2026-11-03T19:03:16.827826+00:00"
+    },
+    {
+      "path": "Before/08-planta.png",
+      "sha256": "64093a5fc987f83e3f36e9aac0be536e485d4ed1e71146fc237148b63d8bc76d",
+      "bytes": 409429,
+      "modifiedUtc": "2026-11-03T19:03:16.905825+00:00"
+    },
+    {
+      "path": "FunctionalDetails/05-analista-de-pie.png",
+      "sha256": "3b7d6a37b2d2ae2953fdf98e1a957c8dae24b07e5f4974b98ecf04db37acf426",
+      "bytes": 618314,
+      "modifiedUtc": "2026-11-03T19:13:07.880013+00:00"
+    },
+    {
+      "path": "FunctionalDetails/06-analista-sentado.png",
+      "sha256": "0e111c489ff352f15d2417918cfe2549f720a3914ef2fd51f9c686c2525c5d76",
+      "bytes": 617908,
+      "modifiedUtc": "2026-11-03T19:13:09.738432+00:00"
+    },
+    {
+      "path": "FunctionalDetails/07-monitor-principal.png",
+      "sha256": "243cfffdeb1a953124974af6bc8c789cf287113990112bd1b3f92a896c7c98e4",
+      "bytes": 462757,
+      "modifiedUtc": "2026-11-03T19:13:09.810432+00:00"
+    },
+    {
+      "path": "FunctionalDetails/08-consulta-libreta.png",
+      "sha256": "6bec804e1d289e417822f11a9bce96202aa38d87c509de84d3e2944468133377",
+      "bytes": 833810,
+      "modifiedUtc": "2026-11-03T19:13:09.903434+00:00"
+    },
+    {
+      "path": "FunctionalDetails/11-marcador-levantarse.png",
+      "sha256": "fad20b55fc202fc9b19cfc3fe4842569e78682628af3edf884ff61687848ba7c",
+      "bytes": 720277,
+      "modifiedUtc": "2026-11-03T19:13:09.985432+00:00"
+    },
+    {
+      "path": "Materials/01-entrada.png",
+      "sha256": "87abc72b540ffa281e5e54f825ed2a91b263418e1b0854fd3df28f34fff173cf",
+      "bytes": 670720,
+      "modifiedUtc": "2026-11-03T19:03:26.568541+00:00"
+    },
+    {
+      "path": "Materials/02-general.png",
+      "sha256": "fb9a70c48e0ed163f0a095d3773ab321e2166516a18abd4bed2a469606279291",
+      "bytes": 833126,
+      "modifiedUtc": "2026-11-03T19:03:26.676542+00:00"
+    },
+    {
+      "path": "Materials/03-cubiculos.png",
+      "sha256": "5e97707b37668a7da5e2f15541931e8c920600c8c73354388769d0d3cb8e9363",
+      "bytes": 752122,
+      "modifiedUtc": "2026-11-03T19:03:26.777542+00:00"
+    },
+    {
+      "path": "Materials/04-puesto.png",
+      "sha256": "44b4256656dfe069cb35845d0a5b691c026c9bd6a0ba6a4bbe2d99a6acc4df12",
+      "bytes": 824711,
+      "modifiedUtc": "2026-11-03T19:03:26.878542+00:00"
+    },
+    {
+      "path": "Materials/05-documentacion.png",
+      "sha256": "2ba214bb73fe10a4502d01df7b27d6b9a168e08f497830bd9f124aba4a2dee96",
+      "bytes": 678174,
+      "modifiedUtc": "2026-11-03T19:03:26.977543+00:00"
+    },
+    {
+      "path": "Materials/06-supervision.png",
+      "sha256": "4c1f546a88080b505d8ed90ff8dabcc3fdb2412c00854346c2ecad2a8e75ee81",
+      "bytes": 700081,
+      "modifiedUtc": "2026-11-03T19:03:27.076541+00:00"
+    },
+    {
+      "path": "Materials/07-nocturna.png",
+      "sha256": "b76195115a69fe8a5cda31f74c223da5228828e2beb5c39411934d24d2056a03",
+      "bytes": 745790,
+      "modifiedUtc": "2026-11-03T19:03:27.176542+00:00"
+    },
+    {
+      "path": "Materials/08-planta.png",
+      "sha256": "bdf403dcb2d2f3923fdc72901f5aec1ec81755f31b21e08b48cca400a2843c0f",
+      "bytes": 409620,
+      "modifiedUtc": "2026-11-03T19:03:27.260542+00:00"
+    },
+    {
+      "path": "Play/01-cierre-por-mirada.png",
+      "sha256": "b38e6e322ffc04de451f6b4e9eec9a377c85615396ad683db2c1eeb243953295",
+      "bytes": 738117,
+      "modifiedUtc": "2026-11-03T19:14:28.437372+00:00"
+    },
+    {
+      "path": "Play/02-supervision-terminal.png",
+      "sha256": "3df075e8723a84e8a9145727f4b2976c950d4f8de560a87f902d53342774e92b",
+      "bytes": 514160,
+      "modifiedUtc": "2026-11-03T19:14:28.522411+00:00"
+    },
+    {
+      "path": "Play/03-puesto-de-pie.png",
+      "sha256": "c4c4cc28a52d01c278de478ad7114b882e31f5138d0a9e49ae14aa8264060b2a",
+      "bytes": 537919,
+      "modifiedUtc": "2026-11-03T19:14:28.613545+00:00"
+    },
+    {
+      "path": "Play/04-puesto-sentado.png",
+      "sha256": "e5d4927a0556fd7922698edb2eedfd2561840edfed0fb9918d4212241c90b88e",
+      "bytes": 484905,
+      "modifiedUtc": "2026-11-03T19:14:28.918064+00:00"
+    },
+    {
+      "path": "Play/05-libreta-teclado.png",
+      "sha256": "ad0b954b625fb2b7a6d4efe1969b9a8071307a14ce479a6142013503aace775c",
+      "bytes": 587413,
+      "modifiedUtc": "2026-11-03T19:14:28.997055+00:00"
+    },
+    {
+      "path": "Play/06-monitor-centrado.png",
+      "sha256": "7d19418ed7d2fd7528e7e0bdf76c694296dbc487b3ec59847ee3adc816f9b313",
+      "bytes": 422472,
+      "modifiedUtc": "2026-11-03T19:14:29.067083+00:00"
+    },
+    {
+      "path": "Profiles/Mobile-same-camera.png",
+      "sha256": "fdb10d460dd04988d552c7a99d3951e635984d8a0e8663102a7d0a6d72045dd8",
+      "bytes": 422472,
+      "modifiedUtc": "2026-11-03T19:14:29.393371+00:00"
+    },
+    {
+      "path": "Profiles/PC-same-camera.png",
+      "sha256": "c3f9c4428b38cab38b28428f0516c217d303ce85cb3ca907ab8017fe0fa495bf",
+      "bytes": 488382,
+      "modifiedUtc": "2026-11-03T19:14:29.289370+00:00"
+    }
+  ],
+  "integrity": {
+    "baselineFiles": 995,
+    "modifiedExistingFiles": [],
+    "missingExistingFiles": []
+  }
+}

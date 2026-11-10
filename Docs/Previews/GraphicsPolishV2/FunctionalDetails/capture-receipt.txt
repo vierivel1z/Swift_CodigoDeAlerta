@@ -1,0 +1,10 @@
+2026-11-03T19:07:06.9351881Z 05-analista-de-pie.png Unity=6000.3.24f1 Play=True Android=NOT_TESTED
+2026-11-03T19:07:08.7942610Z 06-analista-sentado.png Unity=6000.3.24f1 Play=True Android=NOT_TESTED
+2026-11-03T19:07:08.8712616Z 07-monitor-principal.png Unity=6000.3.24f1 Play=True Android=NOT_TESTED
+2026-11-03T19:07:08.9577712Z 08-consulta-libreta.png Unity=6000.3.24f1 Play=True Android=NOT_TESTED
+2026-11-03T19:07:09.0432830Z 11-marcador-levantarse.png Unity=6000.3.24f1 Play=True Android=NOT_TESTED
+2026-11-03T19:13:07.8820067Z 05-analista-de-pie.png Unity=6000.3.24f1 Play=True Android=NOT_TESTED
+2026-11-03T19:13:09.7384322Z 06-analista-sentado.png Unity=6000.3.24f1 Play=True Android=NOT_TESTED
+2026-11-03T19:13:09.8104322Z 07-monitor-principal.png Unity=6000.3.24f1 Play=True Android=NOT_TESTED
+2026-11-03T19:13:09.9034336Z 08-consulta-libreta.png Unity=6000.3.24f1 Play=True Android=NOT_TESTED
+2026-11-03T19:13:09.9864388Z 11-marcador-levantarse.png Unity=6000.3.24f1 Play=True Android=NOT_TESTED

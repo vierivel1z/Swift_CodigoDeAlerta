@@ -1,0 +1,14 @@
+Teleport Entry -> Teleport Inspection
+Teleport Inspection -> Teleport Evidence
+Teleport Inspection -> Teleport Security
+Teleport Inspection -> Teleport Cubicles West
+Teleport Evidence -> Teleport Entry
+Teleport Evidence -> Teleport Inspection
+Teleport Evidence -> Teleport Security
+Teleport Evidence -> Teleport Cubicles West
+Teleport Security -> Teleport Entry
+Teleport Security -> Teleport Evidence
+Teleport Security -> Teleport Cubicles West
+Teleport Cubicles West -> Teleport Security
+Teleport Cubicles West -> Teleport Cubicles East
+Teleport Cubicles East -> Teleport Cubicles West

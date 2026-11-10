@@ -1,0 +1,35 @@
+{
+  "utc": "2026-11-03T17:46:10.9206925Z",
+  "scene": "Assets/_Project/Scenes/BancoCorresponsal.unity",
+  "phase": "BeforeVisualPolish",
+  "circulationMethod": "0.25 m grid, body capsule radius 0.25 m from y=0.30 to y=1.60; teleport/seat markers ignored; prefab colliders conservatively count as occupied",
+  "drawCalls": "NOT MEASURED; Android profiling pending",
+  "floorCenter": {
+    "x": 0.0,
+    "y": -0.10000000149011612,
+    "z": 1.0
+  },
+  "floorSize": {
+    "x": 20.0,
+    "y": 0.20000000298023224,
+    "z": 18.0
+  },
+  "width": 20.0,
+  "length": 18.0,
+  "grossArea": 360.0,
+  "freeArea": 261.8125,
+  "entryConnectedArea": 260.4375,
+  "grid": 0.25,
+  "freeSamples": 4189,
+  "connectedSamples": 4167,
+  "meshRenderers": 270,
+  "meshMaterials": 45,
+  "teleports": 8,
+  "cubicles": 4,
+  "zones": 6,
+  "bakedLights": 12,
+  "realtimeLights": 1,
+  "lightmaps": 1,
+  "triangles": 27572,
+  "sourceSceneSha256": "09dd2a7fb51652c18aeb3b1ef0c0539a85b3f25a19b09b73ba749a6e737b54fd"
+}

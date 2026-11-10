@@ -34,7 +34,17 @@ namespace Swift.Testing
             yield return null; yield return null;
             // Let font geometry and render resources settle before camera captures.
             yield return new WaitForSecondsRealtime(1);
-            string result;
+            // Portal now shows a short confirmation AFTER the existing selection.
+            FindObjectsByType<BankInteractable>(FindObjectsSortMode.None).First(x=>x.Action==BankAction.Attack).Activate();
+            yield return new WaitForSecondsRealtime(.45f);
+            string result=null;
+            // Detailed banking controls now require the real workstation entry state.
+            var liveGame=FindFirstObjectByType<GameManager>();
+            bool portalStarted=liveGame!=null&&liveGame.IntroPlaying;
+            var workstation=FindFirstObjectByType<Swift.UI.OperationsStation>();
+            var chair=Swift.VR.AnalystSeat.Current;
+            if(workstation!=null&&portalStarted){liveGame.SkipIntro();if(chair!=null)chair.Request(true);float until=Time.realtimeSinceStartup+4;while(chair!=null&&chair.IsTransitioning&&Time.realtimeSinceStartup<until)yield return null;yield return null;}
+
             try{
                 var game=FindFirstObjectByType<GameManager>();
                 var targets=FindObjectsByType<BankInteractable>(FindObjectsSortMode.None);
@@ -43,8 +53,8 @@ namespace Swift.Testing
                 if(FindObjectsByType<Camera>(FindObjectsSortMode.None).Length!=1) throw new Exception("Expected one active player camera");
                 if(ui.PanelAnchor.GetComponentsInChildren<Canvas>().Length!=1) throw new Exception("Expected one serialized banking canvas");
                 if(FindObjectsByType<TextMeshProUGUI>(FindObjectsSortMode.None).Any(t=>t.font==null)) throw new Exception("Missing TMP font");
-                targets.First(x=>x.Action==BankAction.Attack).Activate();
-                if (!game.IntroPlaying) throw new Exception("Intro did not start from portal");
+                if (!portalStarted) throw new Exception("Intro did not start from portal");
+                if(workstation!=null&&(chair==null||!chair.IsSeated||!workstation.DetailedVisible))throw new Exception("Station must be seated before testing banking buttons");
                 game.SkipIntro();
                 if (game.IntroPlaying || game.Session == null) throw new Exception("Intro skip did not start selected mode");
                 // Decision buttons are inactive in the menu and become active after the portal.
@@ -82,6 +92,13 @@ namespace Swift.Testing
                 game.Decide(Decision.Approve);
                 if(game.Session.Transactions.Records[0].Status!=TransactionStatus.Approved) throw new Exception("Decision not recorded");
                 targets.First(x=>x.Action==BankAction.DefenseMode).Activate();
+            }catch(Exception ex){result="FAIL: "+ex;}
+            // Await the same presentation confirmation for the second mode as for the first.
+            yield return new WaitForSecondsRealtime(.45f);
+            if(workstation!=null&&chair!=null&&chair.IsSeated){chair.Request(false);float until=Time.realtimeSinceStartup+4;while(chair.IsTransitioning&&Time.realtimeSinceStartup<until)yield return null;yield return null;}
+            if(result==null)try{
+                var game=FindFirstObjectByType<GameManager>();
+                var targets=FindObjectsByType<BankInteractable>(FindObjectsSortMode.None);
                 targets.First(x=>x.Action==BankAction.Defense).Activate();
                 if(!game.Session.Defense.Active) throw new Exception("Security panel failed");
                 foreach(var pad in targets.Where(x=>x.Action==BankAction.Teleport)){pad.Activate();if(Vector3.Distance(pad.Player.position,pad.Destination)>.01f)throw new Exception("Teleport failed");}

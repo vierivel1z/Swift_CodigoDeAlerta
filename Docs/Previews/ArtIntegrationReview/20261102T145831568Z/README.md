@@ -2,7 +2,7 @@
 
 Unity 6000.3.24f1 / URP 17.3.0. Nueve renders reales a 1600 x 1000. Estados de Edicion y Play Mode diferenciados debajo. No son capturas Android ni estereoscopicas; no certifican rendimiento o confort.
 
-[Informe de integracion y archivos modificados](../../../Context/ART_INTEGRATION_REPORT.md). Datos, fechas y SHA256 en capture.json; posiciones y Play/Edicion en capture-receipt.txt.
+[Informe de integracion y archivos modificados](../../../Archive/2026-11-10/Context/ART_INTEGRATION_REPORT.md). Datos, fechas y SHA256 en capture.json; posiciones y Play/Edicion en capture-receipt.txt.
 
 Pruebas: 27 checks de dominio PASS; revision especifica de arte PASS; GameplayFlowProbe, BankOfficeProbe y PrototypeSmokeProbe ejecutadas de nuevo, todas PASS. Android/HONOR y aprobacion visual del usuario pendientes.
 

@@ -1,0 +1,4 @@
+FAIL play 2026-11-03T18:22:53.1311546Z System.Exception: 1.5-second closure gaze activates once and cannot close incomplete turn
+  at Swift.EditorTools.VisualPolishReview.Check (System.Boolean ok, System.String s) [0x00024] in D:\UnityGames\SWIFT_CodigoDeAlerta\Assets\_Project\Editor\VisualPolishReview.cs:28 
+  at Swift.EditorTools.VisualPolishReview+<Play>d__53.MoveNext () [0x002a8] in D:\UnityGames\SWIFT_CodigoDeAlerta\Assets\_Project\Editor\VisualPolishReview.cs:208 
+  at Swift.EditorTools.VisualPolishReview.Tick () [0x00007] in D:\UnityGames\SWIFT_CodigoDeAlerta\Assets\_Project\Editor\VisualPolishReview.cs:30  EDITOR ONLY; ANDROID NOT TESTED

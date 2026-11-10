@@ -141,7 +141,7 @@ GitHub Desktop creó durante la tarea un repositorio anidado con el commit inici
 
 ## Cierre del prototipo funcional — 2026-11-02 (estado posterior a PROJECT_STATUS_AUDIT)
 
-Se conserva todo el historial anterior. Informe: [FUNCTIONAL_PROTOTYPE_VALIDATION.md](FUNCTIONAL_PROTOTYPE_VALIDATION.md). Prueba física pendiente: [HONOR_TEST_CHECKLIST.md](HONOR_TEST_CHECKLIST.md).
+Se conserva todo el historial anterior. Informe: [FUNCTIONAL_PROTOTYPE_VALIDATION.md](../Archive/2026-11-10/Context/FUNCTIONAL_PROTOTYPE_VALIDATION.md). Prueba física pendiente: [HONOR_TEST_CHECKLIST.md](../Archive/2026-11-10/Context/HONOR_TEST_CHECKLIST.md).
 
 | ID | Estado vigente | Evidencia y alcance |
 |---|---|---|
@@ -163,7 +163,7 @@ Siguiente: N04, N07, N08 y N09 en el HONOR; después legibilidad/audio/rendimien
 
 - HECHO en Editor: expediente y registro reconstruidos con UI/TMP, seguidos de alertas existentes, cuatro pasos de procedimiento, resultados y contexto/créditos. Se usaron las cinco imágenes únicamente como referencias de composición.
 - HECHO en Editor: pruebas de la presentación sin desbordes/solapamientos de bloques, raycasts desde inspección, tres decisiones, consultas, anillo y activación de mirada a 1,5 s con bloqueo/rearme. Prólogo y cuatro teletransportes sin regresión observada. 27 checks de dominio PASS.
-- Evidencia: [DOCUMENT_UI_IMPLEMENTATION.md](DOCUMENT_UI_IMPLEMENTATION.md) y `Docs/Previews/DocumentUIReview/20261102T143810058Z/README.md`.
+- Evidencia: [DOCUMENT_UI_IMPLEMENTATION.md](../Archive/2026-11-10/Context/DOCUMENT_UI_IMPLEMENTATION.md) y `Docs/Previews/DocumentUIReview/20261102T143810058Z/README.md`.
 - PENDIENTE N03/K19 para este cambio: generar otra APK que incluya la UI nueva. La APK funcional documentada anteriormente sigue siendo válida como evidencia de aquella compilación, pero no contiene estos cambios posteriores.
 - PENDIENTE N04/N07–N09: instalar esa futura APK en HONOR; leer las cinco pantallas en ambos ojos, probar retícula/anillo/1,5 s y todas las pestañas/decisiones. Medir comodidad angular, FPS, memoria y temperatura.
 - PENDIENTE: aceptación visual del usuario y audio según ART_AUDIO_NEEDS.md. N05/K01 mantiene su bloqueo por material docente ausente. Sin commit/push.
@@ -173,7 +173,7 @@ Siguiente: N04, N07, N08 y N09 en el HONOR; después legibilidad/audio/rendimien
 - HECHO en Editor: único cuadro institucional mate en pared oeste, entre bienvenida y archivo, sin colliders ni cambios de mobiliario/teletransportes. Proporción original preservada.
 - HECHO en Editor: prólogo con los dos individuales de impresora y un render real del banco/UI actual como tercer momento; UV sin franjas de relleno, proporción conservada, fade suave, TMP y Omitir. Se mantienen 3 × 4 s, cámara libre e inicio único del modo seleccionado.
 - HECHO en Editor: revisión específica PASS, 27 checks de dominio PASS y nuevas ejecuciones PASS de GameplayFlowProbe, BankOfficeProbe y PrototypeSmokeProbe. Las aserciones de estas sondas se conservaron; solo se añadió una opción para evitar cerrar el Editor durante la revisión.
-- Evidencia: [ART_INTEGRATION_REPORT.md](ART_INTEGRATION_REPORT.md), `Docs/Previews/ArtIntegrationReview/20261102T145831568Z/README.md` y `Artifacts/ArtIntegrationReview/`.
+- Evidencia: [ART_INTEGRATION_REPORT.md](../Archive/2026-11-10/Context/ART_INTEGRATION_REPORT.md), `Docs/Previews/ArtIntegrationReview/20261102T145831568Z/README.md` y `Artifacts/ArtIntegrationReview/`.
 - PENDIENTE N03/K19: nueva APK con UI y artes actuales; no se compiló una APK durante esta tarea. La APK anterior permanece conservada.
 - PENDIENTE N04/N07–N09/N12/N18: HONOR/Cardboard, legibilidad y confort del prólogo/cuadro, mirada física de 1,5 s, inicio único, botones/recorrido y mediciones térmicas/rendimiento. Sin validación Android ni aprobación visual del usuario.
 - Recursos: no faltan imágenes imprescindibles; opcionales dos ilustraciones 16:9 sin relleno si se quiere más altura de imagen. Audio sigue como tarea separada. N05/K01 conserva su dependencia docente; sin commit, merge o push.
@@ -187,3 +187,141 @@ Siguiente: N04, N07, N08 y N09 en el HONOR; después legibilidad/audio/rendimien
 - N06/K03: conjunto revisado preparado para commit y push autorizados únicamente a feature/vr-visual-improvements. No se autoriza merge ni cambios en main; ver PULL_REQUEST_DRAFT.md y REPRODUCIBILITY.md.
 - Pendientes N03/K19 y N04/N07–N09: APK nueva y validación HONOR con UI/artes/UX actuales. Sustituir audios TEMP y comprobar confort/rendimiento. El bloqueo docente N05/K01 se conserva.
 - Evidencia: UX_GAMEPLAY_PROGRESS.md y Docs/Previews/UXGameplayReview/20261102T205325756Z/.
+
+## Rediseño inmersivo de oficina — 2026-11-02
+
+Se conserva el historial anterior. Rama local `review/environment-immersive`, base `1074fdd`. Esta nueva tarea no incluye commit, push ni merge.
+
+| Tarea | Estado vigente | Evidencia / límite |
+|---|---|---|
+| E01 Entorno y circulación | HECHO en Editor | 16 × 14 m, cuatro cubículos, zonas de impresión/archivo/seguridad, red de navegación validada |
+| E02 Consola de modos | HECHO en Editor | Dos acciones originales, foco/confirmación y selección por mirada de 1,5 s; prólogo preservado |
+| E03 Puesto y UI Propuesta C | HECHO en Editor | Monitor con marco proporcional, expediente documental, observaciones separadas, iconos nativos y decisiones alcanzables |
+| E04 Silla | HECHO en Editor | Sentarse/levantarse bajo fade, offset de pose compensado, rechazo de destino ocupado y bloqueo/restauración de pads |
+| E05 Consulta y libreta | HECHO en Editor | TMP de referencia/datos/alertas existentes; libreta abre procedimiento, sin cambiar expediente ni revelar decisión |
+| E06 Materiales e iluminación | HECHO en Editor | Familias compartidas y nuevo bake de tres lightmaps; URP/Cardboard intactos |
+| E07 Validación | PASS Editor | 27 dominio, flujo, oficina, smoke y revisión específica; ver recibos UTC de la galería |
+| E08 Exploración | HECHO en Editor | Cuatro destinos originales conservados y dos adicionales por el mismo sistema de mirada; retorno a entrada comprobado |
+| E09 / N03 / K19 APK actual | PENDIENTE | La APK anterior no contiene este rediseño; generar archivo nuevo |
+| E10 / N04 / N07–N09 / N12 HONOR | NO PROBADO | Estéreo, seguimiento, fundido binocular, poses, giro lateral, lectura, seis pads, ambos modos |
+| E11 / N18 Rendimiento | PENDIENTE dispositivo | Profiler/Frame Debugger, batches, memoria de lightmaps, FPS y temperatura; inventario geométrico no es benchmark |
+| E12 Recursos / aprobación | PENDIENTE | Audios finales y aceptación visual; no falta ningún modelo obligatorio. Texturas de roble/tejido opcionales |
+
+Informes: [ENVIRONMENT_REDESIGN_PROGRESS.md](../Archive/2026-11-10/Context/ENVIRONMENT_REDESIGN_PROGRESS.md) y [ENVIRONMENT_ASSET_NEEDS.md](ENVIRONMENT_ASSET_NEEDS.md). Galería: `Docs/Previews/EnvironmentRedesign/20261102T212047822Z/README.md`. El bloqueo docente N05/K01 se conserva.
+
+
+## Ampliaci?n arquitect?nica real ? 2026-11-03
+
+Se conserva el historial anterior; este registro actualiza E01?E12 para el estado de esta sesi?n.
+
+| Tarea | Estado | Evidencia / pendiente |
+|---|---|---|
+| EA01 Arquitectura | HECHO Editor | Suelo 16 ? 14 ? 20 ? 18 m; paredes/techo/entrada extendidos sin escalar muebles; +136 m? |
+| EA02 Circulaci?n | HECHO Editor | 140,625 ? 260,4375 m? conectados con entrada, c?psula/ret?cula id?nticas; cuatro cub?culos asim?tricos y seis zonas |
+| EA03 Consola | HECHO Editor | Carcasa s?lida baja e inclinada 25?, originales ATAQUE/DEFENSA y dwell/pr?logo preservados |
+| EA04 Puesto | HECHO Editor | UI horizontal 1400 ? 800, consulta derecha, libreta y silla; decisiones por raycast verificadas |
+| EA05 Navegaci?n | HECHO Editor | Cuatro destinos originales exactos + dos previos de cub?culos + Reception/Rear Gallery; clearance y retorno |
+| EA06 Luz | HECHO Editor | 12 baked + una realtime existente; bake renovado y 75 sondas para planta ampliada |
+| EA07 Validaci?n | PASS Editor | Dominio 27, flow/office/smoke, revisi?n espec?fica y capturas reales; ver informe/recibos finales |
+| EA08 Aceptaci?n visual | PENDIENTE usuario | Capturas revisadas; no equivalencia literal con referencias ni aceptaci?n autom?tica |
+| EA09 / N03 / K19 APK | PENDIENTE | Generar APK nueva con logs/hash sin sobrescribir la antigua |
+| EA10 / E10 HONOR | NO PROBADO | Ocho pads, lectura binocular, silla/fade, giro a consulta, pose/recenter y ambos modos |
+| EA11 / N18 Rendimiento | PENDIENTE Android | 27.572 tri?ngulos y 270 MeshRenderer activos son inventario, no FPS/draw calls |
+| EA12 Recursos | Sin modelo obligatorio | Texturas opcionales y audio final; especificaciones en ENVIRONMENT_ASSET_NEEDS |
+
+Informe: [EXPANDED_BANK_OFFICE_REPORT.md](../Archive/2026-11-10/Context/EXPANDED_BANK_OFFICE_REPORT.md). Galer?a real: `Docs/Previews/ExpandedBankOffice/20261103-OperationsRoom/README.md`. Sin commit/push/merge; main intacta. El bloqueo docente N05/K01 permanece.
+
+
+## Pulido art?stico profesional ? 2026-11-03
+
+Se conserva todo el historial anterior.
+
+| Tarea | Estado | Evidencia / l?mite |
+|---|---|---|
+| VP01 Orientaci?n y apoyos | HECHO Editor | Cinco sillas originales corregidas seg?n eje real; sexta de supervisi?n; monitores/teclados/archivo, macetas y libros apoyados |
+| VP02 Zonas y cierre | HECHO Editor | Recepci?n agrupada y terminal End integrada en escritorio; rechazo de turno incompleto y gaze/latch verificados |
+| VP03 Materiales/arquitectura | HECHO Editor | Familias reconocibles, cuatro texturas peque?as propias, remates y techo combinados; planta 20 ? 18 sin ampliar |
+| VP04 Luz | HECHO Editor | Bake final 17 baked + 1 realtime, 81 sondas y reflexi?n baked 128?; sin cambios URP/XR |
+| VP05 Navegaci?n | HECHO Editor | Ocho destinos/colliders conservados; aros con foco, sin temporizador nuevo; regreso/clearance |
+| VP06 Assets/licencias | REVISADO | AVAILABLE_3D_ASSETS: siete ZIP; cinco mallas duplicadas recuperables por fuente individual, 120 pendientes de licencia |
+| VP07 Validaci?n/capturas | PASS Editor | Dominio 27, flow/office/smoke/entorno y revisi?n espec?fica; galer?a Before/After/Play/Profiles |
+| VP08 Aceptaci?n art?stica | PENDIENTE usuario | Revisar comparaci?n real; no equivalencia literal con referencias |
+| VP09 APK/HONOR | NO EJECUTADO | APK nueva, lectura binocular, silla/fade/pose, aros, ambos modos y recenter |
+| VP10 Rendimiento | PENDIENTE Android | Contadores globales Editor y geometr?a no son perfilado del dispositivo; Frame Debugger/GPU/memoria/temperatura pendientes |
+
+Informe: VISUAL_POLISH_REPORT.md. Galer?a: Docs/Previews/VisualPolishReview/20261103-BankPolish/README.md. Sin commit/push/merge; main intacta. No hay modelos imprescindibles faltantes. Audio final y bloqueo docente N05/K01 conservan su estado.
+
+
+## Graphics Polish V2 ? 2026-11-03
+
+Se conserva todo el historial anterior. Revisi?n aislada por concurrencia sin confirmar; principal sin modificar.
+
+| Tarea | Estado | Evidencia / l?mite |
+|---|---|---|
+| GPV2-01 Materiales | HECHO en copia | 18 materiales compartidos; madera desaturada, metal, pl?stico, tela, papel y arquitectura |
+| GPV2-02 Remates | HECHO en copia | Techo 1,2 m, alf?izares, plintos, columnas y marco de entrada; misma planta 20 ? 18 |
+| GPV2-03 Luz y exterior | PASS Editor | 17 baked + 1 realtime, bake propio, ciudad opaca de bajo coste geom?trico |
+| GPV2-04 Capturas | HECHO | 45 PNG reales; siete parejas Before/After y UI Play, hashes y README |
+| GPV2-05 Funcionalidad | PASS Editor | Dominio 27/27, flow/office/smoke/entorno/Play V2, acciones/colliders/destinos id?nticos al origen |
+| GPV2-06 Integraci?n | PENDIENTE concurrencia | BancoCorresponsal_GraphicsV2 en Scenes/Review; principal byte por byte conservada; men? preparado con guard de hashes |
+| GPV2-07 Aceptaci?n visual | PENDIENTE usuario | Est?tica low-poly, aliasing y contraste por revisar; no equivalencia literal con referencia |
+| GPV2-08 APK / HONOR / rendimiento | NO EJECUTADO | Integrar, validar principal, compilar APK nueva y medir legibilidad, CPU/GPU, overdraw y temperatura |
+
+Informe: [GRAPHICS_POLISH_V2_REPORT.md](../Archive/2026-11-10/Context/GRAPHICS_POLISH_V2_REPORT.md). Galer?a: ../Previews/GraphicsPolishV2/README.md. No se cambian URP/Cardboard/reglas. Sin commit/push/merge. No requiere nuevos recursos obligatorios.
+
+
+## 2026-11-03 - Portal de operaciones / dwell real
+
+Se conserva el historial anterior. Rama review/portal-dwell-feedback; sin commit/push.
+
+| Tarea | Estado | Evidencia |
+|---|---|---|
+| PORTAL-01 Barras independientes conectadas al dwell | PASS Editor | Image.fillAmount = VRInteractionManager.DwellProgress; sin contador adicional |
+| PORTAL-02 Cancelar, cambiar tarjeta, latch y regreso | PASS Editor | Raycasts reales, 1.5 s, dos modos y teletransporte |
+| PORTAL-03 Presentacion y prefab modular | IMPLEMENTADO | Canvas/TMP, banco/escudo UI, marco y acciones originales; respaldo externo |
+| PORTAL-04 Capturas y regresion | PASS Editor | 0/50/100 %, DomainTests 27/27, GameplayFlowProbe, BankOfficeProbe, PrototypeSmokeProbe |
+| PORTAL-05 Aceptacion artistica y HONOR | PENDIENTE | Lectura binocular, comodidad y rendimiento; no APK en esta tarea |
+
+Informe: [PORTAL_OPERATIONS_REPORT.md](../Archive/2026-11-10/Context/PORTAL_OPERATIONS_REPORT.md). Capturas: ../Previews/PortalOperationsReview/README.md. Cierre nativo del Editor documentado; reapertura y pruebas finales satisfactorias.
+
+
+### 2026-11-03 - Correccion de carga uniforme del portal
+
+Fallo PC reproducido: hover acumulaba dwell oculto y el clic confirmaba antes de cargar. Corregido: mantener boton izquierdo 1.5 s en tarjetas; soltar/cambiar reinicia. Reticula y barra comparten contador. Mirada Cardboard conserva dwell; prologo limpia carga real. Escena y prefabs conservados. PASS Editor: regresion de raton, mirada, GameplayFlowProbe, BankOfficeProbe y PrototypeSmokeProbe. Capturas PC 0/49.204/0/100 en Docs/Previews/PortalOperationsReview/UniformFix-20261103. Informe: Docs/Context/PORTAL_UNIFORM_FILL_FIX.md. Respaldo: D:/UnityGames/SWIFT_Backups/PortalUniformFill-20261103-210524. HONOR pendiente. Sin commit/push.
+
+
+### 2026-11-03 - Prologo cercano con seguimiento de camara
+
+Corregido el storyboard fijo a 2.5 m que quedaba detras de la consola. Ahora: distancia preferida 1.1 m, acercamiento ante geometria, seguimiento de posicion y recentrado angular suave con margen para seleccionar Omitir. Canvas del portal oculto durante el prologo y restaurado al terminar. PASS Unity: giro 55 grados y desplazamiento, encuadre completo, TMP, consola cercana, omision con dwell real 1.5 s, flujo con final automatico, oficina y smoke. Cuatro capturas reales y hashes en Docs/Previews/IntroCameraFollow. Informe: Docs/Context/INTRO_CAMERA_FOLLOW_FIX.md. Escena y prefabs sin guardar ni modificar; cambios pendientes preservados. Respaldo: D:/UnityGames/SWIFT_Backups/IntroCameraFollow-20261103-213513. HONOR pendiente; sin APK, commit ni push.
+
+
+### 2026-11-03 - Afinado visual fuerte del portal
+
+Rama review/portal-dwell-feedback, sin commit/push. Marco recortado de doble borde cian y halo UI, cabecera SWIFT destacada, sello institucional, facetas y gradientes, iconos de mayor presencia, titulos/descripciones ampliados, modulos de ojo y barras redondeadas de 48 unidades. Mismos objetos de progreso, acciones, colliders y dwell. Etiqueta duplicada de reticula oculta solo en el portal; punto/anillo conservados. PASS Unity: visual/TMP, mirada, raton, activacion unica, flow, office y smoke. Ocho PNG reales con hashes: Docs/Previews/PortalVisualPolish/20261103. Referencia comparada: REF_Portal_Operations.png. Aproximacion de composicion, sin equivalencia literal ni aceptacion artistica final. Seis scripts core/interaccion y 25 ProjectSettings identicos al respaldo. Respaldo completo y copia de los cambios sin guardar del Editor: D:/UnityGames/SWIFT_Backups/PortalVisualPolish-20261103-224008. Informe: Docs/Context/PORTAL_VISUAL_POLISH.md. HONOR/Android, lectura binocular y rendimiento pendientes.
+
+
+### 2026-11-03 ? Afinado final del portal y pr?logo modal
+
+Faceta ?nica, iconos con contornos unidos, estados de foco/progreso/confirmaci?n m?s claros y l?nea inferior vinculada al mismo dwell. Pr?logo ampliado con marco institucional y omisi?n m?s legible; portal activo al 48 % detr?s del modal y restaurado al terminar. PASS Editor: mirada, rat?n, activaci?n ?nica, silla real, TMP de los tres momentos, omisi?n y final autom?tico, GameplayFlowProbe, BankOfficeProbe, PrototypeSmokeProbe. DomainTests 27/27. Capturas nuevas: Docs/Previews/PortalFinalReview/20261103. Informe: Docs/Context/PORTAL_FINAL_REVIEW.md. Respaldo: D:/UnityGames/SWIFT_Backups/PortalFinal-20261103-234535. Mismas reglas bancarias, URP y Cardboard; sin commit/push. Aceptaci?n visual del usuario y HONOR pendientes; sin APK.
+
+
+### 2026-11-04 - Estacion inmersiva y reposo activo de PC
+
+Implementados cuatro paneles bancarios con identidad compartida de REF_Operations_Expediente_Final, documento marfil, monto/observaciones, VER MAS/VOLVER y paginacion. Entrada contextual por el monitor, misma silla/fade, un SALIR DE ESTACION separado de CERRAR TURNO, pantallas detalladas ocultas de pie y teletransportes bloqueados sentado/restaurados al salir. Reentrada conserva sesion, expediente y pestana. Reposo corporativo en ambos monitores, UI luminosa y una luz real sin sombras (A/B comprobado). PASS Editor: ciclo completo por mirada y PC, cuatro pestanas, decisiones, textos, valores largos, paginacion, portal, GameplayFlowProbe, BankOfficeProbe y PrototypeSmokeProbe. DomainTests 27/27. Informe: Docs/Context/OPERATIONS_STATION_FINAL.md. Galeria: Docs/Previews/OperationsStationFinal/20261104. Respaldo: D:\UnityGames\SWIFT_Backups\OperationsStation-20261104-004925. 45 fuentes/ajustes protegidos identicos. Sin commit/push, APK no generada. Aceptacion artistica del usuario, lectura binocular, comodidad y rendimiento HONOR pendientes.
+
+
+### 2026-11-04 - Refinamiento visual de las tres pantallas
+
+Reposo principal con jerarquia centrada, una instruccion y cuatro apps contenidas; documento mas respirado con beneficiario/cuenta en columnas, monto compacto, observaciones reducidas y decisiones con acentos propios. Secundario organizado en tres tarjetas de apoyo; reposo secundario simplificado. Mismos estados, dwell, silla y reglas bancarias. PASS Editor: antes/despues con cuatro poses coincidentes, ciclo completo de mirada y PC, textos, decisiones, flow, office y smoke. 49 archivos protegidos identicos, incluida BancoCorresponsal. Informe: Docs/Context/STATION_VISUAL_REFINEMENT.md. Capturas: Docs/Previews/StationRefinement/20261104. Respaldo: D:\UnityGames\SWIFT_Backups\StationRefinement-20261104-080938. Sin commit/push/APK. Aceptacion visual y HONOR pendientes.
+
+### 2026-11-04 - Acabado institucional del expediente
+
+Aplicado papel gris frio, banda petroleo, campos agrupados con bordes discretos, monto crema/ambar y notas coherentes. Solo presentacion de Dossier en BankDocumentUI; fuentes y espacios conservados. PASS Editor final: captura comparativa con cuatro poses coincidentes, ciclo completo UI por mirada, decisiones ataque/defensa, TMP, valores largos y entrada/salida PC. Fallo inicial de espera conservado y repeticion completa PASS. Seis archivos protegidos con SHA identicos, incluida escena e interaccion. Informe: Docs/Context/DOSSIER_VISUAL_TREATMENT.md. Galeria: Docs/Previews/DossierTreatment/20261104. Respaldo: D:\UnityGames\SWIFT_Backups\DossierTreatment-20261104-114515. Sin commit/push/APK. HONOR y aceptacion visual pendientes.
+
+### 2026-11-10 — Herramientas inmersivas verificadas en Editor
+
+Integrados en BancoCorresponsal mediante perfil reversible: portapapeles TMP paginado y marcas manuales; teléfono de prueba exclusivo DEFENSA/SIM-003 con registro único/contexto seguro; documento de solo lectura; feedback de impresora/silla; nuevos cues en el gestor de audio existente; revisión posterior de elección original frente a estado efectivo y fuentes. Segundo monitor, reglas, URP y Cardboard conservados. Copia aislada y respaldo externo fechados, sin commit/push.
+
+PASS reales: DomainTests 27/27, DeskToolsTests 37/37; portapapeles 109, teléfono 88 y objetos 38 comprobaciones en principal; PC 14 y tutorial real 43 en copia aislada; GameplayFlowProbe, BankOfficeProbe, PrototypeSmokeProbe en arranques limpios de principal; revisión educativa 42. Historial de fallos corregidos e invalidación del primer recibo de tutorial conservados. No se equipara existencia de scripts con verificación.
+
+Android: PASS build Development IL2CPP/ARM64, 0 errores/1 aviso, APK nueva 67.526.759 bytes en Artifacts/ImmersiveGameplay/Build-20261110-083825; hash/logs guardados. HONOR, lectura binocular, pausa/tracking físico, FPS/calor y aceptación del usuario siguen NO PROBADOS. Guion SIM-003 y clips finales pendientes. Próximas prioridades: prueba física, aprobación editorial, integrar audio licenciado y medir rendimiento antes de ampliar mecánicas. Informe: Docs/Context/IMMERSIVE_AUTONOMOUS_PROGRESS.md. Matriz: IMMERSIVE_IMPLEMENTATION_TRACKER.md. Galería: Docs/Previews/ImmersiveGameplay/README.md.

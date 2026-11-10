@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using TMPro;
 using Swift.Interaction;
 namespace Swift.UI
@@ -59,16 +59,18 @@ namespace Swift.UI
             if(stage==null||gaze.View==null)return;
             stage.rotation=gaze.View.transform.rotation;
             bool focused=gaze.FocusedTarget!=null;
-            State=ConfirmationVisible?VisualState.Confirmed:focused&&gaze.IsGazeInput&&gaze.SelectionLatched?VisualState.Rearm:
-                focused?(gaze.IsGazeInput?VisualState.Filling:VisualState.Focus):VisualState.Idle;
+            State=ConfirmationVisible?VisualState.Confirmed:focused&&gaze.UsesDwellSelection&&gaze.SelectionLatched?VisualState.Rearm:
+                focused?(gaze.UsesDwellSelection?VisualState.Filling:VisualState.Focus):VisualState.Idle;
             bool visible=State!=VisualState.Idle;
-            track.SetActive(visible);border.SetActive(visible);arcObject.SetActive(visible&&State!=VisualState.Focus);hint.gameObject.SetActive(visible);
-            DisplayedProgress=focused&&gaze.IsGazeInput?gaze.DwellProgress:0;
+            track.SetActive(visible);border.SetActive(visible);arcObject.SetActive(visible&&State!=VisualState.Focus);// Mode cards already show the same instruction in their gaze module.
+            bool portalPrompt=focused&&(gaze.FocusedTarget.Action==BankAction.Attack||gaze.FocusedTarget.Action==BankAction.DefenseMode);
+            hint.gameObject.SetActive(visible&&!portalPrompt);
+            DisplayedProgress=focused&&gaze.UsesDwellSelection?gaze.DwellProgress:0;
             float progress=State==VisualState.Confirmed||State==VisualState.Rearm?1:DisplayedProgress;
             var color=State==VisualState.Confirmed?new Color(.25f,1,.55f):State==VisualState.Rearm?new Color(1,.76f,.22f):new Color(.15f,.95f,1);
             activeMaterial.SetColor("_BaseColor",color);
             hint.color=State==VisualState.Rearm?new Color(1,.87f,.5f):Color.white;
-            hint.text=State==VisualState.Confirmed?"SELECCION CONFIRMADA":State==VisualState.Rearm?"APARTA LA MIRADA":gaze.IsGazeInput?"MANTEN LA MIRADA":"CLIC PARA SELECCIONAR";
+            hint.text=State==VisualState.Confirmed?"SELECCION CONFIRMADA":State==VisualState.Rearm?"APARTA LA MIRADA":gaze.IsGazeInput?"MANTEN LA MIRADA":gaze.UsesDwellSelection?"MANTEN PULSADO":"CLIC PARA SELECCIONAR";
             if(visible&&!Mathf.Approximately(previousProgress,progress)) {
                 for(int i=0;i<=64;i++) {float a=(90-360*progress*i/64)*Mathf.Deg2Rad;var v=new Vector3(Mathf.Cos(a),Mathf.Sin(a),0);arcVertices[2*i]=v;arcVertices[2*i+1]=v*1.25f;}
                 arc.vertices=arcVertices;arc.RecalculateBounds();previousProgress=progress;

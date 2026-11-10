@@ -1,0 +1,86 @@
+{
+    "utc": "2026-11-10T08:37:54.5101348Z",
+    "scene": "Assets/_Project/Scenes/BancoCorresponsal.unity",
+    "sceneSha256": "df79b449b7071e793c2ab326bb1543a004fd90cdcf0b9b5fd11d077f78beb39a",
+    "dependencyHash": "08dc013cc8e168d102f685326e56147f",
+    "unity": "6000.3.24f1",
+    "pipeline": "Assets/Settings/PC_RPAsset.asset",
+    "pipelinePackage": "17.3.0",
+    "quality": "PC",
+    "graphicsDevice": "Direct3D11",
+    "note": "Real Editor render of saved scene; not a device/VR performance test. Ceiling hidden temporarily only in top view.",
+    "width": 1600,
+    "height": 1000,
+    "views": [
+        {
+            "file": "01-oficina.png",
+            "position": {
+                "x": 0.0,
+                "y": 2.6500000953674318,
+                "z": -4.5
+            },
+            "target": {
+                "x": 0.0,
+                "y": 1.100000023841858,
+                "z": 1.0
+            },
+            "fieldOfView": 85.0,
+            "orthographicSize": 0.0,
+            "hideCeiling": false
+        },
+        {
+            "file": "02-escritorio.png",
+            "position": {
+                "x": 1.899999976158142,
+                "y": 2.200000047683716,
+                "z": -0.8999999761581421
+            },
+            "target": {
+                "x": 0.0,
+                "y": 1.100000023841858,
+                "z": 1.600000023841858
+            },
+            "fieldOfView": 60.0,
+            "orthographicSize": 0.0,
+            "hideCeiling": false
+        },
+        {
+            "file": "03-computadora-expedientes.png",
+            "position": {
+                "x": -0.15000000596046449,
+                "y": 1.850000023841858,
+                "z": -0.30000001192092898
+            },
+            "target": {
+                "x": -0.15000000596046449,
+                "y": 1.399999976158142,
+                "z": 1.399999976158142
+            },
+            "fieldOfView": 65.0,
+            "orthographicSize": 0.0,
+            "hideCeiling": false
+        },
+        {
+            "file": "04-distribucion-superior.png",
+            "position": {
+                "x": 0.0,
+                "y": 12.0,
+                "z": 0.0
+            },
+            "target": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "fieldOfView": 60.0,
+            "orthographicSize": 5.699999809265137,
+            "hideCeiling": true
+        }
+    ],
+    "pngSha256": [
+        "050b0aefa45ee0bfe9d814cd6687517a379b4b445510d6406b065dcbbf91d7b6",
+        "10d7776187c3040c7aec3ce135fa249e78e0f1109292c5b5d2a8a9e8635b1ea3",
+        "c22ccd83c5941a44a6ea5b3c464fc6df565c08baefed317546fc76028780d94c",
+        "33b10ad2fe754e79fdc77bb98101c4207d655e5a9045e6fd05102ba3c0c8b2b2"
+    ]
+}

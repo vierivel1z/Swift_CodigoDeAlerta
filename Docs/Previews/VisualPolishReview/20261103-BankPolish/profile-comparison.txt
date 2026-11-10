@@ -1,0 +1,2 @@
+Profile=PC path=Assets/Settings/PC_RPAsset.asset renderScale=1 MSAA=1 shadow=2048 wholeEditorDrawCalls=351 batches=323 triangles=36280 NOT_ANDROID; includes Editor rendering, not isolated GPU cost
+Profile=Mobile path=Assets/Settings/Mobile_RPAsset.asset renderScale=0.8 MSAA=1 shadow=1024 wholeEditorDrawCalls=185 batches=171 triangles=19620 NOT_ANDROID; includes Editor rendering, not isolated GPU cost

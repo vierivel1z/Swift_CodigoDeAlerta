@@ -1,0 +1,38 @@
+{
+  "Packages": {
+    "checkedFiles": 2,
+    "changedSinceTaskBackup": []
+  },
+  "ProjectSettings": {
+    "checkedFiles": 25,
+    "changedSinceTaskBackup": []
+  },
+  "Assets/_Project/Scripts/Banking": {
+    "checkedFiles": 2,
+    "changedSinceTaskBackup": []
+  },
+  "Assets/_Project/Scripts/Core": {
+    "checkedFiles": 6,
+    "changedSinceTaskBackup": []
+  },
+  "Assets/_Project/Scripts/VR": {
+    "checkedFiles": 6,
+    "changedSinceTaskBackup": []
+  },
+  "Assets/_Project/Scripts/Interaction": {
+    "checkedFiles": 6,
+    "changedSinceTaskBackup": []
+  },
+  "Assets/_Project/Art": {
+    "checkedFiles": 28,
+    "changedSinceTaskBackup": []
+  },
+  "Assets/_Project/OfficeVisual/Prefabs": {
+    "checkedFiles": 30,
+    "changedSinceTaskBackup": []
+  },
+  "Assets/_Project/Scenes/BancoCorresponsal.unity.meta": {
+    "checkedFiles": 1,
+    "changedSinceTaskBackup": []
+  }
+}

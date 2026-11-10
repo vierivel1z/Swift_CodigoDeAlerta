@@ -11,6 +11,8 @@ namespace Swift.Game
         public long? LastAttackLoss { get; private set; }
         public long? LastDefenseLoss { get; private set; }
         public event Action Changed;
+        // Observation only; emitted after the unchanged domain accepts the decision.
+        public event Action<GameSession, TransactionRecord, Decision> DecisionCommitted;
         public bool IntroPlaying => GetComponent<IntroSequence>()?.IsPlaying == true;
         public void EnterScenario(ScenarioMode mode)
         {
@@ -27,7 +29,10 @@ namespace Swift.Game
         }
         public void Decide(Decision decision)
         {
+            var committingSession = Session;
+            var committingRecord = Session?.Transactions.Current;
             if (IntroPlaying || Session == null || !Session.Decide(decision)) { Notify("Inicia un turno o consulta resultados."); return; }
+            DecisionCommitted?.Invoke(committingSession, committingRecord, decision);
             var records = Session.Transactions.Records;
             var last = System.Linq.Enumerable.Last(records, x => x.Status != TransactionStatus.Pending);
             Notify(last.DefenseOverride ? "Control reforzado: operacion enviada a revision/formato." : last.CorrectDecision == true ? "Decision coherente con la evidencia disponible." : "Revisa los criterios: formato se devuelve; riesgo se retiene.");

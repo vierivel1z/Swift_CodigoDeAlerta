@@ -222,10 +222,10 @@ namespace Swift.EditorTools
             var bad=All<MeshRenderer>().Where(r=>r.gameObject.activeInHierarchy).SelectMany(r=>r.sharedMaterials).Where(m=>m==null||m.shader==null||m.shader.name=="Hidden/InternalErrorShader"||!m.shader.isSupported).ToArray();
             if(bad.Length!=0) throw new Exception("Unsupported/missing renderer materials: "+bad.Length);
             var actions=All<BankInteractable>().Where(x=>x.gameObject.activeInHierarchy).ToArray();
-            if(actions.Count(x=>x.Action==BankAction.Teleport)!=4) throw new Exception("Four teleport destinations required");
+            BankNavigationValidation.Check(actions);
             foreach(var action in new[]{BankAction.Inspect,BankAction.Registry,BankAction.Alerts,BankAction.Defense,BankAction.End}) if(!actions.Any(x=>x.Action==action)) throw new Exception("Missing action "+action);
             if(LightmapSettings.lightmaps.Length==0) throw new Exception("Lighting has not baked");
-            File.WriteAllText("Artifacts/LightingReview/validation.txt","PASS: renderer shaders, five interactions, four teleports, baked lightmaps="+LightmapSettings.lightmaps.Length+", prefabs="+Directory.GetFiles("Assets/_Project/UI/OperationsCenter/Prefabs","*.prefab").Length+". No Android measurement.");
+            File.WriteAllText("Artifacts/LightingReview/validation.txt","PASS: renderer shaders, five interactions, four original destinations preserved, total teleports="+actions.Count(x=>x.Action==BankAction.Teleport)+", baked lightmaps="+LightmapSettings.lightmaps.Length+", prefabs="+Directory.GetFiles("Assets/_Project/UI/OperationsCenter/Prefabs","*.prefab").Length+". No Android measurement.");
         }
         static SceneReviewCapture.View[] Views() => new[]
         {

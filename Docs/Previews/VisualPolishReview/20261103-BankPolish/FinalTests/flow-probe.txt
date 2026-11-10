@@ -1,0 +1,1 @@
+PASS: intro skip, full 12-second timed completion, both modes, comparison, button lifecycle and Approve/Return/Hold collider actions (6/6 correct). No hardware/visual certification.

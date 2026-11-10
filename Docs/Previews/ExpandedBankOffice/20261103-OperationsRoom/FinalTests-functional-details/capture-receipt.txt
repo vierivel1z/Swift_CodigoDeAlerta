@@ -1,0 +1,5 @@
+2026-11-03T17:44:22.0241643Z 05-analista-de-pie.png Unity=6000.3.24f1 Play=True Android=NOT_TESTED
+2026-11-03T17:44:24.0063822Z 06-analista-sentado.png Unity=6000.3.24f1 Play=True Android=NOT_TESTED
+2026-11-03T17:44:24.2254398Z 07-monitor-principal.png Unity=6000.3.24f1 Play=True Android=NOT_TESTED
+2026-11-03T17:44:24.3549763Z 08-consulta-libreta.png Unity=6000.3.24f1 Play=True Android=NOT_TESTED
+2026-11-03T17:44:24.4594901Z 11-marcador-levantarse.png Unity=6000.3.24f1 Play=True Android=NOT_TESTED

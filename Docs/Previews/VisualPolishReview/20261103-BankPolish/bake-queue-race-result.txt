@@ -1,0 +1,10 @@
+FAIL bake 2026-11-03T18:33:53.1046082Z System.IO.IOException: Sharing violation on path D:\UnityGames\SWIFT_CodigoDeAlerta\Artifacts\VisualPolish\command.txt
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x0019e] in <d49d4cb128564ee1b54a84338c98d353>:0 
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <d49d4cb128564ee1b54a84338c98d353>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, System.Boolean detectEncodingFromByteOrderMarks, System.Int32 bufferSize) [0x00055] in <d49d4cb128564ee1b54a84338c98d353>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, System.Boolean detectEncodingFromByteOrderMarks) [0x00000] in <d49d4cb128564ee1b54a84338c98d353>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader..ctor(string,System.Text.Encoding,bool)
+  at System.IO.File.InternalReadAllText (System.String path, System.Text.Encoding encoding) [0x00000] in <d49d4cb128564ee1b54a84338c98d353>:0 
+  at System.IO.File.ReadAllText (System.String path) [0x0002c] in <d49d4cb128564ee1b54a84338c98d353>:0 
+  at Swift.EditorTools.VisualPolishReview.Tick () [0x00064] in D:\UnityGames\SWIFT_CodigoDeAlerta\Assets\_Project\Editor\VisualPolishReview.cs:32  EDITOR ONLY; ANDROID NOT TESTED

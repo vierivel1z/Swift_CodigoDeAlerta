@@ -1,0 +1,22 @@
+{
+  "unity": "6000.3.24f1",
+  "platform": "Editor DX11 / Android target, NOT physical Cardboard",
+  "reference": "Assets/_Project/Art/References/REF_Operations_Expediente_Final.png",
+  "reference_sha256": "a5b1bfe25af04579513cdb39d67c94d42ae8242bf57cdd9117a065b23660cc04",
+  "backup": "D:\\UnityGames\\SWIFT_Backups\\OperationsStation-20261104-004925",
+  "results": {
+    "apply-result.txt": "PASS apply 2026-11-04T06:04:02.1093031Z ",
+    "flow-result.txt": "PASS flow 2026-11-04T06:11:30.9390925Z ",
+    "gaze-result.txt": "PASS gaze 2026-11-04T06:10:51.0417849Z ",
+    "inspect-result.txt": "PASS inspect 2026-11-04T05:58:30.7065729Z ",
+    "light-result.txt": "PASS light 2026-11-04T06:17:12.4149235Z ",
+    "office-result.txt": "PASS office 2026-11-04T06:11:44.4106077Z ",
+    "pc-result.txt": "PASS pc 2026-11-04T06:11:07.5965659Z ",
+    "review-result.txt": "PASS review 2026-11-04T06:18:02.9432782Z ",
+    "smoke-result.txt": "PASS smoke 2026-11-04T06:11:57.8826795Z ",
+    "stationpc-result.txt": "PASS stationpc 2026-11-04T06:16:58.3522977Z "
+  },
+  "domain": "27/27",
+  "captures": 18,
+  "protected_identical": 45
+}

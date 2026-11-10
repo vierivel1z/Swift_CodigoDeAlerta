@@ -1,0 +1,38 @@
+{
+  "after-normal-0.png": {
+    "sha256": "10da2ad502fa755a9515eb5594e3ec9a5778c9b5cffc2b3c7cf9caa8244d9aaa",
+    "bytes": 645117
+  },
+  "attack-100-confirmation.png": {
+    "sha256": "cf8b852d617d7ca3e3cda805a21845dc6405a467ab29aeb40f7bcacd5098725a",
+    "bytes": 605504
+  },
+  "attack-50.png": {
+    "sha256": "cac2dead55835db08d6cf7ecd0c9e513f5176a20e3d5fe0495da87fab3487116",
+    "bytes": 601125
+  },
+  "before.png": {
+    "sha256": "1ab4708f6efe3303b59b46cec15196e16553203c7d6448201d32ac5b16928677",
+    "bytes": 652238
+  },
+  "defense-100-confirmation.png": {
+    "sha256": "e5c29ce1d303627ce07cdf8d2ab03d3f964ef26328b662259afe05bf3a818bab",
+    "bytes": 601020
+  },
+  "defense-50.png": {
+    "sha256": "cdbd8eeeb482bec290c91bea0d51164ad6466d4b2250d684b2ed9d8885e9e3be",
+    "bytes": 601316
+  },
+  "initial-player.png": {
+    "sha256": "a8174fb0cea0945b5352d5501aba1d638de808594c0c6174cfc57cf064aedf14",
+    "bytes": 624030
+  },
+  "play-0.png": {
+    "sha256": "22044c9786589be112ceb46afeec37c2bdb3b04ad7789443cc501d4537eea147",
+    "bytes": 601495
+  },
+  "portal-reset-0.png": {
+    "sha256": "e9885f8725ab5fc4a759dbca914eacf3dd14fde98b26e266e39fd2bbe7409947",
+    "bytes": 606215
+  }
+}

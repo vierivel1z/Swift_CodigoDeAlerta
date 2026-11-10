@@ -1,3 +1,5 @@
+> **Documento histórico (28/10/2026).** Se conserva esta ruta por compatibilidad. Para el estado, pruebas y APK vigentes, consulta [el informe actual](IMMERSIVE_AUTONOMOUS_PROGRESS.md).
+
 # Oficina bancaria con modelos importados — 2026-10-28
 
 ## Construcción

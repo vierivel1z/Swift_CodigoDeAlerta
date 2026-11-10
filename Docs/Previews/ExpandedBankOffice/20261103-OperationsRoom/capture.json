@@ -1,0 +1,55 @@
+{
+  "utc": "2026-11-03T17:47:01.999836+00:00",
+  "unity": "6000.3.24f1",
+  "urp": "17.3.0",
+  "branch": "review/environment-immersive",
+  "baseCommit": "1074fdd313eac8220451f11559e6076ba4fb4e2c",
+  "uncommittedScene": true,
+  "androidTested": false,
+  "visualApproval": "PENDING USER",
+  "temporaryReviewCamera": {
+    "resolution": [
+      1600,
+      900
+    ],
+    "fov": 60,
+    "playerFovModified": false,
+    "stereo": false
+  },
+  "sources": {
+    "Assets/_Project/Scenes/BancoCorresponsal.unity": "09dd2a7fb51652c18aeb3b1ef0c0539a85b3f25a19b09b73ba749a6e737b54fd",
+    "Assets/_Project/Scripts/UI/BankDocumentUI.cs": "c32819354551c78b5e77249ae9e09593bb5fc497fc496040ddec74d1962e163d",
+    "Assets/_Project/Editor/ExpandedBankOffice.cs": "e11d09a06b34946a6e11a50ce950caa8ecb24298bcd1aada3017bf0be30fb693"
+  },
+  "captures": {
+    "01-planta-antes.png": "26fb3bc4eab9a6de7d11270d285d8a0e818001c0d3ddd4abdacbf3db2c44a422",
+    "02-planta-despues.png": "a78f5442428e199c4d2e0207dce9ff5b93027ad0f1e6f956b58e503595ea30e6",
+    "03-entrada-ampliada.png": "b7347e55bd2fff74bd6fabbb1db03a3e70b10bc13016ed88340e93cd7f74485a",
+    "03a-entrada-antes.png": "736403eab0d34da73ad13d03c3338fb4052d5481cf3fad0b343502cb602d477c",
+    "03b-entrada-misma-camara.png": "60584ccb4c22609ce63412a5bb5245875355a74c02fa0fb1eafbf335374b3af6",
+    "04-cubiculos.png": "7c024cb96314e3f881734a23909d73087fdc48126d132e6cdc2cf512cd5b984f",
+    "05-puesto-principal-de-pie.png": "8419b7791ca2d1ea2861012f289f54b1018a62fa8da46f26a3a633ddb8ff3b52",
+    "06-fondo-hacia-entrada.png": "c5df99838d9078c10a03b6cf0503f55d34be9807ae23087f001f82b28f84b3e6",
+    "07-consola-modos.png": "1acfdb1a6abdcf8063e5257bac691fde4fb206b1019243b4f87fa9a41bae202c",
+    "08-escritorio-sentado.png": "f4cb2264a16988d3ead18302d73be76abe2120ec556aead3712bb9e53d4c1c8d",
+    "09-iluminacion-general.png": "ef9e67ffb0afd611fd0b24f176bbc0a45e7a292b1035732daef27b74dae4f888",
+    "10-monitor-principal.png": "663175c7e6c850edee81212f20d494fc22417888571f6927912391804f786f4e",
+    "11-consulta-derecha.png": "8bd222fb34e8a67b460719a8df9d38696ffd46f1ec96341cacf98c086f741e4d",
+    "12-libreta-y-materiales.png": "3a6a0e8536c18569a9f2a3dd548ef2f0c5af675b5c9d75850e9528bd297730db",
+    "13-levantarse.png": "26302869d5f0a90ab8ca5381f238c4ee3a56c705820a975dc707a0ad405d87a0"
+  },
+  "lightingFiles": {
+    "Assets\\_Project\\Scenes\\BancoCorresponsal\\LightingData.asset": "eda27ab4cacda648bf82335c186a327aac85dbc856bd6e298ce3286e9edc356d",
+    "Assets\\_Project\\Scenes\\BancoCorresponsal\\LightingData.asset.meta": "4fe45a4690b7e3205c94c2f3386afce4801d309b0b9b7fdc681ce8cee99a8573",
+    "Assets\\_Project\\Scenes\\BancoCorresponsal\\Lightmap-0_comp_dir.png": "52edf9d0cdff073e4732b2adec29bfc254d4dae196c20cf2aad52d96da4cb616",
+    "Assets\\_Project\\Scenes\\BancoCorresponsal\\Lightmap-0_comp_dir.png.meta": "c58b53171a9a449cba57bf96031ff624c96a4f7c48627b633578a62dfef453d9",
+    "Assets\\_Project\\Scenes\\BancoCorresponsal\\Lightmap-0_comp_light.exr": "a52fe1206e18a598964b1eca0f16ff5c012ef4b5a650df4cb4d69d5d70f60d66",
+    "Assets\\_Project\\Scenes\\BancoCorresponsal\\Lightmap-0_comp_light.exr.meta": "24d77943400d1f04ef6aa0cff10d78a730ed82c4c34fb56509668a75cc81c4fd"
+  },
+  "tests": {
+    "flow": "PASS flow 2026-11-03T17:43:44.1440766Z Editor only; Android NOT TESTED",
+    "office": "PASS office 2026-11-03T17:43:57.4770968Z Editor only; Android NOT TESTED",
+    "smoke": "PASS smoke 2026-11-03T17:44:10.5369071Z Editor only; Android NOT TESTED",
+    "environment": "PASS review 2026-11-03T17:44:26.8432367Z errors=0 Editor only; Android NOT TESTED"
+  }
+}

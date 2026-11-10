@@ -1,0 +1,23 @@
+{
+    "utc": "2026-10-30T19:34:41.7092711Z",
+    "scene": "Assets/_Project/Scenes/BancoCorresponsal.unity",
+    "sceneSha256": "079f58cff327ecd33cb561dab8eba96235db81978bd58688fc48b740a947c767",
+    "unity": "6000.3.24f1",
+    "pipeline": "Assets/Settings/PC_RPAsset.asset",
+    "quality": "PC",
+    "files": [
+        "01-oficina.png",
+        "02-escritorio.png",
+        "03-computadora-expedientes.png",
+        "04-distribucion-superior.png",
+        "05-iluminacion.png"
+    ],
+    "sha256": [
+        "fd726273489355bd77805d5c13ae48a4e74551aa8054b86473ad286a16044c05",
+        "d44e3c28ce69b9c581f2bd8204e06ad1d00d072cc5d3b68c9328c2e429e7f1d4",
+        "c46545729cd67868a7e4a1fe692f5ad82952505da6b49f4fb58c3de6a40b89d3",
+        "dd2e4436ee21eab6cd23522b6cd3af714826b6678d1900936986a2033ddb333f",
+        "897cad62004d3c88803fe59973b41e785da72d4411c66838af922d569c70c2c8"
+    ],
+    "note": "Real Unity Editor renders; top view hides Ceiling temporarily. Not Android or Play evidence."
+}

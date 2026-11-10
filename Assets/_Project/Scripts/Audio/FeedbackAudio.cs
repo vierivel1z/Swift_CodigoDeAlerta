@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using Swift.Bank;
 using Swift.Game;
 using Swift.Interaction;
@@ -24,10 +24,11 @@ namespace Swift.Audio
             public bool Defense,Ended;
         }
         readonly AudioSource[] buses=new AudioSource[5];
-        readonly AudioClip[] temporary=new AudioClip[8];
-        readonly float[] lastCue=new float[8];
+        readonly AudioClip[] temporary=new AudioClip[System.Enum.GetValues(typeof(AudioCue)).Length];
+        readonly float[] lastCue=new float[System.Enum.GetValues(typeof(AudioCue)).Length];
         Snapshot previous;
         GameManager bound;
+        AudioSource phoneRingSource;
         Vector3? origin;
         bool ownsLibrary,initialized;
         void Awake() {Current=this;Initialize();}
@@ -36,6 +37,8 @@ namespace Swift.Audio
         void Initialize()
         {
             if(initialized)return;initialized=true;
+            var ringNode=new GameObject("Audio Objects - telephone ring");ringNode.transform.SetParent(transform,false);
+            phoneRingSource=ringNode.AddComponent<AudioSource>();phoneRingSource.playOnAwake=false;phoneRingSource.loop=false;phoneRingSource.minDistance=1;phoneRingSource.maxDistance=8;phoneRingSource.rolloffMode=AudioRolloffMode.Logarithmic;
             if(Library==null)Library=Resources.Load<AudioCueLibrary>("Audio/SWIFT_AudioCues");
             if(Library==null){Library=ScriptableObject.CreateInstance<AudioCueLibrary>();ownsLibrary=true;}
             for(int i=0;i<lastCue.Length;i++)lastCue[i]=float.NegativeInfinity;
@@ -91,13 +94,14 @@ namespace Swift.Audio
         {
             Initialize();if(!isActiveAndEnabled)return;
             int index=(int)cue;
+            if(index<0||index>=lastCue.Length)return;
             if(Time.unscaledTime-lastCue[index]<.12f)return;
             lastCue[index]=Time.unscaledTime;LastCue=cue;LastCueFrame=Time.frameCount;EmittedCount++;CueEmitted?.Invoke(cue);
-            var category=cue==AudioCue.NewAlert?AudioCategory.Alerts:cue==AudioCue.Dossier||cue==AudioCue.Evidence?AudioCategory.Objects:AudioCategory.UI;
-            var source=buses[(int)category];source.volume=Library.Gain(category);source.outputAudioMixerGroup=Library.Group(category);
+            var category=cue==AudioCue.NewAlert?AudioCategory.Alerts:cue==AudioCue.Dossier||cue==AudioCue.Evidence||cue>=AudioCue.PhoneRing?AudioCategory.Objects:AudioCategory.UI;
+            var source=cue==AudioCue.PhoneRing?phoneRingSource:buses[(int)category];source.volume=Library.Gain(category);source.outputAudioMixerGroup=Library.Group(category);
             if(category==AudioCategory.Objects){source.spatialBlend=position.HasValue?1:0;if(position.HasValue)source.transform.position=position.Value;}
             var clip=Library.Clip(cue);
-            if(clip==null&&Library.UseTemporaryTones)clip=temporary[index]!=null?temporary[index]:(temporary[index]=Tone(cue));
+            if(clip==null&&Library.UseTemporaryTones&&index<=(int)AudioCue.TurnEnd)clip=temporary[index]!=null?temporary[index]:(temporary[index]=Tone(cue));
             if(clip!=null){source.PlayOneShot(clip);PlayedCount++;}
         }
         static AudioClip Tone(AudioCue cue)
@@ -108,6 +112,7 @@ namespace Swift.Audio
             for(int i=0;i<samples.Length;i++){float t=(float)i/samples.Length;float envelope=Mathf.Min(1,t*30)*(1-t)*(1-t);samples[i]=.4f*Mathf.Sin(2*Mathf.PI*frequency*i/rate)*envelope;}
             var clip=AudioClip.Create("TEMP_SYNTH_SWIFT_"+cue,samples.Length,1,rate,false);clip.SetData(samples,0);return clip;
         }
+        public void StopCue(AudioCue cue) { if(cue==AudioCue.PhoneRing&&phoneRingSource!=null)phoneRingSource.Stop(); }
         public void RefreshLoops()
         {
             Initialize();Loop(AudioCategory.Ambience,Library.AmbienceLoop);Loop(AudioCategory.Music,Library.MusicLoop);
@@ -117,8 +122,8 @@ namespace Swift.Audio
             var source=buses[(int)category];source.volume=Library.Gain(category);source.outputAudioMixerGroup=Library.Group(category);
             if(source.clip==clip&&source.isPlaying)return;source.Stop();source.clip=clip;if(clip!=null)source.Play();
         }
-        void OnApplicationPause(bool paused) {foreach(var source in buses)if(source!=null){if(paused)source.Pause();else source.UnPause();}}
-        void OnDisable() {if(bound!=null)bound.Changed-=Observe;bound=null;foreach(var source in buses)if(source!=null)source.Stop();}
+        void OnApplicationPause(bool paused) {foreach(var source in buses)if(source!=null){if(paused)source.Pause();else source.UnPause();}if(phoneRingSource!=null){if(paused)phoneRingSource.Pause();else phoneRingSource.UnPause();}}
+        void OnDisable() {if(bound!=null)bound.Changed-=Observe;bound=null;foreach(var source in buses)if(source!=null)source.Stop();if(phoneRingSource!=null)phoneRingSource.Stop();}
         void OnDestroy() {if(Current==this)Current=null;foreach(var clip in temporary)if(clip!=null)Destroy(clip);if(ownsLibrary)Destroy(Library);}
     }
 }

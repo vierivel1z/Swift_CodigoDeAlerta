@@ -16,8 +16,22 @@ namespace Swift.Interaction
         public bool IsGazeInput => !((Application.isEditor || !Application.isMobilePlatform) && !SimulateGazeInEditor);
         public float DwellProgress => focused == null ? 0 : Mathf.Clamp01(elapsed / Mathf.Max(.2f,DwellSeconds));
         public bool SelectionLatched => activated;
+        // Portal mouse holds and Cardboard gaze share this manager's single dwell clock.
+        public bool UsesDwellSelection => IsGazeInput || RequiresHeldDwell(focused);
+        static bool IsModeCard(BankInteractable target) => target != null &&
+            (target.Action == BankAction.Attack || target.Action == BankAction.DefenseMode);
+        static bool RequiresHeldDwell(BankInteractable target) => IsModeCard(target) || target!=null &&
+            (target.Action==BankAction.Sit || target.Action==BankAction.Stand || target.GetComponent<Swift.UI.DocumentFocus>()!=null);
         public float LastActivationTime { get; private set; } = float.NegativeInfinity;
         public event System.Action<BankInteractable> Activated;
+        // Explicit desktop input-mode changes start a fresh fixation; Cardboard is untouched.
+        public void SetEditorGazeSimulation(bool value)
+        {
+            if (!Application.isEditor && Application.isMobilePlatform) return;
+            if (SimulateGazeInEditor == value) return;
+            SimulateGazeInEditor = value;
+            ResetFixation();
+        }
         void Update()
         {
             if (View == null) return;
@@ -28,14 +42,25 @@ namespace Swift.Interaction
             if (Physics.Raycast(ray, out var hit, Reach, ~0, QueryTriggerInteraction.Ignore)) { next = hit.collider.GetComponentInParent<BankInteractable>(); distance = hit.distance; }
             if (next != focused) { focused = next; elapsed = 0; activated = false; }
             if (focused != null) {
-                elapsed += Time.deltaTime;
-                bool clicked = pc && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame;
-                if (clicked || (!pc && !activated && elapsed >= Mathf.Max(0.2f, DwellSeconds))) {
-                    // Latch before callback: callbacks can teleport or change the UI.
-                    activated = true;
-                    LastActivationTime = Time.unscaledTime;
-                    Activated?.Invoke(focused);
-                    focused.Activate();
+                bool blocked = !focused.CanActivate || (focused.Manager != null && focused.Manager.IntroPlaying && focused.Action != BankAction.SkipIntro);
+                bool held = pc && Mouse.current != null && Mouse.current.leftButton.isPressed;
+                bool dwell = !pc || RequiresHeldDwell(focused);
+                if (blocked) {
+                    // Never hide a running timer behind the prologue. Keep the completed
+                    // fixation latched until look-away, but clear its charge.
+                    elapsed = 0;
+                } else if (!activated || (pc && !RequiresHeldDwell(focused))) {
+                    // A hover/cancelled mouse press owns no dwell time. Gaze needs no press.
+                    elapsed = dwell && (!pc || held)
+                        ? Mathf.Min(elapsed + Time.deltaTime, Mathf.Max(.2f, DwellSeconds)) : 0;
+                    bool clicked = pc && !dwell && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame;
+                    if (clicked || (dwell && elapsed >= Mathf.Max(.2f, DwellSeconds))) {
+                        activated = true;
+                        LastActivationTime = Time.unscaledTime;
+                        var target = focused;
+                        Activated?.Invoke(target);
+                        target.Activate();
+                    }
                 }
             }
             if (Reticle != null) {
@@ -44,7 +69,10 @@ namespace Swift.Interaction
                 Reticle.localScale = Vector3.one * size;
             }
         }
-        void OnDisable() { focused = null; elapsed = 0; activated = false; }
+        void ResetFixation() { focused = null; elapsed = 0; activated = false; }
+        void OnDisable() { ResetFixation(); }
+        void OnApplicationFocus(bool hasFocus) { if (!hasFocus) ResetFixation(); }
+        void OnApplicationPause(bool paused) { if (paused) ResetFixation(); }
     }
 }
 

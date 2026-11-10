@@ -1,0 +1,1 @@
+Baked room reflection - 128 mode=Baked resolution=128 bakedTexture=Assets/_Project/Scenes/BancoCorresponsal/ReflectionProbe-0.exr

@@ -1,0 +1,15 @@
+Luz principal Directional intensity=1.2 rotation=(45.00, 330.00, 0.00) bake=Realtime
+Key light Directional intensity=0.65 rotation=(50.00, 335.00, 0.00) bake=Realtime
+Baked ceiling light 1 Spot intensity=18 rotation=(90.00, 0.00, 0.00) bake=Baked
+Baked ceiling light 2 Spot intensity=18 rotation=(90.00, 0.00, 0.00) bake=Baked
+Baked ceiling light 3 Spot intensity=18 rotation=(90.00, 0.00, 0.00) bake=Baked
+Baked ceiling light 4 Spot intensity=18 rotation=(90.00, 0.00, 0.00) bake=Baked
+Baked ceiling light 5 Spot intensity=18 rotation=(90.00, 0.00, 0.00) bake=Baked
+Baked ceiling light 6 Spot intensity=18 rotation=(90.00, 0.00, 0.00) bake=Baked
+Baked inspection soft fill Spot intensity=16 rotation=(90.00, 0.00, 0.00) bake=Baked
+Rear baked ceiling 0 Spot intensity=14 rotation=(90.00, 0.00, 0.00) bake=Baked
+Rear baked ceiling 1 Spot intensity=14 rotation=(90.00, 0.00, 0.00) bake=Baked
+Reception baked luminaire 0 Spot intensity=14 rotation=(90.00, 0.00, 0.00) bake=Baked
+Reception baked luminaire 1 Spot intensity=14 rotation=(90.00, 0.00, 0.00) bake=Baked
+Baked analyst task light Spot intensity=3 rotation=(68.00, 325.00, 0.00) bake=Baked
+Probe positions=75

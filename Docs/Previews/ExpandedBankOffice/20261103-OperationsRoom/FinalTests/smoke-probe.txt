@@ -1,0 +1,1 @@
+PASS: Play Mode, TMP panel/fonts, six decisions per mode, evidence, registry, alerts, defense override, results and available teleports. Gaze dwell/latch/reset also passed.

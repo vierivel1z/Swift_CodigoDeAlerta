@@ -1,0 +1,14 @@
+2026-11-04T01:08:40.7978230Z Editor/00.png origin=(0.00, 2.80, 0.00) orthographicSize=4.15 EditorPlay=False NOT_ANDROID
+2026-11-04T01:08:41.0276324Z Editor/01.png origin=(-4.70, 4.25, 0.00) orthographicSize=1.45 EditorPlay=False NOT_ANDROID
+2026-11-04T01:08:41.1243178Z Editor/02.png origin=(0.00, 4.25, 0.00) orthographicSize=1.45 EditorPlay=False NOT_ANDROID
+2026-11-04T01:08:41.2058740Z Editor/03.png origin=(4.70, 4.25, 0.00) orthographicSize=1.45 EditorPlay=False NOT_ANDROID
+2026-11-04T01:08:41.2999141Z Editor/04.png origin=(-4.70, 1.10, 0.00) orthographicSize=1.45 EditorPlay=False NOT_ANDROID
+2026-11-04T01:08:41.3785285Z Editor/05.png origin=(0.00, 1.10, 0.00) orthographicSize=1.45 EditorPlay=False NOT_ANDROID
+2026-11-04T01:08:41.4614304Z Editor/06.png origin=(4.70, 1.10, 0.00) orthographicSize=1.45 EditorPlay=False NOT_ANDROID
+2026-11-04T01:08:57.0229548Z Play/00.png origin=(0.00, 2.80, 0.00) orthographicSize=4.15 EditorPlay=True NOT_ANDROID
+2026-11-04T01:08:57.1225013Z Play/01.png origin=(-4.70, 4.25, 0.00) orthographicSize=1.45 EditorPlay=True NOT_ANDROID
+2026-11-04T01:08:57.1955020Z Play/02.png origin=(0.00, 4.25, 0.00) orthographicSize=1.45 EditorPlay=True NOT_ANDROID
+2026-11-04T01:08:57.2795297Z Play/03.png origin=(4.70, 4.25, 0.00) orthographicSize=1.45 EditorPlay=True NOT_ANDROID
+2026-11-04T01:08:57.3645864Z Play/04.png origin=(-4.70, 1.10, 0.00) orthographicSize=1.45 EditorPlay=True NOT_ANDROID
+2026-11-04T01:08:57.4755842Z Play/05.png origin=(0.00, 1.10, 0.00) orthographicSize=1.45 EditorPlay=True NOT_ANDROID
+2026-11-04T01:08:57.5746098Z Play/06.png origin=(4.70, 1.10, 0.00) orthographicSize=1.45 EditorPlay=True NOT_ANDROID

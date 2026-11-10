@@ -173,7 +173,8 @@ namespace Swift.EditorTools
             while(!automatic&&Time.realtimeSinceStartup-began<16)yield return null;
             Check(automatic&&Time.realtimeSinceStartup-began>=11.8f,"Existing prologue ends automatically at normal 12-second duration");
             var teleports=UnityEngine.Object.FindObjectsByType<Swift.Interaction.BankInteractable>(FindObjectsSortMode.None).Where(x=>x.Action==Swift.Interaction.BankAction.Teleport).ToArray();
-            Check(teleports.Length==4,"Four existing teleport destinations retained");
+            BankNavigationValidation.Check(teleports);
+            Check(true,"Four original teleport identities and destinations retained; additional pads permitted");
             foreach(var target in teleports) {
                 var position=target.Player.position;target.Activate();
                 Check(Vector3.Distance(target.Player.position,target.Destination)<.001f,"Existing teleport reaches "+target.name);

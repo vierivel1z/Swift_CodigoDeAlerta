@@ -1,6 +1,8 @@
 # Capturas para revisión
 
-**Estado inicial: no se generaron capturas en la nube.** Unity no está instalado ni activado allí. Esta carpeta está preparada para PNG reales de BancoCorresponsal; no contiene imágenes ilustrativas ni copias de capturas anteriores.
+Galería vigente de ejecución: [herramientas inmersivas](ImmersiveGameplay/README.md).
+[Última revisión estática completa](LATEST.md). Las carpetas anteriores conservan evidencia histórica;
+sus README explican fecha, encuadre y límites. No se eliminan para reducir el número de Markdown.
 
 En Unity local: `SWIFT > Revision visual > Camaras y capturas PNG`.
 

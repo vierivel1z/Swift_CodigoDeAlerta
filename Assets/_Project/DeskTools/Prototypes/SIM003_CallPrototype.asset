@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c8bde7f527e8e4f82760cd52a4d3de, type: 3}
+  m_Name: SIM003_CallPrototype
+  m_EditorClassIdentifier: Assembly-CSharp::Swift.DeskTools.VerificationCallCatalog
+  ContentStatus: "PROTOTIPO: guion propuesto por Astra; pendiente de aprobaci\xF3n
+    editorial."
+  Calls:
+  - CallId: SIM003-REGISTRY-PROTOTYPE
+    TransactionId: SIM-003
+    Speaker: "Mesa de registros / conversaci\xF3n ficticia"
+    PrototypeContent: 1
+    Outcome: 0
+    Lines:
+    - Solicito contrastar el nombre asociado a la cuenta del expediente.
+    - 'El nombre que figura en nuestro registro es: {RegisteredName}.'
+    - "Esta consulta no confirma la autorizaci\xF3n de la transferencia."
+    Evidence: "[PRUEBA DE GUION] Consulta telef\xF3nica ficticia {Id}; fuente: Mesa
+      de registros; nombre comunicado: {RegisteredName}; la autorizaci\xF3n no fue
+      confirmada."

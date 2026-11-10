@@ -1,0 +1,58 @@
+{
+  "Packages": {
+    "checkedFiles": 2,
+    "changedSinceStart": []
+  },
+  "ProjectSettings": {
+    "checkedFiles": 25,
+    "changedSinceStart": []
+  },
+  "Assets/Models": {
+    "checkedFiles": 326,
+    "changedSinceStart": []
+  },
+  "Assets/Settings": {
+    "checkedFiles": 14,
+    "changedSinceStart": []
+  },
+  "Assets/XR": {
+    "checkedFiles": 6,
+    "changedSinceStart": []
+  },
+  "Assets/_Project/Scripts/Banking": {
+    "checkedFiles": 2,
+    "changedSinceStart": []
+  },
+  "Assets/_Project/Scripts/Core": {
+    "checkedFiles": 6,
+    "changedSinceStart": []
+  },
+  "Assets/_Project/Scripts/VR": {
+    "checkedFiles": 6,
+    "changedSinceStart": []
+  },
+  "Assets/_Project/Scripts/Interaction": {
+    "checkedFiles": 6,
+    "changedSinceStart": []
+  },
+  "Assets/_Project/Art": {
+    "checkedFiles": 28,
+    "changedSinceStart": []
+  },
+  "Assets/_Project/OfficeVisual/Prefabs": {
+    "checkedFiles": 30,
+    "changedSinceStart": []
+  },
+  "Assets/_Project/OfficeVisual/EnvironmentRedesign": {
+    "checkedFiles": 22,
+    "changedSinceStart": []
+  },
+  "Assets/_Project/OfficeVisual/ExpandedBankOffice": {
+    "checkedFiles": 14,
+    "changedSinceStart": []
+  },
+  "Assets/_Project/Scenes/BancoCorresponsal.unity.meta": {
+    "checkedFiles": 1,
+    "changedSinceStart": []
+  }
+}

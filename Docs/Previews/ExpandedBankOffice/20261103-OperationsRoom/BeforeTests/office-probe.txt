@@ -1,0 +1,1 @@
+PASS: Play Mode; one camera and serialized monitor canvas; computer, printer/evidence, archive, alerts, defense; nine interaction roles reachable by physics raycasts from available eye points; transaction decision and four teleports. No Android hardware test.

@@ -1,0 +1,30 @@
+Teleport Entry -> Teleport Inspection
+Teleport Entry -> Teleport Reception
+Teleport Inspection -> Teleport Evidence
+Teleport Inspection -> Teleport Security
+Teleport Inspection -> Teleport Cubicles West
+Teleport Inspection -> Teleport Cubicles East
+Teleport Evidence -> Teleport Inspection
+Teleport Evidence -> Teleport Cubicles West
+Teleport Evidence -> Teleport Reception
+Teleport Evidence -> Teleport Rear Gallery
+Teleport Security -> Teleport Cubicles West
+Teleport Security -> Teleport Cubicles East
+Teleport Security -> Teleport Reception
+Teleport Security -> Teleport Rear Gallery
+Teleport Cubicles West -> Teleport Inspection
+Teleport Cubicles West -> Teleport Evidence
+Teleport Cubicles West -> Teleport Security
+Teleport Cubicles West -> Teleport Cubicles East
+Teleport Cubicles West -> Teleport Rear Gallery
+Teleport Cubicles East -> Teleport Security
+Teleport Cubicles East -> Teleport Cubicles West
+Teleport Cubicles East -> Teleport Rear Gallery
+Teleport Reception -> Teleport Entry
+Teleport Reception -> Teleport Inspection
+Teleport Reception -> Teleport Evidence
+Teleport Reception -> Teleport Security
+Teleport Rear Gallery -> Teleport Evidence
+Teleport Rear Gallery -> Teleport Security
+Teleport Rear Gallery -> Teleport Cubicles West
+Teleport Rear Gallery -> Teleport Cubicles East

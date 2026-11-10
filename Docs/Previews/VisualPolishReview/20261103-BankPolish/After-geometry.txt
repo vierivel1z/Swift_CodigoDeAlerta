@@ -1,0 +1,1 @@
+All active MeshFilters (same method as expansion baseline)=31360; enabled Renderer triangles=31228; these are inventory counts, not rendered frame GPU counts.

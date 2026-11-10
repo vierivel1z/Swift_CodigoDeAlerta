@@ -291,10 +291,10 @@ namespace Swift.EditorTools
             var actions = roots.SelectMany(x=>x.GetComponentsInChildren<BankInteractable>()).ToArray();
             if(actions.Any(x=>x.GetComponent<Collider>()==null)) throw new Exception("Interaction collider missing");
             foreach(var required in new[]{BankAction.Inspect,BankAction.Evidence,BankAction.Registry,BankAction.Alerts,BankAction.Defense}) if(!actions.Any(x=>x.Action==required)) throw new Exception("Missing banking action "+required);
-            if(actions.Count(x=>x.Action==BankAction.Teleport)!=4) throw new Exception("Expected four teleport destinations");
+            BankNavigationValidation.Check(actions);
             long triangles = roots.SelectMany(x=>x.GetComponentsInChildren<MeshFilter>()).Where(x=>x.sharedMesh!=null).Sum(x=>Enumerable.Range(0,x.sharedMesh.subMeshCount).Sum(i=>(long)x.sharedMesh.GetIndexCount(i)/3));
             Directory.CreateDirectory("Artifacts/Office20261028");
-            File.WriteAllText("Artifacts/Office20261028/scene-validation.txt",$"PASS: scene reopened; {renderers.Length} active mesh renderers; {actions.Length} collider-backed actions; {triangles} active mesh triangles; five required roles; four teleports. XR hardware not tested.");
+            File.WriteAllText("Artifacts/Office20261028/scene-validation.txt",$"PASS: scene reopened; {renderers.Length} active mesh renderers; {actions.Length} collider-backed actions; {triangles} active mesh triangles; five required roles; four original destinations preserved; {actions.Count(x=>x.Action==BankAction.Teleport)} total teleports. XR hardware not tested.");
             Debug.Log("SWIFT_OFFICE_VALIDATION_PASS");
         }
     }

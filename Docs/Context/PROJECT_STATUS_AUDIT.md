@@ -1,3 +1,5 @@
+> **Documento histórico (2/11/2026).** Se conserva esta ruta por compatibilidad. Para el estado, pruebas y APK vigentes, consulta [el informe actual](IMMERSIVE_AUTONOMOUS_PROGRESS.md).
+
 # Auditoría del estado real — SWIFT: Código de Alerta
 
 Fecha: **2 de noviembre de 2026 (America/Lima)**. Equipo 05 — A Toda Olla. Raíz auditada: `D:/UnityGames/SWIFT_CodigoDeAlerta`. Rama: `review/unity-scene-designer`, HEAD `3bef77b`.

@@ -1,5 +1,7 @@
 # SWIFT: Código de Alerta
 
+Documentación organizada: [empezar aquí](Docs/README.md).
+
 Diseño de escenas y revisión desde el celular: [guía de capturas y GitHub](Docs/VisualReview/README.md),
 [opciones Unity MCP para Codex local](Docs/VisualReview/UNITY_MCP.md) y
 [skill unity-scene-designer](.agents/skills/unity-scene-designer/SKILL.md).
@@ -28,9 +30,9 @@ existente; hay cuatro destinos de teletransporte.
 
 PC: botón derecho + mouse para mirar, WASD y clic para interactuar. Elegir ATAQUE o
 DEFENSA en la entrada. Android utiliza orientación de cabeza y mirada mantenida.
-Las pruebas automatizadas de Editor pasaron; la oficina nueva **no ha sido probada
-ni medida en un teléfono/visor**. La APK anterior de Artifacts corresponde al prototipo
-anterior y no se publica por Git. Para obtener la oficina actual hay que compilar de nuevo.
+El estado local, la APK de desarrollo del 10/11 y sus pruebas se describen en el
+[informe vigente](Docs/Context/IMMERSIVE_AUTONOMOUS_PROGRESS.md). La validación física
+Android/Cardboard continúa pendiente. Para tareas y guías, usar el [índice de Docs](Docs/README.md).
 
 Todos los datos bancarios son ficticios. El resumen histórico se presenta separado
 de la defensa contrafactual. No hay conexiones a sistemas bancarios reales.

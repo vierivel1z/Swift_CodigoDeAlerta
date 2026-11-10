@@ -1,0 +1,80 @@
+PASS No multiple user scenes replaced
+PASS No unsaved user changes discarded
+PASS Catalog scene active
+PASS 12 reusable samples plus one neutral control
+PASS All visible mesh shaders supported
+PASS All mesh materials URP Lit
+PASS 12 flat samples
+PASS 12 samples of Sphere 
+PASS 12 samples of Cube 
+PASS 12 samples of Cylinder 
+PASS Persistent offline cubemap128 restored
+PASS Two neutral white studio lights
+PASS No skybox color cast or fog
+PASS No missing MonoBehaviours
+PASS TMP fits Family 0
+PASS TMP fits Label 0
+PASS TMP fits Label 1
+PASS TMP fits Family 1
+PASS TMP fits Label 2
+PASS TMP fits Label 3
+PASS TMP fits Family 2
+PASS TMP fits Label 4
+PASS TMP fits Label 5
+PASS TMP fits Family 3
+PASS TMP fits Label 6
+PASS TMP fits Label 7
+PASS TMP fits Family 4
+PASS TMP fits Label 8
+PASS TMP fits Label 9
+PASS TMP fits Family 5
+PASS TMP fits Label 10
+PASS TMP fits Label 11
+PASS RenderTexture allocated
+PASS URP request supported
+PASS URP request supported
+PASS URP request supported
+PASS URP request supported
+PASS URP request supported
+PASS URP request supported
+PASS URP request supported
+PASS No errors while reopening/rendering catalog
+PASS Catalog scene active
+PASS 12 reusable samples plus one neutral control
+PASS All visible mesh shaders supported
+PASS All mesh materials URP Lit
+PASS 12 flat samples
+PASS 12 samples of Sphere 
+PASS 12 samples of Cube 
+PASS 12 samples of Cylinder 
+PASS Persistent offline cubemap128 restored
+PASS Two neutral white studio lights
+PASS No skybox color cast or fog
+PASS No missing MonoBehaviours
+PASS TMP fits Family 0
+PASS TMP fits Label 0
+PASS TMP fits Label 1
+PASS TMP fits Family 1
+PASS TMP fits Label 2
+PASS TMP fits Label 3
+PASS TMP fits Family 2
+PASS TMP fits Label 4
+PASS TMP fits Label 5
+PASS TMP fits Family 3
+PASS TMP fits Label 6
+PASS TMP fits Label 7
+PASS TMP fits Family 4
+PASS TMP fits Label 8
+PASS TMP fits Label 9
+PASS TMP fits Family 5
+PASS TMP fits Label 10
+PASS TMP fits Label 11
+PASS RenderTexture allocated
+PASS URP request supported
+PASS URP request supported
+PASS URP request supported
+PASS URP request supported
+PASS URP request supported
+PASS URP request supported
+PASS URP request supported
+PASS No new runtime errors

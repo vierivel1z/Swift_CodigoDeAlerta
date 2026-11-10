@@ -1,0 +1,3 @@
+FAIL bake 2026-11-03T17:41:17.2469077Z System.Exception: No unsaved scene discarded
+  at Swift.EditorTools.ExpandedBankOffice.Check (System.Boolean ok, System.String label) [0x0002f] in D:\UnityGames\SWIFT_CodigoDeAlerta\Assets\_Project\Editor\ExpandedBankOffice.cs:64 
+  at Swift.EditorTools.ExpandedBankOffice.Tick () [0x000d7] in D:\UnityGames\SWIFT_CodigoDeAlerta\Assets\_Project\Editor\ExpandedBankOffice.cs:46  EDITOR ONLY; ANDROID NOT TESTED

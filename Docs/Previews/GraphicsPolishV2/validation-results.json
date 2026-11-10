@@ -1,0 +1,17 @@
+{
+  "prepare": "PASS prepare 2026-11-03T19:03:17.3304162Z errors=0 EDITOR ONLY; ANDROID NOT TESTED",
+  "materials": "PASS materials 2026-11-03T19:03:27.2605423Z errors=0 EDITOR ONLY; ANDROID NOT TESTED",
+  "architecture": "PASS architecture 2026-11-03T19:04:19.2622957Z errors=0 EDITOR ONLY; ANDROID NOT TESTED",
+  "finish": "PASS finish 2026-11-03T19:08:52.9821021Z errors=0 EDITOR ONLY; ANDROID NOT TESTED",
+  "lighting": "PASS lighting 2026-11-03T19:04:20.0890607Z errors=0 EDITOR ONLY; ANDROID NOT TESTED",
+  "bake": "PASS bake 2026-11-03T19:10:01.4526698Z errors=0 EDITOR ONLY; ANDROID NOT TESTED",
+  "after": "PASS after 2026-11-03T19:11:27.4534165Z errors=0 EDITOR ONLY; ANDROID NOT TESTED",
+  "play": "PASS play 2026-11-03T19:14:29.7069797Z errors=0 EDITOR ONLY; ANDROID NOT TESTED",
+  "flow": "PASS flow 2026-11-03T19:12:03.7203831Z errors=0 EDITOR ONLY; ANDROID NOT TESTED",
+  "office": "PASS office 2026-11-03T19:12:13.3111634Z errors=0 EDITOR ONLY; ANDROID NOT TESTED",
+  "smoke": "PASS smoke 2026-11-03T19:12:22.6360019Z errors=0 EDITOR ONLY; ANDROID NOT TESTED",
+  "environment": "PASS environment 2026-11-03T19:13:12.1942799Z errors=0 EDITOR ONLY; ANDROID NOT TESTED",
+  "protected": "PASS protected 2026-11-03T19:18:37.9975126Z errors=0 EDITOR ONLY; ANDROID NOT TESTED",
+  "seal": "PASS seal 2026-11-03T19:18:39.6592159Z errors=0 EDITOR ONLY; ANDROID NOT TESTED",
+  "DomainTests": "PASS 27/27; dotnet run --project Tools/DomainTests/DomainTests.csproj; executed this session, exit 0; Editor-independent domain checks"
+}

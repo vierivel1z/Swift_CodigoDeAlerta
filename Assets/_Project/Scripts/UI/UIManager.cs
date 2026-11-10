@@ -11,6 +11,9 @@ namespace Swift.UI
         public TMP_FontAsset Font;
         public Transform PanelAnchor;
         public bool CompactMonitor;
+        public Sprite StationFrame,StationFill;
+        public bool ImmersiveStation;
+        public Swift.DeskTools.DeskToolsProfile DeskTools;
         public bool OperationsCenterStyle;
         [Header("Procedimiento: textos de presentacion editables")]
         [TextArea] public string[] ReviewStepTitles = {"01  /  LEE EL EXPEDIENTE", "02  /  CONTRASTA LA INFORMACION", "03  /  DOCUMENTA LA REVISION", "04  /  TOMA UNA DECISION"};
@@ -37,6 +40,11 @@ namespace Swift.UI
                 }
             }
             Manager.Changed += Refresh; Refresh();
+            if(OperationsCenterStyle&&ImmersiveStation&&documents!=null){var station=gameObject.AddComponent<OperationsStation>();station.Initialize(this,dossier.transform.parent);}
+            if(ImmersiveStation && DeskTools != null && (DeskTools.ClipboardEnabled || DeskTools.PhoneEnabled || DeskTools.PrinterFeedbackEnabled || DeskTools.SeatPolishEnabled || DeskTools.DocumentInspectionEnabled)) {
+                var tools = new GameObject("Desk tools - reversible presentation"); tools.transform.SetParent(transform,false);
+                tools.AddComponent<Swift.DeskTools.DeskInteractionCoordinator>().Initialize(this);
+            }
         }
         void KeepPanelInFrontOfComputer()
         {
@@ -85,7 +93,7 @@ namespace Swift.UI
             var obj = new GameObject(name, typeof(RectTransform)); obj.transform.SetParent(parent, false);
             var rect = obj.GetComponent<RectTransform>(); rect.anchoredPosition = position; rect.sizeDelta = size;
             var text = obj.AddComponent<TextMeshProUGUI>(); text.font = Font; text.fontSize = fontSize;
-            text.text = name;
+            text.fontStyle=FontStyles.Normal; text.text = name;
             text.color = Color.white; text.alignment = TextAlignmentOptions.TopLeft; text.raycastTarget = false;
             return text;
         }

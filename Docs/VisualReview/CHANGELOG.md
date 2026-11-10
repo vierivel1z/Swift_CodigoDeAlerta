@@ -77,6 +77,64 @@ Estado: borrador / cambios solicitados / aprobado por el usuario:
 - Pendientes N03/K19 y N04/N07–N09: APK nueva y validación HONOR con UI/artes/UX actuales. Sustituir audios TEMP y comprobar confort/rendimiento. El bloqueo docente N05/K01 se conserva.
 - Evidencia: UX_GAMEPLAY_PROGRESS.md y Docs/Previews/UXGameplayReview/20261102T205325756Z/.
 
+## Rediseño inmersivo — 2026-11-02
+
+- Petición: ampliar oficina, cuatro cubículos, consola compartida de modos, puesto con consulta/libreta, silla de mirada y UI Propuesta C, manteniendo lógica bancaria y XR.
+- Rama/base: `review/environment-immersive` / `1074fdd313eac8220451f11559e6076ba4fb4e2c`. Sin commit, push ni merge; main intacta.
+- Respaldo completo: `D:/UnityGames/SWIFT_Backups/EnvironmentRedesign-20261102-161323`, con checkpoints posteriores. No se borraron recursos ni se ejecutaron generadores anteriores.
+- Escena BancoCorresponsal editada mediante APIs Unity/Undo, GUID conservado. Sala 16 × 14 m, cuatro cubículos y corredores; cuatro destinos originales conservados y dos adicionales con el mismo teletransporte.
+- Prefabs originales intactos; dos nuevos de monitor/lámpara normalizados desde Kenney existente. Familias de materiales compartidas; paneles de consulta/clipboard mediante UI/TMP.
+- Consola de modos reutiliza las dos acciones originales y el dwell de 1,5 s. Silla mueve el origen del rig bajo fade opaco y conserva HeadPoseAdapter; bloquea pads y WASD al sentarse.
+- UI mantiene KeepPanelInFrontOfComputer, tres botones y cálculos. Referencias de formato/observaciones sin instrucciones directas de decisión por transferencia; núcleo bancario sin cambios.
+- Bake final: tres lightmaps, nueve luces baked y una direccional realtime existente. 26.004 triángulos / 177 MeshRenderer / 39 materiales de malla distintos: inventario Editor, no medición Android.
+- Galería real: `Docs/Previews/EnvironmentRedesign/20261102T212047822Z/`, antes/después comparables, planta, consola, cubículos, pie/sentado, monitores/libreta y LEVANTARSE. Iteraciones anteriores conservadas. Capturas PC de Edición y Play, no IA ni estéreo Android.
+- PASS: 27 dominio, GameplayFlowProbe, BankOfficeProbe, PrototypeSmokeProbe y revisión específica de consola/silla/rutas/clearance/TMP/offset/consulta. Dependencias, scripts y lightmaps comprobados; recibos UTC en galería.
+- Integridad: 67 archivos protegidos idénticos al respaldo, incluyendo paquetes, URP/XR, prefabs originales, GameManager/dominio/pose/prólogo y PNG originales.
+- Pendientes: aceptación estética del usuario, APK actualizada, HONOR/Cardboard, confort, lectura binocular, pausa/recenter y perfilado. Audio final pendiente; no falta ningún modelo imprescindible.
+- Informes: `Docs/Context/ENVIRONMENT_REDESIGN_PROGRESS.md` y `ENVIRONMENT_ASSET_NEEDS.md`. Estado: implementado y revisado en Editor; sin aprobación visual/hardware.
+
+
+## Ampliaci?n real ? 2026-11-03
+
+- Petici?n: aumentar arquitectura y circulaci?n, usar referencias confirmadas directamente y conservar jugabilidad Cardboard. Skill aplicada: `.agents/skills/unity-scene-designer/SKILL.md`.
+- Rama `review/environment-immersive`, base 1074fdd313eac8220451f11559e6076ba4fb4e2c. Main sin cambios; sin commit, staging, push ni merge.
+- Recuperaci?n: `D:/UnityGames/SWIFT_Backups/ExpandedBankOffice-20261103-004324`, copia inicial completa y checkpoints de escena/meta/lightmaps. No se descartan cambios previos.
+- Planta real 16 ? 14 ? 20 ? 18 m; +136 m?. Circulaci?n conectada aproximada 140,625 ? 260,4375 m?, m?todo de c?psula/ret?cula documentado. No se escala el conjunto de la escena.
+- Cuatro cub?culos en grupos asim?tricos; seis zonas, ventanas opacas, divisi?n posterior de supervisi?n. Dos destinos adicionales, cuatro originales exactos y dos de cub?culos conservados.
+- Consola baja de cu?a inclinada; puesto horizontal con consulta a la derecha y TMP din?mico. Silla, fade, mirada 1,5 s, KeepPanelInFrontOfComputer y reglas bancarias preservados.
+- Cinco materiales compartidos y malla propia de consola; sin recursos externos ni prefabs originales sobrescritos. Iluminaci?n renovada: 12 baked + una realtime activa y 75 sondas; segundo bake tras corregir cobertura oscura.
+- Capturas reales de Unity Edici?n/Play: `Docs/Previews/ExpandedBankOffice/20261103-OperationsRoom/`. Primera iteraci?n oscura conservada. Comparaci?n antes/despu?s con c?mara id?ntica y vistas adicionales, no renders IA ni estereoscop?a Android.
+- PASS dominio 27, flujo/oficina/smoke y revisi?n espec?fica. Recibos antes, despu?s y finales en `Artifacts/ExpandedBankOffice/`; estado de captura en README/manifest de galer?a.
+- Inventario: 27.572 tri?ngulos, 270 MeshRenderer, 45 materiales de malla distintos. No se midieron draw calls/FPS Android ni se certifica optimizaci?n.
+- Informe: `Docs/Context/EXPANDED_BANK_OFFICE_REPORT.md`. Pendiente aceptaci?n visual del usuario, APK nueva, HONOR, confort/lectura/seguimiento/perfilado y audio final. No hay modelo adicional obligatorio.
+
+
+## Pulido art?stico profesional ? 2026-11-03
+
+- Solicitud: corregir orientaci?n, decoraci?n y cierre antes del pulido, usando tres capturas recibidas y referencias aprobadas. Skill unity-scene-designer aplicada.
+- Rama/base: review/environment-immersive / 1074fdd. Main intacta, sin commit/push/merge ni staging. Respaldo completo VisualPolish-20261103-130232 y checkpoints por fase.
+- Escena 20 ? 18 conservada. Cinco sillas corregidas seg?n geometr?a (+Z respaldo), sexta de supervisi?n, teclados/monitores/archivos orientados, plantas/espera agrupadas y superficies apoyadas. Cierre End existente integrado en escritorio/monitor de supervisi?n.
+- Nuevos usos verificados de desk/bookcaseOpen Kenney; no se extrae Office Pack no autorizado. AVAILABLE_3D_ASSETS documenta siete ZIP, 145 fuentes Models y cuatro de Cardboard; 120 mallas pendientes de procedencia/licencia.
+- Familias de superficies con patrones procedurales propios peque?os; z?calos/cornisa/ret?cula/perfiles combinados. Aros de navegaci?n reemplazan solo presentaci?n, mantienen ocho destinos/colliders; ArchitecturalFocusVisual consume el gestor de mirada existente.
+- Puesto con teclado, rat?n y libreta delante del monitor, tama?o TMP conservado. Sentarse, stand, pose, fade y KeepPanelInFrontOfComputer intactos.
+- Horneado final PASS: 17 baked + 1 realtime, 81 sondas, una reflexi?n baked 128?. Sin cambios de paquetes, URP/XR, fuentes/importadores o prefabs descargados. 488 archivos protegidos id?nticos al inicio.
+- PASS: dominio 27, GameplayFlowProbe, BankOfficeProbe, PrototypeSmokeProbe y revisi?n de entorno; revisi?n espec?fica final de seis sillas, cierre por mirada/turno incompleto, raycasts sentados, TMP y levantarse. Fallos de herramientas intermedios conservados y resueltos; no se confunden con resultados finales.
+- Galer?a real: Docs/Previews/VisualPolishReview/20261103-BankPolish; Before/After con ocho c?maras equivalentes, detalle 07 corregido por oclusi?n, Play y dos perfiles existentes. Capturas mono PC, no Android ni IA.
+- Inventario final: 284 MeshRenderer / 49 materiales distintos / 31.360 tri?ngulos activos (31.228 habilitados). Contadores globales Editor registrados con l?mites; Frame Debugger/Profiler Android no ejecutados.
+- Pendiente: aprobaci?n visual del usuario, APK nueva, HONOR, lectura/confort/fade/pose, rendimiento y audio final. No hay modelo adicional imprescindible. Informe VISUAL_POLISH_REPORT.md.
+
+
+## 2026-11-03 ? Graphics Polish V2 (revisi?n aislada)
+
+Petici?n: pulir materiales, arquitectura y luz conservando oficina 20 ? 18 y mec?nicas. Rama review/environment-immersive, base 1074fdd. Respaldado en D:/UnityGames/SWIFT_Backups/GraphicsPolishV2-20261103-135942. Varios procesos Codex; exclusividad sin confirmar: no se edita la principal.
+
+Escena nueva Scenes/Review/BancoCorresponsal_GraphicsV2.unity con GUID propio y bake propio; biblioteca OfficeVisual/GraphicsPolishV2 con 18 materiales y remates agrupados; helper solo Editor/GraphicsPolishV2Review.cs. Madera desaturada, archivo met?lico, pl?sticos/textiles/papel diferenciados, techo modular, ventanas/columnas/mamparas acabadas, libros en escritorios y luz administrativa neutra con puesto c?lido. Sin descarga ni modelos de licencia pendiente.
+
+Galer?a real: Docs/Previews/GraphicsPolishV2/README.md, 45 PNG, siete parejas id?nticas antes/despu?s, planta y UI Play. Hashes y recibos incluidos. Inventario 31.228 ? 32.718 tri?ngulos; 284 ? 288 renderers; 49 ? 54 materiales visibles. 17 baked/1 realtime/81 sondas/1 reflexi?n baked 128/1 atlas1024. Configuraci?n URP/XR intacta.
+
+PASS Editor: dominio27, GameplayFlowProbe, BankOfficeProbe, PrototypeSmokeProbe, entorno, mirada/cierre, asiento/fade, TMP y raycasts. Acciones/colliders/destinos comparados con origen: id?nticos. 995 archivos previos Assets/Packages/ProjectSettings conservados. Integraci?n preparada con respaldo/hash, NO ejecutada. APK, Frame Debugger/overdraw, HONOR y aceptaci?n art?stica pendientes. Informe GRAPHICS_POLISH_V2_REPORT.md. Sin commit/push/merge.
+
+
 ## 2026-11-03 — Biblioteca de materiales y estudio neutro
 
 Preparación en review/environment-immersive / base1074fdd. Catálogo aislado: 12 materiales URP/Lit reutilizados, dos por familia; un gris neutro nuevo. Escena MaterialLibrary/Showcase/MaterialLibrary_Studio.unity, índice JSON, cubemap neutro 128 persistente y helper de Editor. Siete capturas finales reales; informe MATERIAL_LIBRARY_REPORT.md. Las iteraciones iniciales quedan solo en disco local.
@@ -84,3 +142,66 @@ Preparación en review/environment-immersive / base1074fdd. Catálogo aislado: 1
 Las comprobaciones se realizaron durante la preparación anterior: 1058 archivos previos de Assets/Packages/ProjectSettings intactos. No se ejecutan nuevas pruebas Unity ni Android para este commit. BancoCorresponsal, URP y Cardboard no se modifican.
 
 Commit local autorizado por el usuario en la rama nueva feat/material-library-catalog. Se incluyen los 12 materiales y tres texturas compartidas necesarios para resolver referencias, con sus metas. Los demás cambios locales de la oficina siguen sin versionar. Sin push ni merge.
+
+
+## 2026-11-03 - Material library verification in Unity
+
+Unity6000.3.24f1 / DX11, same local project, Mobile_RPAsset. Catalog reopen and short Play Mode PASS; zero errors/warnings captured during checks. Persistent custom cubemap128, 12 opaque URP/Lit samples, 48 shapes, TMP and rendering verified. Fourteen new Editor/Play captures: Docs/Previews/MaterialLibraryVerification/20261104T010447Z. UTC receipts cross midnight; local date remains November3. All1073 existing Assets/Packages/ProjectSettings files unchanged. Main bank scene untouched; banking probes and Android not tested in this scope. Report MATERIAL_LIBRARY_VERIFICATION.md. No new commit/push/merge.
+
+
+## 2026-11-03 - Portal de operaciones: progreso de mirada verificable
+
+- Rama review/portal-dwell-feedback desde c4a1278. Cambios locales anteriores preservados; sin commit/push/merge.
+- Respaldo: D:/UnityGames/SWIFT_Backups/PortalOperations-20261103-203448 (Assets, Docs y git status).
+- Reconstruccion UI/TMP de tarjetas, iconos acotados y prefab modular. Barras Filled/Horizontal leen el dwell existente; confirmacion posterior de 0.35 s antes del flujo normal. PC: G + camara/raton existente.
+- Escena BancoCorresponsal y seis scripts existentes afectados; helper Editor y recursos nuevos en OfficeVisual/PortalOperations, con metas. 1043 assets anteriores identicos respecto al respaldo; siete archivos anteriores modificados, sin faltantes. Detalle Artifacts/PortalOperations/asset-delta.json.
+- Galeria real: Docs/Previews/PortalOperationsReview (9 PNG, recibos y hashes). Referencia revisada: REF_Portal_Operations.png. Bordes/iconos simplificados, sin equivalencia literal ni aprobacion artistica final.
+- PASS Editor: prueba especifica con raycasts y dwell de produccion, DomainTests 27/27, flow, office y smoke. Office actualizado para esperar la confirmacion de ambos modos.
+- Incidencia: cierre nativo del Editor despues de una ronda PASS; log conservado. Se reabrio y repitieron verificaciones con exito. Android/HONOR, rendimiento y comodidad pendientes; no APK.
+- Informe: Docs/Context/PORTAL_OPERATIONS_REPORT.md. No se alteraron URP, Cardboard, paquetes ni reglas bancarias.
+
+
+### 2026-11-03 - Correccion de carga uniforme del portal
+
+Fallo PC reproducido: hover acumulaba dwell oculto y el clic confirmaba antes de cargar. Corregido: mantener boton izquierdo 1.5 s en tarjetas; soltar/cambiar reinicia. Reticula y barra comparten contador. Mirada Cardboard conserva dwell; prologo limpia carga real. Escena y prefabs conservados. PASS Editor: regresion de raton, mirada, GameplayFlowProbe, BankOfficeProbe y PrototypeSmokeProbe. Capturas PC 0/49.204/0/100 en Docs/Previews/PortalOperationsReview/UniformFix-20261103. Informe: Docs/Context/PORTAL_UNIFORM_FILL_FIX.md. Respaldo: D:/UnityGames/SWIFT_Backups/PortalUniformFill-20261103-210524. HONOR pendiente. Sin commit/push.
+
+
+### 2026-11-03 - Prologo cercano con seguimiento de camara
+
+Corregido el storyboard fijo a 2.5 m que quedaba detras de la consola. Ahora: distancia preferida 1.1 m, acercamiento ante geometria, seguimiento de posicion y recentrado angular suave con margen para seleccionar Omitir. Canvas del portal oculto durante el prologo y restaurado al terminar. PASS Unity: giro 55 grados y desplazamiento, encuadre completo, TMP, consola cercana, omision con dwell real 1.5 s, flujo con final automatico, oficina y smoke. Cuatro capturas reales y hashes en Docs/Previews/IntroCameraFollow. Informe: Docs/Context/INTRO_CAMERA_FOLLOW_FIX.md. Escena y prefabs sin guardar ni modificar; cambios pendientes preservados. Respaldo: D:/UnityGames/SWIFT_Backups/IntroCameraFollow-20261103-213513. HONOR pendiente; sin APK, commit ni push.
+
+
+### 2026-11-03 - Afinado visual fuerte del portal
+
+Rama review/portal-dwell-feedback, sin commit/push. Marco recortado de doble borde cian y halo UI, cabecera SWIFT destacada, sello institucional, facetas y gradientes, iconos de mayor presencia, titulos/descripciones ampliados, modulos de ojo y barras redondeadas de 48 unidades. Mismos objetos de progreso, acciones, colliders y dwell. Etiqueta duplicada de reticula oculta solo en el portal; punto/anillo conservados. PASS Unity: visual/TMP, mirada, raton, activacion unica, flow, office y smoke. Ocho PNG reales con hashes: Docs/Previews/PortalVisualPolish/20261103. Referencia comparada: REF_Portal_Operations.png. Aproximacion de composicion, sin equivalencia literal ni aceptacion artistica final. Seis scripts core/interaccion y 25 ProjectSettings identicos al respaldo. Respaldo completo y copia de los cambios sin guardar del Editor: D:/UnityGames/SWIFT_Backups/PortalVisualPolish-20261103-224008. Informe: Docs/Context/PORTAL_VISUAL_POLISH.md. HONOR/Android, lectura binocular y rendimiento pendientes.
+
+
+### 2026-11-03 ? Afinado final del portal y pr?logo modal
+
+Faceta ?nica, iconos con contornos unidos, estados de foco/progreso/confirmaci?n m?s claros y l?nea inferior vinculada al mismo dwell. Pr?logo ampliado con marco institucional y omisi?n m?s legible; portal activo al 48 % detr?s del modal y restaurado al terminar. PASS Editor: mirada, rat?n, activaci?n ?nica, silla real, TMP de los tres momentos, omisi?n y final autom?tico, GameplayFlowProbe, BankOfficeProbe, PrototypeSmokeProbe. DomainTests 27/27. Capturas nuevas: Docs/Previews/PortalFinalReview/20261103. Informe: Docs/Context/PORTAL_FINAL_REVIEW.md. Respaldo: D:/UnityGames/SWIFT_Backups/PortalFinal-20261103-234535. Mismas reglas bancarias, URP y Cardboard; sin commit/push. Aceptaci?n visual del usuario y HONOR pendientes; sin APK.
+
+
+### 2026-11-04 - Estacion inmersiva y reposo activo de PC
+
+Implementados cuatro paneles bancarios con identidad compartida de REF_Operations_Expediente_Final, documento marfil, monto/observaciones, VER MAS/VOLVER y paginacion. Entrada contextual por el monitor, misma silla/fade, un SALIR DE ESTACION separado de CERRAR TURNO, pantallas detalladas ocultas de pie y teletransportes bloqueados sentado/restaurados al salir. Reentrada conserva sesion, expediente y pestana. Reposo corporativo en ambos monitores, UI luminosa y una luz real sin sombras (A/B comprobado). PASS Editor: ciclo completo por mirada y PC, cuatro pestanas, decisiones, textos, valores largos, paginacion, portal, GameplayFlowProbe, BankOfficeProbe y PrototypeSmokeProbe. DomainTests 27/27. Informe: Docs/Context/OPERATIONS_STATION_FINAL.md. Galeria: Docs/Previews/OperationsStationFinal/20261104. Respaldo: D:\UnityGames\SWIFT_Backups\OperationsStation-20261104-004925. 45 fuentes/ajustes protegidos identicos. Sin commit/push, APK no generada. Aceptacion artistica del usuario, lectura binocular, comodidad y rendimiento HONOR pendientes.
+
+
+### 2026-11-04 - Refinamiento visual de las tres pantallas
+
+Reposo principal con jerarquia centrada, una instruccion y cuatro apps contenidas; documento mas respirado con beneficiario/cuenta en columnas, monto compacto, observaciones reducidas y decisiones con acentos propios. Secundario organizado en tres tarjetas de apoyo; reposo secundario simplificado. Mismos estados, dwell, silla y reglas bancarias. PASS Editor: antes/despues con cuatro poses coincidentes, ciclo completo de mirada y PC, textos, decisiones, flow, office y smoke. 49 archivos protegidos identicos, incluida BancoCorresponsal. Informe: Docs/Context/STATION_VISUAL_REFINEMENT.md. Capturas: Docs/Previews/StationRefinement/20261104. Respaldo: D:\UnityGames\SWIFT_Backups\StationRefinement-20261104-080938. Sin commit/push/APK. Aceptacion visual y HONOR pendientes.
+
+### 2026-11-04 - Acabado institucional del expediente
+
+Aplicado papel gris frio, banda petroleo, campos agrupados con bordes discretos, monto crema/ambar y notas coherentes. Solo presentacion de Dossier en BankDocumentUI; fuentes y espacios conservados. PASS Editor final: captura comparativa con cuatro poses coincidentes, ciclo completo UI por mirada, decisiones ataque/defensa, TMP, valores largos y entrada/salida PC. Fallo inicial de espera conservado y repeticion completa PASS. Seis archivos protegidos con SHA identicos, incluida escena e interaccion. Informe: Docs/Context/DOSSIER_VISUAL_TREATMENT.md. Galeria: Docs/Previews/DossierTreatment/20261104. Respaldo: D:\UnityGames\SWIFT_Backups\DossierTreatment-20261104-114515. Sin commit/push/APK. HONOR y aceptacion visual pendientes.
+
+### 2026-11-10 — Inspección de herramientas y revisión educativa
+
+Petición: aplicar investigación de inmersión Cardboard por fases, sin reglas nuevas ni rehacer oficina. Rama existente review/portal-dwell-feedback, base c4a1278, cambios locales previos preservados. Respaldo D:/UnityGames/SWIFT_Backups/Immersive-20261110-020437 y escena aislada creada con GUID propio.
+
+Se reutilizan madera/clip/papel, biblioteca de materiales, TMP y marcos institucionales. Teléfono procedural de tres meshes y tres materiales existentes. Vista de inspección world-space con páginas, texto gris papel y controles grandes; foco por MaterialPropertyBlock, breve respuesta visual de silla y estado de impresora. Sin nuevas luces, texturas o efectos. Unity serializó valores predeterminados de consulta y metadatos URP de la luz de escritorio existente; diff conservado, pipeline/intensidad intactos.
+
+Capturas reales inspeccionadas: Docs/Previews/ImmersiveGameplay/README.md (Play/Game View y comparativas con poses) y Docs/Previews/20261110T083754509Z-0bfe48/README.md (cuatro vistas en edición). Cenital parcial del núcleo con techo temporalmente oculto; vistas de edición muestran textos anteriores al arranque, no UI dinámica final. Se corrigieron clipping, oclusión de botones y apertura fuera de campo antes de integrar. No se afirma coincidencia cinematográfica ni aprobación visual del usuario.
+
+Pruebas reales de Unity: herramientas, PC, tutorial y sondas flow/office/smoke PASS; dominio 27/27 y pruebas de escritorio 37/37. Logs, fallos intermedios y resultados en Artifacts/ImmersiveGameplay. El primer PASS de tutorial fue invalidado y repetido correctamente. Herramienta de ventanas indisponible; se usaron APIs del Editor y se abrieron las capturas reales.
+
+Android: PASS build Development IL2CPP/ARM64, 0 errores/1 aviso, APK nueva 67.526.759 bytes en Artifacts/ImmersiveGameplay/Build-20261110-083825; hash/logs guardados. Pendientes HONOR, óptica/lectura, rendimiento, clips y guion final. Revisión visual pendiente del usuario. Sin commit, push, merge ni publicación.

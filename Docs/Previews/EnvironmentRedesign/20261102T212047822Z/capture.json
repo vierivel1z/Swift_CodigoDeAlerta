@@ -1,0 +1,88 @@
+{
+  "utc": "2026-11-02T21:54:58.681197+00:00",
+  "unity": "6000.3.24f1",
+  "urp": "17.3.0",
+  "branch": "review/environment-immersive",
+  "base": "1074fdd313eac8220451f11559e6076ba4fb4e2c",
+  "scene": "Assets/_Project/Scenes/BancoCorresponsal.unity",
+  "sceneSha256": "ad5e250274963e682bc371179b3c06ec7d157532ce4ad1047616f3a1683affc0",
+  "beforeSceneSha256": "fde029b941dae441ad8c851e4de192c89a6d15187856da1d85ece421c5c8a485",
+  "note": "Actual Unity Editor camera renders, PC RPAsset, 1600x1000, not Android/VR certification; top views temporarily hide ceiling. Before and after use matching overview and plan cameras. Earlier attempts retained in iteration-1.",
+  "images": [
+    {
+      "file": "01-oficina-anterior.png",
+      "sha256": "7fd842fcc88bc33369d349388ccbb11e5ef412fee67fda205789afa61c7e0e37"
+    },
+    {
+      "file": "01b-planta-anterior.png",
+      "sha256": "0757bdd728c43b122a9181c571dbb0cce74834eefd78c0f4e05215f86bc68f50"
+    },
+    {
+      "file": "02-oficina-ampliada.png",
+      "sha256": "4fb95cd52aba12dbd5eafcd0be42fcad5012f34da7180691b64d360c0662ba3b"
+    },
+    {
+      "file": "03-consola-modos.png",
+      "sha256": "b5ca21bc829db09b3d559893204a0d8878433a4a4b452558d1b8f2d8f7e9d7d4"
+    },
+    {
+      "file": "04-cubiculos.png",
+      "sha256": "7b62559fad60937370b807ee863738342497a91b21258ed9c08c0123d8302561"
+    },
+    {
+      "file": "05-analista-de-pie.png",
+      "sha256": "e57323a9f7278b533a39dade7f1be4941dad8f337f6e52a26560c6ce7c53b4d9"
+    },
+    {
+      "file": "06-analista-sentado.png",
+      "sha256": "d60145dcb1d590f0ee6c3bd83f8bb711ef02d173161c3d857b02abf96e7d7a81"
+    },
+    {
+      "file": "07-monitor-principal.png",
+      "sha256": "661771f529146762b3310db18e6b92b30b84b55b691a9e8fc05f80fdc6a947bd"
+    },
+    {
+      "file": "08-consulta-libreta.png",
+      "sha256": "e5681ac7f0b0c03f216906e54808cfcc4e663ceac5695056379f31f073a93484"
+    },
+    {
+      "file": "09-iluminacion-materiales.png",
+      "sha256": "dbf9e13eefd6e71f78d345b1bea10b6fb8c74e5a7f344875f071b21014b25af5"
+    },
+    {
+      "file": "10-distribucion-superior.png",
+      "sha256": "fcb2638572e41f76d7a680493f69f818678e9f546e94f0848dd5d0407234c573"
+    },
+    {
+      "file": "11-marcador-levantarse.png",
+      "sha256": "09c2eeb5815adbfb8f95125538dcd82fd641c48582c849a4a4318cc1c944ca36"
+    }
+  ],
+  "sourceSHA256": {
+    "Assets/_Project/Scripts/Audio/AudioCueLibrary.cs": "bcd4a0d003fdc727626e3c00ec652f71df828999278c17bbe3df8d2f4fa43f7f",
+    "Assets/_Project/Scripts/Audio/FeedbackAudio.cs": "5d58771656facbb611decd0776363d50d5fe20fe5c134f3554377902c11be4bf",
+    "Assets/_Project/Scripts/Banking/BankingDomain.cs": "49ab7dae6ebeb6d3351e20bb4320fd3c8256d3888c1ab84b1fa15647dcdd840c",
+    "Assets/_Project/Scripts/Core/GameManager.cs": "8c047059a6c5f9011231995343e26b7dc3308401b2e97dfb2cac8e74e67ad997",
+    "Assets/_Project/Scripts/Core/IntroSequence.cs": "d0521883d80c835e08f89c106ec1d7f8090c1dce2a07ddc5bb1ad4beebabaa5f",
+    "Assets/_Project/Scripts/Core/ScenarioData.cs": "ee6ffa673168e167fb940699e557938aae14cf38c8108f9b6c27c2c71ba70b7a",
+    "Assets/_Project/Scripts/Interaction/BankInteractable.cs": "3e810126261c53d217bd5b0596df093307316ab328b2f45aee0c5f369a108969",
+    "Assets/_Project/Scripts/Interaction/EditorInputAdapter.cs": "3e9ed5f19381174df6a9a913763e8e11363018a633cdf62047859202bad39d71",
+    "Assets/_Project/Scripts/Interaction/VRInteractionManager.cs": "9f2cfa48b2c537e8b01e62373845eee1c00ff3c403013d95d891c5c829c54c76",
+    "Assets/_Project/Scripts/Testing/BankOfficeProbe.cs": "731ad971ab24252efb5975b7b4cd0b248c6eedf5f9a17b24577c5169297c95b0",
+    "Assets/_Project/Scripts/Testing/GameplayFlowProbe.cs": "0e8f67b9f8bc8cec9c33915da86948900abf37ad3d83d8829ac59d5890839536",
+    "Assets/_Project/Scripts/Testing/OfficeBootstrap.cs": "253f279824a28e11db5461a00ca4f59f9c4e050a946d27d14013038cbb53fe8f",
+    "Assets/_Project/Scripts/Testing/OfficeFactory.cs": "31078aca83ae20965802beaebbd5f1e88b95a68d258a05c50d8c2604c01255f7",
+    "Assets/_Project/Scripts/Testing/PrototypeSmokeProbe.cs": "b8f437143caaf7b2abe51283d42313879913ebf996daf28000687b0c5271e1ee",
+    "Assets/_Project/Scripts/UI/BankDocumentUI.cs": "3c6c7e36b60582bcd75f8a88fc0363e38448b78e5021846e45bcfc10d6f7298b",
+    "Assets/_Project/Scripts/UI/DocumentFocus.cs": "a5fe2956ac07c21bcafd075c602a786fa6532bee29dfb0a8eb998b0c5b23eceb",
+    "Assets/_Project/Scripts/UI/FormatReferencePanel.cs": "f17624cbe548de258d1857b06e89850c596317a223b10d620ccca261f9bb6863",
+    "Assets/_Project/Scripts/UI/GazeProgressVisual.cs": "3579b00b2bdc234fd9fd35fb38d50e12e0a57c13ef172d1681a16896438df4ae",
+    "Assets/_Project/Scripts/UI/ModeStationVisual.cs": "ec3c0a48b4bbadd098ebf87d0d1419c9b61ed6488ca341c7956d42c2a0de89bb",
+    "Assets/_Project/Scripts/UI/OperationsCenterStyle.cs": "ae183b5b955f606f733b4532a2e82e9e77d02a1893332b654dab6c2825f8a9d7",
+    "Assets/_Project/Scripts/UI/UIManager.cs": "43fee30efffaeb577ebe53b5edb36079f0bd903797e87ba19911a6e21f217c3f",
+    "Assets/_Project/Scripts/UI/VRQuickTutorial.cs": "743798c77d319b3d6e10b4143afbd75d43268b52c0e3593b4742f7d23f8f22cf",
+    "Assets/_Project/Scripts/VR/AnalystSeat.cs": "15803f944593ed3c41823c6ba7f65819a377162f5a330bd807746a397374a585",
+    "Assets/_Project/Scripts/VR/CardboardLifecycle.cs": "e76f75aa557e57c28f8c0e72db64ce4b278ed799fd9e6e4e7b430e3419acb2b2",
+    "Assets/_Project/Scripts/VR/HeadPoseAdapter.cs": "bdd466a86345e3a2d2f5aaf3c70ca69dc80ecff825e275df1c71d5622829a6e5"
+  }
+}

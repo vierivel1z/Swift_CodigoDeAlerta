@@ -1,0 +1,7 @@
+chairDesk: back is local +Z from upper mesh centroid; seat front is -Z. Player visual is independent of sit/stand target origin.
+BankOfficeVisualV1/03_Zone_B_Inspection/Analyst chair height=1.08 floor=0 facingDot=1 chairBounds=Center: (0.00, 0.54, 0.05), Extents: (0.30, 0.54, 0.28) deskBounds=Center: (0.00, 0.40, 2.50), Extents: (1.30, 0.40, 0.81)
+EnvironmentRedesignV1/02_SecondaryCubicles/Cubicle 1/Office chair height=1.08 floor=0 facingDot=1 chairBounds=Center: (-6.40, 0.54, -2.05), Extents: (0.34, 0.54, 0.32) deskBounds=Center: (-6.60, 0.40, -0.80), Extents: (1.30, 0.40, 0.55)
+EnvironmentRedesignV1/02_SecondaryCubicles/Cubicle 2/Office chair height=1.08 floor=0 facingDot=1 chairBounds=Center: (-6.95, 0.54, 3.25), Extents: (0.33, 0.54, 0.31) deskBounds=Center: (-6.80, 0.40, 4.50), Extents: (1.30, 0.40, 0.55)
+EnvironmentRedesignV1/02_SecondaryCubicles/Cubicle 3/Office chair height=1.08 floor=0 facingDot=1 chairBounds=Center: (6.60, 0.54, -0.85), Extents: (0.34, 0.54, 0.32) deskBounds=Center: (6.40, 0.40, 0.40), Extents: (1.30, 0.40, 0.55)
+EnvironmentRedesignV1/02_SecondaryCubicles/Cubicle 4/Office chair height=1.08 floor=0 facingDot=1 chairBounds=Center: (6.65, 0.54, 5.05), Extents: (0.33, 0.54, 0.31) deskBounds=Center: (6.80, 0.40, 6.30), Extents: (1.30, 0.40, 0.55)
+VisualPolishV1/Supervision workstation/Supervisor chair height=1.08 floor=0 facingDot=0.9950371 chairBounds=Center: (6.00, 0.54, 8.00), Extents: (0.30, 0.54, 0.28) deskBounds=Center: (6.10, 0.39, 9.00), Extents: (0.75, 0.39, 0.40)

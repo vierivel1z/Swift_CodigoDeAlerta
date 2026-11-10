@@ -1,0 +1,68 @@
+{
+  "commit": "c4a127890e9bccb2b496e6752f40e94253273c59",
+  "editorResult": "PASS reopen and render 2026-11-04T01:08:41.4624313Z Unity=6000.3.24f1 errors=0 warnings=0",
+  "playResult": "PASS Play Mode 2026-11-04T01:08:57.5766132Z errors=0 warnings=0 EDITOR ONLY; ANDROID NOT TESTED",
+  "configuration": "Unity=6000.3.24f1\nAPI=Direct3D11\nBuildTarget=Android\nPipeline=Assets/Settings/Mobile_RPAsset.asset\nEditor only; NOT Android performance test",
+  "integrity": {
+    "protectedFiles": 1073,
+    "changed": []
+  },
+  "images": [
+    {
+      "path": "Editor/00.png",
+      "sha256": "ff9166c9dd165cf381d5e152962849a6aa1454559b420a989530ef09e3660d9d"
+    },
+    {
+      "path": "Editor/01.png",
+      "sha256": "4f786cc6f615240968321f3cf788256a86f83e84be6e59b0bd9b321dcd1a4c28"
+    },
+    {
+      "path": "Editor/02.png",
+      "sha256": "01a9eeb8d942f8fd3e988446f6094394e7eade84d21aeb2b9ebe264eebe56832"
+    },
+    {
+      "path": "Editor/03.png",
+      "sha256": "934ec82363736f26c9b2b5017962f0954aeeaaf9e18f597a3f302e6d15e2400d"
+    },
+    {
+      "path": "Editor/04.png",
+      "sha256": "b00d006ce4277257963d2dee5224ac35daf675177c0c8998169a441f2b14e8f5"
+    },
+    {
+      "path": "Editor/05.png",
+      "sha256": "35e4a20d0378585fb6c2e02d86bc44b138ecef894f6ddc5f589f2f084d8ff19c"
+    },
+    {
+      "path": "Editor/06.png",
+      "sha256": "dfad1a350ee702816939c84ec79e443b040743e4520bbdf3a6c28510c5250542"
+    },
+    {
+      "path": "Play/00.png",
+      "sha256": "47eff912b3ca40733ffb36917d14c29570021e57cb808ca44372823142b667ce"
+    },
+    {
+      "path": "Play/01.png",
+      "sha256": "d136ea2940e64816e00c93a9be556be117103a322ad858be00730168d87f0f96"
+    },
+    {
+      "path": "Play/02.png",
+      "sha256": "2f18c0aefd4b268413e8ceb36d9fb8e1723a9f235c85653f71391d0b0b2a7071"
+    },
+    {
+      "path": "Play/03.png",
+      "sha256": "971867b968d23a10998de10f0dff41a132151f8bb92aefa2ddae7acaeedd1511"
+    },
+    {
+      "path": "Play/04.png",
+      "sha256": "b90a0a27940de6633bfec29b3b0244075a0ec026a920a6ac420545c9e03734fa"
+    },
+    {
+      "path": "Play/05.png",
+      "sha256": "6beb8e15a7c3e51c6fcd7fae45fae07740ea11ce6a0a32cede0181fcc47f636a"
+    },
+    {
+      "path": "Play/06.png",
+      "sha256": "beded2bd0266f7143ee727ddee1755872891fed8a3b823c7972c39d099edc6ca"
+    }
+  ]
+}

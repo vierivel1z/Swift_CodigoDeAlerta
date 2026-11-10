@@ -1,0 +1,48 @@
+{
+  "unity": "6000.3.24f1",
+  "platform": "Editor DX11, NOT Android",
+  "pairs": [
+    {
+      "image": "01-idle-main.png",
+      "pose": "(1.60, 1.60, -0.65) look=(-0.57, -0.02, 0.82)",
+      "samePose": true,
+      "resolution": [
+        1600,
+        900
+      ],
+      "fov": 60
+    },
+    {
+      "image": "02-active-main.png",
+      "pose": "(0.00, 1.25, 0.05) look=(0.00, 0.17, 0.99)",
+      "samePose": true,
+      "resolution": [
+        1600,
+        900
+      ],
+      "fov": 60
+    },
+    {
+      "image": "03-active-secondary.png",
+      "pose": "(0.00, 1.25, 0.05) look=(0.77, 0.11, 0.62)",
+      "samePose": true,
+      "resolution": [
+        1600,
+        900
+      ],
+      "fov": 60
+    },
+    {
+      "image": "04-idle-secondary.png",
+      "pose": "(1.60, 1.60, -0.65) look=(-0.02, -0.06, 1.00)",
+      "samePose": true,
+      "resolution": [
+        1600,
+        900
+      ],
+      "fov": 60
+    }
+  ],
+  "finalAfter": "2026-11-04T16:50:09Z",
+  "note": "receipt retains an earlier pre-compilation after capture; current PNGs are the final run."
+}

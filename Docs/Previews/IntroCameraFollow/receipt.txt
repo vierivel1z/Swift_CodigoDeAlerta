@@ -1,0 +1,8 @@
+2026-11-04T02:39:16.4962612Z 01-portal-near-prologue.png Play=True eye=(0.00, 1.60, -3.60) rotation=(17.74, 0.00, 0.00) FOV=60 aspect=2.154599
+2026-11-04T02:39:17.2890652Z 02-follow-turn-and-move.png Play=True eye=(0.30, 1.60, -3.80) rotation=(17.74, 55.00, 0.00) FOV=60 aspect=2.154599
+2026-11-04T02:39:18.0622974Z 03-close-console-clearance.png Play=True eye=(0.00, 1.60, -2.75) rotation=(36.44, 0.00, 0.00) FOV=60 aspect=2.154599
+2026-11-04T02:39:18.1398338Z 04-gaze-skip-stays-reachable.png Play=True eye=(0.00, 1.60, -2.75) rotation=(48.41, 0.53, 0.32) FOV=60 aspect=2.154599
+2026-11-04T02:41:43.4955762Z 01-portal-near-prologue.png Play=True eye=(0.00, 1.60, -3.60) rotation=(17.74, 0.00, 0.00) FOV=60 aspect=2.154599
+2026-11-04T02:41:44.2764706Z 02-follow-turn-and-move.png Play=True eye=(0.30, 1.60, -3.80) rotation=(17.74, 55.00, 0.00) FOV=60 aspect=2.154599
+2026-11-04T02:41:45.0442441Z 03-close-console-clearance.png Play=True eye=(0.00, 1.60, -2.75) rotation=(36.44, 0.00, 0.00) FOV=60 aspect=2.154599
+2026-11-04T02:41:45.1102679Z 04-gaze-skip-stays-reachable.png Play=True eye=(0.00, 1.60, -2.75) rotation=(48.41, 0.52, 0.31) FOV=60 aspect=2.154599
