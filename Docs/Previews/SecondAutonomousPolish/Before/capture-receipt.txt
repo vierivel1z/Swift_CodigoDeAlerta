@@ -1,0 +1,14 @@
+2026-11-10T08:32:01.1890920Z results-choice-and-control Unity=6000.3.24f1 scene=Assets/_Project/Scenes/Review/BancoCorresponsal_Immersive_20261110.unity eye=(0.00, 1.25, 0.05) forward=(0.00, 0.17, 0.99) dwell=0 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-10T08:32:58.4400861Z results-choice-and-control Unity=6000.3.24f1 scene=Assets/_Project/Scenes/Review/BancoCorresponsal_Immersive_20261110.unity eye=(0.00, 1.25, 0.05) forward=(0.00, 0.17, 0.99) dwell=0 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-10T08:33:03.3935716Z educational-review Unity=6000.3.24f1 scene=Assets/_Project/Scenes/Review/BancoCorresponsal_Immersive_20261110.unity eye=(0.00, 1.25, 0.05) forward=(-0.88, -0.07, 0.47) dwell=1 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-10T08:37:48.2794639Z results-choice-and-control Unity=6000.3.24f1 scene=Assets/_Project/Scenes/BancoCorresponsal.unity eye=(0.00, 1.25, 0.05) forward=(0.00, 0.17, 0.99) dwell=0 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-10T08:37:53.2154470Z educational-review Unity=6000.3.24f1 scene=Assets/_Project/Scenes/BancoCorresponsal.unity eye=(0.00, 1.25, 0.05) forward=(-0.88, -0.07, 0.47) dwell=1 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-11T00:32:56.7135673Z results-choice-and-control Unity=6000.3.24f1 scene=Assets/_Project/Scenes/BancoCorresponsal.unity eye=(0.00, 1.25, 0.05) forward=(0.00, 0.17, 0.99) dwell=0 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-11T00:33:01.7517282Z educational-review Unity=6000.3.24f1 scene=Assets/_Project/Scenes/BancoCorresponsal.unity eye=(0.00, 1.25, 0.05) forward=(-0.88, -0.07, 0.47) dwell=1 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-11T00:37:29.8804741Z 01-portal.png Unity=6000.3.24f1 Play=True Android=False
+2026-11-11T00:37:30.0600051Z 02-prologo.png Unity=6000.3.24f1 Play=True Android=False
+2026-11-11T00:37:30.7526715Z 03-expediente.png Unity=6000.3.24f1 Play=True Android=False
+2026-11-11T00:37:31.0990080Z 04-datos-largos.png Unity=6000.3.24f1 Play=True Android=False
+2026-11-11T00:37:31.2848865Z 05-observaciones-pagina2.png Unity=6000.3.24f1 Play=True Android=False
+2026-11-11T00:37:32.4132471Z 06-resultados.png Unity=6000.3.24f1 Play=True Android=False
+2026-11-11T00:37:32.5021742Z 07-revision-educativa.png Unity=6000.3.24f1 Play=True Android=False

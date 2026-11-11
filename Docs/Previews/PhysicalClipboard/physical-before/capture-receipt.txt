@@ -1,0 +1,2 @@
+2026-11-11T18:45:49.8914034Z desk-before Unity=6000.3.24f1 scene=Assets/_Project/Scenes/BancoCorresponsal.unity eye=(0.00, 1.25, 0.05) forward=(-0.57, -0.24, 0.78) dwell=0 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-11T18:45:51.5037008Z reading-before Unity=6000.3.24f1 scene=Assets/_Project/Scenes/BancoCorresponsal.unity eye=(0.00, 1.25, 0.05) forward=(-0.88, -0.07, 0.47) dwell=0 play=true source=URP_EDITOR_CAMERA NOT_ANDROID

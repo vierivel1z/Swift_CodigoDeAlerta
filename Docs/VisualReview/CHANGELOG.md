@@ -1,5 +1,13 @@
 # Registro de revisiones visuales
 
+## Dirección artística autónoma — 2026-11-10
+
+- Escena BancoCorresponsal respaldada y variante aislada revisada en Unity 6000.3.24f1 antes de integrar. No se borraron escenas ni objetos interactivos.
+- Reutilizados materiales GraphicsPolishV2 en 180 renderers; añadidas cinco mallas combinadas existentes, sin colliders; retocadas 15 luces horneadas y regenerado el lightmap. URP, Cardboard y reglas bancarias sin cambios.
+- Nueve pares de capturas reales desde cámaras idénticas: [galería](../Previews/ArtDirectionPolish/README.md). Las iteraciones intermedias se conservan; se rechazó una captura aislada con importación incompleta.
+- Pruebas de dominio 27/27 PASS; flujo, oficina y humo PASS tanto en variante como en principal; portapapeles y teléfono PASS en variante. Editor solamente; HONOR sin probar.
+- Informe y coste preliminar: [ART_DIRECTION_AUTONOMOUS_REPORT.md](../Context/ART_DIRECTION_AUTONOMOUS_REPORT.md). Respaldo local en `Artifacts/ArtDirectionPolish/Backup-20261110-185745/`. Sin commit, push ni merge.
+
 ## Auditoría de arte y audio — 2026-11-02
 
 - Petición: evaluar iluminación, materiales, colores, composición, Propuesta C, audio y assets futuros, sin implementar cambios de presentación.
@@ -205,3 +213,20 @@ Capturas reales inspeccionadas: Docs/Previews/ImmersiveGameplay/README.md (Play/
 Pruebas reales de Unity: herramientas, PC, tutorial y sondas flow/office/smoke PASS; dominio 27/27 y pruebas de escritorio 37/37. Logs, fallos intermedios y resultados en Artifacts/ImmersiveGameplay. El primer PASS de tutorial fue invalidado y repetido correctamente. Herramienta de ventanas indisponible; se usaron APIs del Editor y se abrieron las capturas reales.
 
 Android: PASS build Development IL2CPP/ARM64, 0 errores/1 aviso, APK nueva 67.526.759 bytes en Artifacts/ImmersiveGameplay/Build-20261110-083825; hash/logs guardados. Pendientes HONOR, óptica/lectura, rendimiento, clips y guion final. Revisión visual pendiente del usuario. Sin commit, push, merge ni publicación.
+
+
+### 2026-11-10 — Segunda ronda de calidad y optimización UI
+
+Caché de reconstrucción documental para avisos idénticos, monto largo y previews con elipsis; resultados de dos líneas con decisión original, estado efectivo, intervención y fuentes; revisión educativa compacta. Corrección de asociación de respuesta visual de la impresora. Capturas Play Mode antes/después en siete poses y caso adicional de evidencia: Docs/Previews/SecondAutonomousPolish/README.md. PASS Editor: DomainTests 27/27 y sondas flow, office, smoke, regression, clipboard, phone, objects, tutorial, stationpc y estrés visual. 20 avisos idénticos: 780 RectTransforms transitorios antes, 0 después. Fallos intermedios preservados. Informe: Docs/Context/SECOND_AUTONOMOUS_POLISH_REPORT.md. HONOR y perfilado móvil pendientes. Escena, URP y Cardboard no tocados en esta ronda; sin commit/push/APK nueva.
+
+### 2026-11-11 — Pulido de detalles de oficina y cierre
+
+Rótulos institucionales azul petróleo; libros flotantes asentados y estantería ocupada con prefab existente; pantalla física de supervisión y cierre ampliada; fila inferior del monitor con CERRAR TURNO más ancho y tipografía mayor; feedback de objetos suavizado sin cambiar activaciones. Escena respaldada y variante v3 revisada antes de integrar. Capturas reales antes/después desde ocho poses y Play Mode del monitor: Docs/Previews/OfficeDetailPolish/README.md. Sondas Editor de objetos, cierre, estación PC y oficina PASS; DomainTests 27/27. Primer fallo de la sonda de cierre debió a expectativa equivocada de final manual; estación PC pasó al repetir. Informe: Docs/Context/OFFICE_DETAIL_POLISH_REPORT.md. Falta evaluación binocular y rendimiento en HONOR. Sin commit/push/APK nueva.
+
+### 2026-11-11 — Estado educativo de controles
+
+La cabecera de resultados distingue ATAQUE sin revisión automática, DEFENSA sin activar y DEFENSA activa usando el estado real de GameSession. No cambian cálculos ni decisiones. Nueva prueba de dominio con elecciones idénticas: 5/6 en ambos, USD 20 000 ficticios frente a 0 con control activo. PASS .NET DomainTests 37/37 y DeskToolsTests 37/37; PASS Editor regression, flow, office, smoke, phone y clipboard. Capturas reales: Docs/Previews/CybersecurityReview/README.md. Matriz, laboratorio Quest y guion docente en Docs/Research. Cardboard físico/Quest/simulador XR NO PROBADOS; sin paquetes, loaders, escena principal, commit o push adicionales.
+
+## 2026-11-11 — Portapapeles físico reversible
+
+Variante física sobre el tablero de madera existente, con elevación/retorno, texto TMP sobre el papel, controles por el dwell único y acceso `AMPLIAR` a la vista anterior. Sin cambios a escena, prefab, URP, Cardboard o reglas bancarias. PASS Unity Editor: `physical-before`, `physical-after`, `objects`, `stationpc` y `regression`; Android/Cardboard físico pendiente. [Informe](../Context/PHYSICAL_CLIPBOARD_REPORT.md) y [capturas](../Previews/PhysicalClipboard/README.md). Sin commit/push.

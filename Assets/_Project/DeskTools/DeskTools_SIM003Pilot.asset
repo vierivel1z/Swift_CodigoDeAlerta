@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f4662e157c5b49a85b204d186a77b, type: 3}
+  m_Name: DeskTools_SIM003Pilot
+  m_EditorClassIdentifier: Assembly-CSharp::Swift.DeskTools.DeskToolsProfile
+  ClipboardEnabled: 1
+  PhoneEnabled: 1
+  SeatPolishEnabled: 1
+  PrinterFeedbackEnabled: 1
+  DocumentInspectionEnabled: 1
+  AllowPrototypeCalls: 1
+  PhysicalClipboardEnabled: 1
+  Sim003PilotEnabled: 1
+  Sim003PrinterEnabled: 1
+  Sim003PrinterFailsInAttack: 1
+  PolishedClipboardVisual: 1
+  Reference: 1
+  Calls: {fileID: 11400000, guid: 8e38e7dca168ff741a896f1dee8b81f8, type: 2}
+  PhonePrefab: {fileID: 4898431464819588933, guid: a5dce1682531f5244b474800d4e27f67, type: 3}
+  InspectionPrefab: {fileID: 5746528819730244206, guid: e123e6979354a4e45bb363cf72fac850, type: 3}

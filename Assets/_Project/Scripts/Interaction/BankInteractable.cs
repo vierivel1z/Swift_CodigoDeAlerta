@@ -3,7 +3,7 @@ using Swift.Game;
 using Swift.Bank;
 namespace Swift.Interaction
 {
-    public enum BankAction { Inspect, Registry, Alerts, Evidence, Defense, End, Attack, DefenseMode, Approve, Hold, Return, Teleport, SkipIntro, ViewDossier, Procedure, History, TutorialStart, TutorialNext, TutorialSkip, TutorialDecision, Sit, Stand, FormatReference, Notebook, MoreObservations, BackToDocument, ObservationNext, ObservationPrevious, DeskTool }
+    public enum BankAction { Inspect, Registry, Alerts, Evidence, Defense, End, Attack, DefenseMode, Approve, Hold, Return, Teleport, SkipIntro, ViewDossier, Procedure, History, TutorialStart, TutorialNext, TutorialSkip, TutorialDecision, Sit, Stand, FormatReference, Notebook, MoreObservations, BackToDocument, ObservationNext, ObservationPrevious, DeskTool, PilotSelectAccount, PilotSearch, PilotMatches, PilotDiffers, PilotUnverified, PilotConfirm, PilotCancel, PilotContinue, PilotInspectPrint, PilotReturnPrint, PilotPrintExpand }
     public sealed class BankInteractable : MonoBehaviour
     {
         public GameManager Manager;
@@ -12,7 +12,7 @@ namespace Swift.Interaction
         public Vector3 Destination;
         public Swift.UI.VRQuickTutorial Tutorial;
         public int TutorialToken, TutorialChoice;
-        public bool CanActivate => Swift.DeskTools.DeskInteractionCoordinator.Allows(this);
+        public bool CanActivate => (Swift.DeskTools.Sim003Pilot.Current?.Allows(this)??true)&&Swift.DeskTools.DeskInteractionCoordinator.Allows(this);
         public void Activate()
         {
             var audio=Swift.Audio.FeedbackAudio.Current;
@@ -33,6 +33,7 @@ namespace Swift.Interaction
             if (Manager != null && Manager.IntroPlaying) {audio?.Emit(Swift.Audio.AudioCue.Unavailable);return;}
             if (Action == BankAction.Teleport) {if(Player!=null)Player.position=Destination;audio?.Emit(Player!=null?Swift.Audio.AudioCue.Teleport:Swift.Audio.AudioCue.Unavailable);return;}
             if (Manager == null) return;
+            if(Swift.DeskTools.Sim003Pilot.Current?.TryHandle(this)==true)return;
             if(Swift.DeskTools.DeskInteractionCoordinator.Current?.TryHandle(this)==true)return;
             var before=Swift.Audio.FeedbackAudio.Capture(Manager);audio?.SetActionOrigin(transform.position);
             switch (Action) {

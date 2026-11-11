@@ -1,0 +1,1 @@
+2026-11-11T13:32:43.7068818Z welcome Unity=6000.3.24f1 scene=Assets/_Project/Scenes/BancoCorresponsal.unity eye=(0.00, 1.25, 0.05) forward=(0.00, 0.17, 0.99) dwell=0 play=true source=URP_EDITOR_CAMERA NOT_ANDROID

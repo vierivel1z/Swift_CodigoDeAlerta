@@ -1,0 +1,18 @@
+# AfterArchitecture
+
+Unity=6000.3.24f1
+Scene=Assets/_Project/Scenes/Review/BancoCorresponsal_ArtDirection_20261110.unity
+SceneSHA256=C7E0EBE2CFFEE29627D2AB02666E0CBE8A00C2E49216997D546DE4378362FE4A
+Pipeline=Assets/Settings/PC_RPAsset.asset
+GPU=NVIDIA GeForce GT 730
+Real URP Editor render. Monoscopic; Android/Cardboard not tested. Top view hides ceiling temporarily.
+
+- [01-entrada.png](01-entrada.png) eye=(0.00, 1.60, -6.60) look=(0.00, 1.45, 3.10) ortho=0 sha256=D1FCE468961ED6BD3F128CC9708E504A0C4C47F23D5BEF75E0940296B10D874C
+- [02-general.png](02-general.png) eye=(8.80, 2.20, -6.90) look=(0.00, 1.30, 3.60) ortho=0 sha256=D390460028641D9A395018DC8AB05D839F0FB27B4A380B6FE862BBF2CDE07134
+- [03-cubiculos.png](03-cubiculos.png) eye=(-3.60, 1.65, -3.10) look=(-6.60, 1.05, 0.00) ortho=0 sha256=8A540C1DAEED0364EDF69E5EB9F00B08B84E24D42978BA7093A0E39772B4D61A
+- [04-puesto-pie.png](04-puesto-pie.png) eye=(-1.80, 1.80, -1.10) look=(0.25, 1.20, 1.70) ortho=0 sha256=C606BF79F1BA41368885453101186DB2C9DA9F7B1D49F03D1E1F845EC931D499
+- [05-puesto-sentado.png](05-puesto-sentado.png) eye=(0.00, 1.25, 0.05) look=(0.00, 1.40, 1.80) ortho=0 sha256=EECD9B370B6CA2D1B1259EA8CD23B1B12D9E86894893317E7C00CCAAE63FF233
+- [06-documentacion.png](06-documentacion.png) eye=(-1.50, 1.65, 1.00) look=(-4.20, 1.20, 4.30) ortho=0 sha256=CB014062DC29B9C3C742D83B0D88812BBBF3D5D97D79BEBF653027553217CF2B
+- [07-supervision.png](07-supervision.png) eye=(2.70, 1.60, 4.30) look=(7.40, 1.40, 8.20) ortho=0 sha256=E3FA280EA8DB4DB4B64DC466449890088709264DBEC60A8C7E3EFE5AC2129764
+- [08-nocturna.png](08-nocturna.png) eye=(0.00, 1.60, 8.30) look=(7.70, 2.00, -0.30) ortho=0 sha256=3C8EB0490898CEBACB2DD81368E3B7C8E46F7DFAB72A8D15925113324813CE39
+- [09-planta.png](09-planta.png) eye=(0.00, 21.00, 1.00) look=(0.00, 0.00, 1.00) ortho=11 sha256=883F2FF88A3B4DEA056BF90012983ACA85DBB6AC3B666613A69893AEAD9CB8FC

@@ -21,6 +21,13 @@ namespace Swift.UI
         {
             if(Rules!=null)Rules.text=RuleText;
             var data=Manager?.Session?.Transactions.Current?.Data;
+            var pilot=Swift.DeskTools.Sim003Pilot.Current;
+            if(pilot!=null&&(pilot.ActiveForCurrent||pilot.ReviewPending)){
+                if(SupportRecord!=null)SupportRecord.text=pilot.ReviewPending?"REVISIÓN / SIM-003":"EXPEDIENTE / SIM-003";
+                if(Observed!=null)Observed.text=pilot.ReviewPending?"Revisa el resultado en el monitor principal.":"Consulta la orden en el monitor principal.";
+                if(ExistingAlert!=null)ExistingAlert.text=pilot.ReviewPending?"Elige CONTINUAR cuando termines.":"Busca la cuenta en REGISTRO y registra tu observación.";
+                return;
+            }
             if(CompactSupport){
                 if(SupportRecord!=null)SupportRecord.text=data==null?"SIN EXPEDIENTE ACTIVO":"EXPEDIENTE / "+data.Id;
                 if(Observed!=null)Observed.text=data==null?"Sin expediente activo":Value(data.Account)+"\n"+Value(data.Beneficiary);

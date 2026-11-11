@@ -1,0 +1,5 @@
+2026-11-11T07:39:17.2040892Z close-turn-monitor Unity=6000.3.24f1 scene=Assets/_Project/Scenes/BancoCorresponsal.unity eye=(0.00, 1.25, 0.05) forward=(0.00, 0.17, 0.99) dwell=0 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-11T07:40:55.8041100Z close-turn-monitor Unity=6000.3.24f1 scene=Assets/_Project/Scenes/BancoCorresponsal.unity eye=(0.00, 1.25, 0.05) forward=(0.00, 0.17, 0.99) dwell=0 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-11T07:40:57.4683036Z close-turn-results Unity=6000.3.24f1 scene=Assets/_Project/Scenes/BancoCorresponsal.unity eye=(0.00, 1.25, 0.05) forward=(0.00, 0.17, 0.99) dwell=1 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-11T13:39:33.6015093Z close-turn-monitor Unity=6000.3.24f1 scene=Assets/_Project/Scenes/BancoCorresponsal.unity eye=(0.00, 1.25, 0.05) forward=(0.00, 0.17, 0.99) dwell=0 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-11T13:39:35.2516117Z close-turn-results Unity=6000.3.24f1 scene=Assets/_Project/Scenes/BancoCorresponsal.unity eye=(0.00, 1.25, 0.05) forward=(0.00, 0.17, 0.99) dwell=1 play=true source=URP_EDITOR_CAMERA NOT_ANDROID

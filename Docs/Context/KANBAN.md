@@ -325,3 +325,25 @@ Integrados en BancoCorresponsal mediante perfil reversible: portapapeles TMP pag
 PASS reales: DomainTests 27/27, DeskToolsTests 37/37; portapapeles 109, teléfono 88 y objetos 38 comprobaciones en principal; PC 14 y tutorial real 43 en copia aislada; GameplayFlowProbe, BankOfficeProbe, PrototypeSmokeProbe en arranques limpios de principal; revisión educativa 42. Historial de fallos corregidos e invalidación del primer recibo de tutorial conservados. No se equipara existencia de scripts con verificación.
 
 Android: PASS build Development IL2CPP/ARM64, 0 errores/1 aviso, APK nueva 67.526.759 bytes en Artifacts/ImmersiveGameplay/Build-20261110-083825; hash/logs guardados. HONOR, lectura binocular, pausa/tracking físico, FPS/calor y aceptación del usuario siguen NO PROBADOS. Guion SIM-003 y clips finales pendientes. Próximas prioridades: prueba física, aprobación editorial, integrar audio licenciado y medir rendimiento antes de ampliar mecánicas. Informe: Docs/Context/IMMERSIVE_AUTONOMOUS_PROGRESS.md. Matriz: IMMERSIVE_IMPLEMENTATION_TRACKER.md. Galería: Docs/Previews/ImmersiveGameplay/README.md.
+
+## Seguimiento de la segunda ronda autónoma — 2026-11-10
+
+No se cambian los estados globales K04/K07/K09/K12/K14/K18/K19 porque su aceptación en HONOR sigue pendiente. Evidencia nueva en [SECOND_AUTONOMOUS_POLISH_REPORT.md](SECOND_AUTONOMOUS_POLISH_REPORT.md) y [galería Play Mode](../Previews/SecondAutonomousPolish/README.md).
+
+- K12/K18: expediente con datos largos sin desbordes en la sonda, resultados separados por acción, estado, control y fuentes; 20 avisos repetidos dejaron de crear 780 RectTransforms transitorios. Falta lectura binocular y audio final.
+- K07/K14: tutorial, impresora, ratón PC, portapapeles, teléfono y objetos pasaron tras corregir la asociación visual de la impresora y la sonda de un objetivo destruido. Falta uso físico Cardboard.
+- K19: DomainTests 27/27; flow, office, smoke, regression, clipboard, phone, objects, tutorial, stationpc y caso visual de estrés PASS en Editor. No se compiló ni se probó APK en esta ronda.
+- Siguiente gate: ejecutar APK en HONOR y medir rendimiento, lectura, comodidad y audio; no marcar HECHO con las capturas monoscópicas.
+
+## Seguimiento de pulido de oficina — 2026-11-11
+
+- Cierre físico, rótulos, libros y estantes: integrados en BancoCorresponsal tras comparar ocho vistas reales. Detalles y respaldo en [OFFICE_DETAIL_POLISH_REPORT.md](OFFICE_DETAIL_POLISH_REPORT.md).
+- Monitor principal: CERRAR TURNO ampliado y verificado por raycast/dwell en Editor. La última decisión sigue cerrando automáticamente el turno conforme a la lógica actual.
+- Validación pendiente: Cardboard en HONOR, lectura binocular, distancia de la terminal de supervisión desde los teletransportes y FPS/calor. No se marcan como completadas las tareas que dependen del dispositivo.
+
+## Controles de ciberseguridad y demo — 2026-11-11
+
+- P0 Cardboard: escena, paquetes, loaders, URP y reglas bancarias conservados. PASS Editor flow/office/smoke; HONOR físico pendiente.
+- P1/P2 explicación: matriz de vulnerabilidades y controles, guion de demo con mismas decisiones, y estado real de revisión reforzada en resultados TMP. DomainTests 37/37, DeskToolsTests 37/37 y regression Editor PASS. Ver Docs/Research/CYBERSECURITY_MODE_COMPARISON.md y ACADEMIC_DEMO_FLOW.md.
+- P3/P4: teléfono SIM-003 y portapapeles pasaron de nuevo en Editor; guion telefónico sigue siendo prototipo editorial y no modifica pérdidas. Piloto educativo y óptica HONOR pendientes.
+- P5–P8 Quest: estudio de simuladores y diseño de laboratorio en Docs/Research/QUEST_CONTROLLER_LAB.md. Sin XRI/OpenXR en manifest, escena Quest ejecutable, simulador ni hardware probado; esperar modelo del visor y gate Cardboard físico antes de instalar paquetes en aislamiento.

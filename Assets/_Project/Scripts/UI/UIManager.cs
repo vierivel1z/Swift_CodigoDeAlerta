@@ -20,6 +20,8 @@ namespace Swift.UI
         [TextArea] public string[] ReviewStepTexts = {"Revisa emisor, beneficiario, cuenta, monto e intermediario.", "Consulta REGISTRO y ALERTAS. Una coincidencia no confirma fraude.", "Usa evidencias. En DEFENSA puedes activar los controles de seguridad.", "APROBAR: sin anomalias. RETENER: revisar. DEVOLVER: formato."};
         [SerializeField] TextMeshProUGUI dossier, feedback, summary;
         BankDocumentUI documents;
+        public BankDocumentUI.Page DocumentPage => documents!=null?documents.CurrentPage:BankDocumentUI.Page.Dossier;
+        BankInteractable[] decisionTargets;
         void Start()
         {
             if (OperationsCenterStyle && Manager == null) Manager = FindFirstObjectByType<GameManager>();
@@ -28,6 +30,9 @@ namespace Swift.UI
             if (OperationsCenterStyle && dossier != null)
                 foreach (var action in dossier.transform.parent.GetComponentsInChildren<BankInteractable>(true)) action.Manager = Manager;
             if (dossier == null || Manager == null) return;
+            decisionTargets = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Where(
+                dossier.transform.parent.GetComponentsInChildren<BankInteractable>(true),
+                x => x.Action == BankAction.Approve || x.Action == BankAction.Hold || x.Action == BankAction.Return));
             if (OperationsCenterStyle) {
                 if (Font == null) Font = dossier.font;
                 documents = gameObject.AddComponent<BankDocumentUI>();
@@ -45,6 +50,8 @@ namespace Swift.UI
                 var tools = new GameObject("Desk tools - reversible presentation"); tools.transform.SetParent(transform,false);
                 tools.AddComponent<Swift.DeskTools.DeskInteractionCoordinator>().Initialize(this);
             }
+            if(ImmersiveStation&&DeskTools!=null&&DeskTools.Sim003PilotEnabled)
+                gameObject.AddComponent<Swift.DeskTools.Sim003Pilot>().Initialize(this);
         }
         void KeepPanelInFrontOfComputer()
         {
@@ -106,19 +113,17 @@ namespace Swift.UI
         }
         void Refresh()
         {
+            var currentRecord = Manager.Session?.Transactions.Current;
+            bool decisionsVisible = currentRecord != null && Manager.Session?.Ended != true;
+            if (decisionTargets != null)
+                foreach (var target in decisionTargets)
+                    if (target != null && target.gameObject.activeSelf != decisionsVisible) target.gameObject.SetActive(decisionsVisible);
             if (documents != null) {
-                var currentRecord = Manager.Session?.Transactions.Current;
-                foreach (var target in dossier.transform.parent.GetComponentsInChildren<BankInteractable>(true))
-                    if (target.Action == BankAction.Approve || target.Action == BankAction.Hold || target.Action == BankAction.Return)
-                        target.gameObject.SetActive(currentRecord != null && Manager.Session?.Ended != true);
                 documents.Refresh(); return;
             }
             var session = Manager.Session;
-            var current = session?.Transactions.Current;
+            var current = currentRecord;
             bool finished = session?.Ended == true;
-            foreach (var button in dossier.transform.parent.GetComponentsInChildren<BankInteractable>(true))
-                if (button.Action == BankAction.Approve || button.Action == BankAction.Hold || button.Action == BankAction.Return)
-                    button.gameObject.SetActive(current != null && !finished);
             dossier.rectTransform.anchoredPosition = new Vector2(0, finished ? (CompactMonitor ? 260 : 350) : (CompactMonitor ? 195 : 275));
             dossier.rectTransform.sizeDelta = new Vector2(1080, finished ? 240 : (CompactMonitor ? 390 : 450));
             dossier.fontSize = CompactMonitor ? 28 : 30;
@@ -137,7 +142,7 @@ namespace Swift.UI
             }
             Swift.UI.OperationsCenterStyle.Apply(this,dossier,feedback,summary,finished);
         }
-        public void RefreshPresentation() { if (Manager != null) Refresh(); }
+        public void RefreshPresentation() { if (Manager != null) { documents?.Invalidate();Refresh(); } }
         public void ShowDocument(BankDocumentUI.Page page) { if (documents != null) documents.Show(page); }
         static string StatusText(TransactionStatus status) => status == TransactionStatus.Approved ? "Aprobada" : status == TransactionStatus.Held ? "Retenida" : status == TransactionStatus.Returned ? "Devuelta" : "Pendiente";
         void OnDestroy() { if (Manager != null) Manager.Changed -= Refresh; }

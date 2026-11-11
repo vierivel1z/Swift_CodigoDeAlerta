@@ -1,0 +1,4 @@
+2026-11-10T08:31:07.1888760Z tutorial-complete Unity=6000.3.24f1 scene=Assets/_Project/Scenes/Review/BancoCorresponsal_Immersive_20261110.unity eye=(1.60, 1.60, -0.65) forward=(-0.57, -0.07, 0.82) dwell=0.2382228 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-10T08:31:07.3256377Z tutorial-gameview GameView=True NOT_ANDROID
+2026-11-11T02:44:36.1283475Z tutorial-complete Unity=6000.3.24f1 scene=Assets/_Project/Scenes/BancoCorresponsal.unity eye=(1.60, 1.60, -0.65) forward=(-0.57, -0.07, 0.82) dwell=0.22233 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-11T02:44:36.2463159Z tutorial-gameview GameView=True NOT_ANDROID

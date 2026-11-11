@@ -21,6 +21,7 @@ namespace Swift.EditorTools
         public const string Gallery="Docs/Previews/ImmersiveGameplay/20261110";
         public const string Main="Assets/_Project/Scenes/BancoCorresponsal.unity";
         public const string Trial="Assets/_Project/Scenes/Review/BancoCorresponsal_Immersive_20261110.unity";
+        public const string ArtReview="Assets/_Project/Scenes/Review/BancoCorresponsal_ArtDirection_20261110.unity";
         public const string AssetRoot="Assets/_Project/DeskTools";
         const string Pending="SWIFT_IMMERSIVE_PLAY";
         public static string Running { get; private set; }
@@ -38,6 +39,22 @@ namespace Swift.EditorTools
             Running=File.ReadAllText(queue).Trim();File.Delete(queue);
             try {
                 if(Running=="status"){Status();Result(Running,null);return;}
+                if(Running=="pilot-prepare"){Sim003PilotEditorSetup.Prepare();Result(Running,null);return;}
+                if(Running=="art-baseline"){ArtDirectionPolish.Baseline();Result(Running,null);return;}
+                if(Running=="art-material-variant"){ArtDirectionPolish.MaterialVariant();Result(Running,null);return;}
+                if(Running=="art-architecture-variant"){ArtDirectionPolish.ArchitectureVariant();Result(Running,null);return;}
+                if(Running=="art-lighting-variant"){ArtDirectionPolish.LightingVariant();Result(Running,null);return;}
+                if(Running=="art-apply-main"){ArtDirectionPolish.ApplyMain();Result(Running,null);return;}
+                if(Running=="art-open-variant"){
+                    Check(SceneManager.GetActiveScene().path==ArtReview,"Only the saved art review may be reloaded");
+                    Check(Hash(ArtReview)==File.ReadAllText("Artifacts/ArtDirectionPolish/AfterLighting-inventory.txt").Split('\n').First(x=>x.StartsWith("SceneSHA256=")).Trim().Substring(12),"Saved art review still matches its capture");
+                    EditorSceneManager.OpenScene(ArtReview,OpenSceneMode.Single);Result(Running,null);return;
+                }
+                if(Running=="art-open-main"){
+                    Check(SceneManager.GetActiveScene().path==Main,"Only the integrated main may be reloaded");
+                    Check(Hash(Main)==File.ReadAllText("Artifacts/ArtDirectionPolish/main-after.sha256"),"Saved main still matches its final capture");
+                    EditorSceneManager.OpenScene(Main,OpenSceneMode.Single);Result(Running,null);return;
+                }
                 if(Running=="restore-build-preloads"){
                     var preloads=PlayerSettings.GetPreloadedAssets();
                     File.WriteAllLines(Dir+"/preloads-inspection.txt",new[]{"Count="+preloads.Length}.Concat(preloads.Select(a=>a==null?"<null>":a.GetType().FullName+" path="+AssetDatabase.GetAssetPath(a)+" guid="+AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(a)))));
@@ -66,10 +83,10 @@ namespace Swift.EditorTools
                         if(!EditorUserBuildSettings.SwitchActiveBuildTargetAsync(BuildTargetGroup.Android,BuildTarget.Android))throw new Exception("Android target switch rejected.");
                     }else Build();return;
                 }
-                if(!new[]{"baseline","clipboard","phone","objects","regression","stationpc","tutorial","flow","office","smoke"}.Contains(Running))throw new Exception("Unknown immersive command.");
+                if(!new[]{"baseline","clipboard","phone","objects","regression","stationpc","closeui","tutorial","flow","office","smoke","welcome-before","welcome-after","physical-before","physical-after","pilot-attack","pilot-defense","pilot-attack-print"}.Contains(Running))throw new Exception("Unknown immersive command.");
                 Check(SceneManager.sceneCount==1&&!SceneManager.GetActiveScene().isDirty,"Single clean scene; no unsaved work discarded");
                 if(Running=="baseline")Check(SceneManager.GetActiveScene().path==Main,"Baseline uses saved main");
-                else Check(SceneManager.GetActiveScene().path==Trial||SceneManager.GetActiveScene().path==Main,"Expected bank or isolated trial");
+                else Check(SceneManager.GetActiveScene().path==Trial||SceneManager.GetActiveScene().path==Main||SceneManager.GetActiveScene().path==ArtReview||SceneManager.GetActiveScene().path==Sim003PilotEditorSetup.ReviewScene,"Expected bank or isolated trial");
                 SessionState.SetString(Pending,Running);EditorApplication.EnterPlaymode();
             }catch(Exception ex){Result(Running,ex);}
         }

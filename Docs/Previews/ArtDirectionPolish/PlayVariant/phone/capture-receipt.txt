@@ -1,0 +1,20 @@
+2026-11-10T08:17:32.5704425Z phone-ringing Unity=6000.3.24f1 scene=Assets/_Project/Scenes/Review/BancoCorresponsal_Immersive_20261110.unity eye=(0.00, 1.25, 0.05) forward=(-0.88, -0.07, 0.47) dwell=0 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-10T08:17:37.6660274Z phone-dialogue Unity=6000.3.24f1 scene=Assets/_Project/Scenes/Review/BancoCorresponsal_Immersive_20261110.unity eye=(0.00, 1.25, 0.05) forward=(-0.88, -0.07, 0.47) dwell=1 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-10T08:17:37.8161011Z phone-gameview GameView=True NOT_ANDROID
+2026-11-10T08:17:42.9822308Z phone-recorded Unity=6000.3.24f1 scene=Assets/_Project/Scenes/Review/BancoCorresponsal_Immersive_20261110.unity eye=(0.00, 1.25, 0.05) forward=(-0.88, -0.07, 0.47) dwell=0 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-10T08:21:13.2250159Z phone-ringing Unity=6000.3.24f1 scene=Assets/_Project/Scenes/Review/BancoCorresponsal_Immersive_20261110.unity eye=(0.00, 1.25, 0.05) forward=(0.76, -0.06, 0.65) dwell=0 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-10T08:21:18.4289096Z phone-dialogue Unity=6000.3.24f1 scene=Assets/_Project/Scenes/Review/BancoCorresponsal_Immersive_20261110.unity eye=(0.00, 1.25, 0.05) forward=(0.76, -0.06, 0.65) dwell=1 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-10T08:21:18.5909793Z phone-gameview GameView=True NOT_ANDROID
+2026-11-10T08:21:23.7755682Z phone-recorded Unity=6000.3.24f1 scene=Assets/_Project/Scenes/Review/BancoCorresponsal_Immersive_20261110.unity eye=(0.00, 1.25, 0.05) forward=(0.76, -0.06, 0.65) dwell=0 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-10T08:26:36.9867804Z phone-ringing Unity=6000.3.24f1 scene=Assets/_Project/Scenes/Review/BancoCorresponsal_Immersive_20261110.unity eye=(0.00, 1.25, 0.05) forward=(0.76, -0.06, 0.65) dwell=0 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-10T08:26:42.1564471Z phone-dialogue Unity=6000.3.24f1 scene=Assets/_Project/Scenes/Review/BancoCorresponsal_Immersive_20261110.unity eye=(0.00, 1.25, 0.05) forward=(0.76, -0.06, 0.65) dwell=1 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-10T08:26:42.3187774Z phone-gameview GameView=True NOT_ANDROID
+2026-11-10T08:26:47.5442676Z phone-recorded Unity=6000.3.24f1 scene=Assets/_Project/Scenes/Review/BancoCorresponsal_Immersive_20261110.unity eye=(0.00, 1.25, 0.05) forward=(0.76, -0.06, 0.65) dwell=0 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-10T08:36:14.7717118Z phone-ringing Unity=6000.3.24f1 scene=Assets/_Project/Scenes/BancoCorresponsal.unity eye=(0.00, 1.25, 0.05) forward=(0.76, -0.06, 0.65) dwell=0 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-10T08:36:19.9443767Z phone-dialogue Unity=6000.3.24f1 scene=Assets/_Project/Scenes/BancoCorresponsal.unity eye=(0.00, 1.25, 0.05) forward=(0.76, -0.06, 0.65) dwell=1 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-10T08:36:20.1055103Z phone-gameview GameView=True NOT_ANDROID
+2026-11-10T08:36:25.2847396Z phone-recorded Unity=6000.3.24f1 scene=Assets/_Project/Scenes/BancoCorresponsal.unity eye=(0.00, 1.25, 0.05) forward=(0.76, -0.06, 0.65) dwell=0 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-11T00:12:29.0977408Z phone-ringing Unity=6000.3.24f1 scene=Assets/_Project/Scenes/Review/BancoCorresponsal_ArtDirection_20261110.unity eye=(0.00, 1.25, 0.05) forward=(0.76, -0.06, 0.65) dwell=0 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-11T00:12:34.2507795Z phone-dialogue Unity=6000.3.24f1 scene=Assets/_Project/Scenes/Review/BancoCorresponsal_ArtDirection_20261110.unity eye=(0.00, 1.25, 0.05) forward=(0.76, -0.06, 0.65) dwell=1 play=true source=URP_EDITOR_CAMERA NOT_ANDROID
+2026-11-11T00:12:34.4000526Z phone-gameview GameView=True NOT_ANDROID
+2026-11-11T00:12:39.6026322Z phone-recorded Unity=6000.3.24f1 scene=Assets/_Project/Scenes/Review/BancoCorresponsal_ArtDirection_20261110.unity eye=(0.00, 1.25, 0.05) forward=(0.76, -0.06, 0.65) dwell=0 play=true source=URP_EDITOR_CAMERA NOT_ANDROID

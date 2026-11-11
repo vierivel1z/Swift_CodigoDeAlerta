@@ -29,6 +29,19 @@ static class Program
         Check(defense.Transactions.Records[1].Status == TransactionStatus.Returned, "controls distinguish format");
         Check(defense.Transactions.Records[5].Status == TransactionStatus.Held, "alert held without confirming fraud");
         Check(defense.EndScenario(), "defense can finish");
+        // Demonstration: identical analyst choices isolate the reinforced review's effect.
+        var demoChoices = new[] { Decision.Approve, Decision.Return, Decision.Approve, Decision.Hold, Decision.Hold, Decision.Hold };
+        var demoAttack = new GameSession(ScenarioMode.Attack, TrainingData.Create());
+        var demoDefense = new GameSession(ScenarioMode.Defense, TrainingData.Create());
+        Check(demoDefense.ApplyDefense(), "demo defense control activated explicitly");
+        foreach (var choice in demoChoices) {
+            Check(demoAttack.Decide(choice) && demoDefense.Decide(choice), "identical demo decision accepted");
+        }
+        Check(demoAttack.Correct == 5 && demoDefense.Correct == 5, "control does not improve analyst score");
+        Check(demoAttack.SimulatedLoss == 20000 && demoDefense.SimulatedLoss == 0, "same demo choices isolate simulated loss difference");
+        Check(demoAttack.Transactions.Records[2].Status == TransactionStatus.Approved &&
+              demoDefense.Transactions.Records[2].Status == TransactionStatus.Held &&
+              demoDefense.Transactions.Records[2].DefenseOverride, "SIM-003 original approval differs from effective defended state");
         var correct = new GameSession(ScenarioMode.Defense, TrainingData.Create());
         foreach(var row in data) correct.Decide(TransactionManager.Recommended(row));
         Check(correct.Correct == 6 && correct.SimulatedLoss == 0, "recommended decisions score correctly");

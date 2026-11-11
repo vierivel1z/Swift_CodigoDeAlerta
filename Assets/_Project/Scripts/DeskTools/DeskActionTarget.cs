@@ -1,7 +1,7 @@
 using UnityEngine;
 namespace Swift.DeskTools
 {
-    public enum DeskCommand { Clipboard, Previous, Next, Mark, Close, Phone, RequestCall, AnswerCall, EndCall, RegisterCall, Document, Debrief }
+    public enum DeskCommand { Clipboard, Previous, Next, Mark, Close, Phone, RequestCall, AnswerCall, EndCall, RegisterCall, Document, Debrief, Expand }
     public sealed class DeskActionTarget : MonoBehaviour
     {
         public DeskCommand Command;

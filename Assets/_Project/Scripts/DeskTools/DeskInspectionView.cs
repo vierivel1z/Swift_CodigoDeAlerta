@@ -9,6 +9,7 @@ namespace Swift.DeskTools
     {
         public TMP_Text Heading, Context, SheetTitle, Body, Notice, PageLabel;
         public DeskActionTarget Previous,Primary,Next,Close;
+        public DeskActionTarget Expand;
         public Transform Root => transform;
         public void Build(TMP_FontAsset font,Sprite frame,Sprite fill)
         {
@@ -40,6 +41,61 @@ namespace Swift.DeskTools
             foreach(var action in GetComponentsInChildren<DeskActionTarget>(true)) {
                 action.Owner=owner;var bank=action.GetComponent<BankInteractable>();bank.Manager=owner.Manager;
             }
+        }
+        // A second instance of the existing view is laid directly on the real paper.
+        // The original landscape prefab remains intact for accessibility.
+        public void ConfigureForPhysicalPaper()
+        {
+            var rt=GetComponent<RectTransform>();rt.sizeDelta=new Vector2(320,410);
+            foreach(var name in new[]{"Marco institucional","Cabecera","Sombra de papel","Papel gris frÃ­o","Papel gris frío"}) {
+                var decoration=transform.Find(name);if(decoration!=null)decoration.gameObject.SetActive(false);
+            }
+            Layout(Heading,new Vector2(0,174),new Vector2(282,26),20);
+            Layout(Context,new Vector2(0,147),new Vector2(282,23),16);
+            Layout(SheetTitle,new Vector2(0,112),new Vector2(282,52),20);
+            Layout(Body,new Vector2(0,-2),new Vector2(282,204),19);
+            Body.lineSpacing=1;Body.overflowMode=TextOverflowModes.Page;
+            Layout(Notice,new Vector2(0,-116),new Vector2(282,36),15);
+            Layout(PageLabel,new Vector2(-55,-145),new Vector2(174,23),16);
+            Heading.color=new Color(.06f,.14f,.17f);Context.color=new Color(.04f,.28f,.32f);
+            SheetTitle.color=new Color(.04f,.18f,.22f);Body.color=new Color(.03f,.09f,.12f);
+            Notice.color=new Color(.13f,.21f,.23f);PageLabel.color=new Color(.04f,.24f,.28f);
+            Place(Previous,new Vector2(-126,-183),new Vector2(59,43),"‹");
+            Place(Primary,new Vector2(-42,-183),new Vector2(105,43),"MARCAR");
+            Place(Next,new Vector2(42,-183),new Vector2(59,43),"›");
+            Place(Close,new Vector2(122,-183),new Vector2(72,43),"DEJAR");
+            Expand=Button(transform,"AMPLIAR",new Vector2(108,-146),new Vector2(90,29),DeskCommand.Expand,Heading.font,null,Previous.GetComponent<DocumentFocus>().Progress.sprite);
+            Place(Expand,new Vector2(108,-146),new Vector2(90,29),"AMPLIAR");
+            var blocker=GetComponent<BoxCollider>();if(blocker!=null){blocker.size=new Vector3(320,410,2);blocker.center=new Vector3(0,0,8);}
+            var canvas=GetComponent<Canvas>();canvas.sortingOrder=31;
+        }
+        public void PolishPhysicalControls()
+        {
+            Layout(Body,new Vector2(0,3),new Vector2(282,190),19);
+            Layout(Notice,new Vector2(0,-111),new Vector2(282,34),15);
+            Layout(PageLabel,new Vector2(-54,-140),new Vector2(175,23),16);
+            Place(Expand,new Vector2(109,-140),new Vector2(92,27),"AMPLIAR");
+            Place(Previous,new Vector2(-78,-175),new Vector2(140,34),"ANTERIOR");
+            Place(Next,new Vector2(78,-175),new Vector2(140,34),"SIGUIENTE");
+            Place(Primary,new Vector2(-78,-214),new Vector2(140,34),"MARCAR");
+            Place(Close,new Vector2(78,-214),new Vector2(140,34),"DEJAR");
+            foreach(var action in new[]{Previous,Next,Primary,Close,Expand}){
+                var background=action.GetComponent<Image>();background.color=new Color(.11f,.24f,.27f);
+                var label=action.GetComponentInChildren<TMP_Text>();label.color=new Color(.92f,.94f,.89f);
+            }
+        }
+        static void Layout(TMP_Text label,Vector2 at,Vector2 size,float fontSize)
+        {label.rectTransform.anchoredPosition=at;label.rectTransform.sizeDelta=size;label.fontSize=fontSize;}
+        static void Place(DeskActionTarget action,Vector2 at,Vector2 size,string label)
+        {
+            var rt=action.GetComponent<RectTransform>();rt.anchoredPosition=at;rt.sizeDelta=size;
+            var box=action.GetComponent<BoxCollider>();box.size=new Vector3(size.x,size.y,12);
+            var text=action.GetComponentInChildren<TMP_Text>();text.text=label;Layout(text,Vector2.zero,size-new Vector2(8,6),17);
+            var progress=action.GetComponent<DocumentFocus>().Progress;
+            progress.rectTransform.anchoredPosition=new Vector2(0,-size.y/2+4);
+            progress.rectTransform.sizeDelta=new Vector2(size.x-10,5);
+            foreach(var child in action.GetComponentsInChildren<Image>(true))
+                if(child.name=="Borde")child.gameObject.SetActive(false);
         }
         public void Present(string heading,string context,string title,string body,string notice,string page)
         {

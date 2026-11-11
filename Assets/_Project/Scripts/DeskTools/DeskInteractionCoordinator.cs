@@ -20,6 +20,8 @@ namespace Swift.DeskTools
         public DeskToolsProfile Profile { get; private set; }
         public DeskSessionJournal Journal { get; } = new DeskSessionJournal();
         public DeskInspectionView View { get; private set; }
+        public DeskInspectionView ExpandedView { get; private set; }
+        public PhysicalClipboardPresentation PhysicalClipboard { get; private set; }
         public VerificationConversation Call { get; private set; }
         public BankInteractable ClipboardTarget { get; private set; }
         public BankInteractable PhoneTarget { get; private set; }
@@ -41,9 +43,20 @@ namespace Swift.DeskTools
         {
             Owner=owner;Profile=owner.DeskTools;Current=this;seat=AnalystSeat.Current;gaze=FindFirstObjectByType<VRInteractionManager>();
             var panel=Profile.InspectionPrefab!=null?Instantiate(Profile.InspectionPrefab,transform):new GameObject("Desk inspection",typeof(RectTransform),typeof(Canvas),typeof(DeskInspectionView));
-            panel.transform.SetParent(transform,false);View=panel.GetComponent<DeskInspectionView>();View.Build(owner.Font,owner.StationFrame,owner.StationFill);View.Bind(this);panel.SetActive(false);
+            panel.transform.SetParent(transform,false);View=panel.GetComponent<DeskInspectionView>();View.Build(owner.Font,owner.StationFrame,owner.StationFill);View.Bind(this);panel.SetActive(false);ExpandedView=View;
             ClipboardTarget=FindObjectsByType<BankInteractable>(FindObjectsSortMode.None).FirstOrDefault(x=>x.Action==BankAction.Notebook);
-            if(Profile.ClipboardEnabled&&ClipboardTarget!=null) Attach(ClipboardTarget,DeskCommand.Clipboard);
+            if(Profile.ClipboardEnabled&&ClipboardTarget!=null) {
+                Attach(ClipboardTarget,DeskCommand.Clipboard);
+                if(Profile.PhysicalClipboardEnabled) {
+                    var paper=Profile.InspectionPrefab!=null?Instantiate(Profile.InspectionPrefab,ClipboardTarget.transform):new GameObject("Texto sobre papel",typeof(RectTransform),typeof(Canvas),typeof(DeskInspectionView));
+                    var paperView=paper.GetComponent<DeskInspectionView>();paperView.Build(owner.Font,owner.StationFrame,owner.StationFill);
+                    paperView.ConfigureForPhysicalPaper();paperView.Bind(this);
+                    if(Profile.PolishedClipboardVisual)paperView.PolishPhysicalControls();
+                    PhysicalClipboard=ClipboardTarget.gameObject.AddComponent<PhysicalClipboardPresentation>();
+                    PhysicalClipboard.Initialize(ClipboardTarget.transform,paperView,owner.Font,Profile.PolishedClipboardVisual);
+                    attachments.Add(PhysicalClipboard);attachments.Add(paper);
+                }
+            }
             var document=GameObject.Find("Fictional transfer documents");
             if(Profile.DocumentInspectionEnabled&&document!=null) {
                 DocumentTarget=document.GetComponent<BankInteractable>();
@@ -69,7 +82,10 @@ namespace Swift.DeskTools
                 Attach(PhoneTarget,DeskCommand.Phone);
                 phoneStatus=phoneObject.GetComponentsInChildren<TMPro.TMP_Text>(true).FirstOrDefault();
             }
-            var printer=FindObjectsByType<BankInteractable>(FindObjectsSortMode.None).FirstOrDefault(x=>x.Action==BankAction.Evidence&&x.GetComponentsInChildren<MeshRenderer>().Length>0);
+            // The desk documents also carry the legacy Evidence action, so renderer order
+            // must never decide which physical object receives printer confirmation.
+            var printer=FindObjectsByType<BankInteractable>(FindObjectsSortMode.None)
+                .FirstOrDefault(x=>x.Action==BankAction.Evidence&&x.name=="Interactive Printer"&&x.GetComponentsInChildren<MeshRenderer>().Length>0);
             if(Profile.PrinterFeedbackEnabled&&printer!=null) {
                 PrinterFeedback=printer.gameObject.AddComponent<DeskObjectFeedback>();PrinterFeedback.Target=printer;attachments.Add(PrinterFeedback);
                 if(printer.GetComponent<DocumentFocus>()==null){var focus=printer.gameObject.AddComponent<DocumentFocus>();focus.Target=printer;attachments.Add(focus);}
@@ -141,6 +157,7 @@ namespace Swift.DeskTools
                 case DeskCommand.AnswerCall:return ActiveTool=="Phone"&&Call?.State==VerificationState.Ringing;
                 case DeskCommand.RegisterCall:return ActiveTool=="Phone"&&Call!=null&&Call.CanRegister(Manager.Session);
                 case DeskCommand.Mark:return ActiveTool=="Clipboard";
+                case DeskCommand.Expand:return ActiveTool=="Clipboard"&&PhysicalClipboard!=null&&View==PhysicalClipboard.PaperView&&PhysicalClipboard.State==PhysicalClipboardPresentation.PoseState.Inspecting;
                 case DeskCommand.Next:case DeskCommand.Previous:return InspectionOpen&&(ActiveTool!="Phone"||Call?.State==VerificationState.Connected||Call?.State==VerificationState.Reviewing||Call?.State==VerificationState.Recorded);
             }
             return false;
@@ -161,6 +178,7 @@ namespace Swift.DeskTools
                 case DeskCommand.Next:Step(1);break;
                 case DeskCommand.Mark:
                     if(Journal.Toggle(Manager.Session,observedRecord.Data.Id,Page)){FeedbackAudio.Current?.Emit(AudioCue.Confirm);RefreshView();}break;
+                case DeskCommand.Expand:SwitchToExpandedClipboard();break;
                 case DeskCommand.RequestCall:
                     if(Call.Request(Manager.Session)){RefreshView();ringRoutine=StartCoroutine(RingAfterRequest());}break;
                 case DeskCommand.AnswerCall:
@@ -179,7 +197,13 @@ namespace Swift.DeskTools
         }
         void Open(string tool)
         {
+            View=tool=="Clipboard"&&PhysicalClipboard!=null?PhysicalClipboard.PaperView:ExpandedView;
             ActiveTool=tool;Page=0;bodyPage=1;View.Body.pageToDisplay=1;
+            if(tool=="Clipboard"&&PhysicalClipboard!=null){
+                PhysicalClipboard.Lift(seat.Eye);
+                FeedbackAudio.Current?.Emit(AudioCue.Dossier);
+                return;
+            }
             // World anchor relative to the station, never a child of the tracked camera.
             var eye=seat.Eye.position;var forward=Vector3.ProjectOnPlane(Owner.PanelAnchor.forward,Vector3.up).normalized;
             var right=Vector3.Cross(Vector3.up,forward);
@@ -189,18 +213,35 @@ namespace Swift.DeskTools
             View.transform.localScale=Vector3.one*(rightTool?.00095f:.00105f);View.gameObject.SetActive(true);
             FeedbackAudio.Current?.Emit(AudioCue.Dossier);
         }
+        void SwitchToExpandedClipboard()
+        {
+            View.gameObject.SetActive(false);
+            PhysicalClipboard.Return();
+            View=ExpandedView;bodyPage=1;View.Body.pageToDisplay=1;
+            var eye=seat.Eye.position;
+            var forward=Vector3.ProjectOnPlane(Owner.PanelAnchor.forward,Vector3.up).normalized;
+            var right=Vector3.Cross(Vector3.up,forward);
+            var center=eye+forward*.70f-right*1.30f-Vector3.up*.10f;
+            View.transform.SetPositionAndRotation(center,Quaternion.LookRotation(center-eye,Vector3.up));
+            View.transform.localScale=Vector3.one*.00105f;
+            View.gameObject.SetActive(true);
+            RefreshView();
+        }
         public void CloseInspection()
         {
             if(!InspectionOpen)return;
             if(ringRoutine!=null){StopCoroutine(ringRoutine);ringRoutine=null;}
             if(ActiveTool=="Phone"){Call?.Cancel();FeedbackAudio.Current?.StopCue(AudioCue.PhoneRing);FeedbackAudio.Current?.Emit(AudioCue.PhoneEnd,PhoneTarget!=null?PhoneTarget.transform.position:(Vector3?)null);}
-            ActiveTool=null;if(View!=null)View.gameObject.SetActive(false);RefreshPhoneState();
+            bool wasPhysical=ActiveTool=="Clipboard"&&PhysicalClipboard!=null;
+            ActiveTool=null;if(View!=null)View.gameObject.SetActive(false);
+            if(wasPhysical)PhysicalClipboard.Return();
+            View=ExpandedView;RefreshPhoneState();
         }
         void Step(int direction)
         {
             View.Body.ForceMeshUpdate();
-            if(direction>0&&bodyPage<View.Body.textInfo.pageCount){bodyPage++;View.Body.pageToDisplay=bodyPage;FeedbackAudio.Current?.Emit(AudioCue.PageTurn);UpdatePageNumber();return;}
-            if(direction<0&&bodyPage>1){bodyPage--;View.Body.pageToDisplay=bodyPage;FeedbackAudio.Current?.Emit(AudioCue.PageTurn);UpdatePageNumber();return;}
+            if(direction>0&&bodyPage<View.Body.textInfo.pageCount){bodyPage++;View.Body.pageToDisplay=bodyPage;FeedbackAudio.Current?.Emit(AudioCue.PageTurn);UpdatePageNumber();if(ActiveTool=="Clipboard")PhysicalClipboard?.AnimatePageTurn();return;}
+            if(direction<0&&bodyPage>1){bodyPage--;View.Body.pageToDisplay=bodyPage;FeedbackAudio.Current?.Emit(AudioCue.PageTurn);UpdatePageNumber();if(ActiveTool=="Clipboard")PhysicalClipboard?.AnimatePageTurn();return;}
             bodyPage=1;View.Body.pageToDisplay=1;
             if(ActiveTool=="Phone") {
                 phoneLine=Mathf.Clamp(phoneLine+direction,0,Call.Script.Lines.Length-1);
@@ -209,7 +250,7 @@ namespace Swift.DeskTools
                 int pages=ActiveTool=="Debrief"?Manager.Session.Transactions.Records.Count:ActiveTool=="Clipboard"?3:1;
                 Page=(Page+direction+pages)%pages;
             }
-            FeedbackAudio.Current?.Emit(AudioCue.PageTurn);RefreshView();
+            FeedbackAudio.Current?.Emit(AudioCue.PageTurn);RefreshView();if(ActiveTool=="Clipboard")PhysicalClipboard?.AnimatePageTurn();
         }
         void RegisterCall()
         {
@@ -230,6 +271,7 @@ namespace Swift.DeskTools
             if(printerStatus!=null)printerStatus.text="EVIDENCIA REGISTRADA\n"+count+" / simulación actual";
             FeedbackAudio.Current?.Emit(AudioCue.Printer,PrinterFeedback!=null?PrinterFeedback.transform.position:(Vector3?)null);
         }
+        public void ShowPrinterStatus(string value){if(printerStatus!=null)printerStatus.text=value;}
         public void ObserveQuery(BankAction action)
         {
             if(observedRecord==null)return;
@@ -253,6 +295,7 @@ namespace Swift.DeskTools
         void LateUpdate()
         {
             if(InspectionOpen&&(!seat.IsSeated||seat.IsTransitioning||Manager.IntroPlaying||VRQuickTutorial.Active!=null))CloseInspection();
+            if(PhysicalClipboard!=null&&(!seat.IsSeated||seat.IsTransitioning||Manager.IntroPlaying||VRQuickTutorial.Active!=null))PhysicalClipboard.RestoreImmediately();
             if(phoneStatus!=null){bool ready=PhoneAvailable;if(phoneStatus.gameObject.activeSelf!=ready)phoneStatus.gameObject.SetActive(ready);}
         }
         void RefreshPhoneState()
@@ -267,11 +310,14 @@ namespace Swift.DeskTools
             View.Previous.GetComponent<Collider>().enabled=true;View.Next.GetComponent<Collider>().enabled=true;
             if(ActiveTool=="Clipboard") {
                 var d=observedRecord.Data;var notes=Journal.For(d.Id);heading="SWIFT / PORTAPAPELES";context=d.Id+" / referencia de revisión";
-                if(Page==0){title="FORMATO Y PROCEDIMIENTO";body="1. Lee emisor, beneficiario y cuenta.\n2. Comprueba monto e intermediario.\n3. Contrasta registro y alertas.\n4. Documenta y toma tu decisión.";}
+                if(Page==0){title="FORMATO Y PROCEDIMIENTO";body=Sim003Pilot.Current?.ActiveForCurrent==true?
+                    "1. Compara beneficiario y titular registrado.\n2. Verifica la cuenta indicada.\n3. Contrasta lo consultado.\n4. Registra cualquier discrepancia.\n5. No apruebes sin aclarar inconsistencias relevantes.":
+                    "1. Lee emisor, beneficiario y cuenta.\n2. Comprueba monto e intermediario.\n3. Contrasta registro y alertas.\n4. Documenta y toma tu decisión.";}
                 if(Page==1){title="DATOS DEL EXPEDIENTE";body="Emisor: "+Value(d.OriginBank)+"\nBeneficiario: "+Value(d.Beneficiary)+"\nCuenta: "+Value(d.Account)+"\nMonto: USD "+d.Amount.ToString("N0")+"\nIntermediario: "+Value(d.IntermediaryBank)+(string.IsNullOrEmpty(d.Date)?"":"\nFecha: "+d.Date);}
-                if(Page==2){title="OBSERVACIONES Y FUENTES";body=FormatReferencePanel.ObservedAlerts(d)+"\nFuentes abiertas: "+(notes.Sources.Count==0?"ninguna":string.Join(", ",notes.Sources.OrderBy(x=>x)))+"\nConsulta telefónica registrada: "+(notes.PhoneEvidence==null?"no":"sí");}
+                if(Page==2){title="OBSERVACIONES Y FUENTES";body=(Sim003Pilot.Current?.ActiveForCurrent==true?
+                    "Hallazgo elegido: "+Sim003Pilot.Current.FindingText:"Observaciones: "+FormatReferencePanel.ObservedAlerts(d))+"\nFuentes abiertas: "+(notes.Sources.Count==0?"ninguna":string.Join(", ",notes.Sources.OrderBy(x=>x)))+"\nConsulta telefónica registrada: "+(notes.PhoneEvidence==null?"no":"sí");}
                 notice="Marca manual: "+(notes.ManualChecks[Page]?"REVISADO":"sin marcar")+". No valida datos ni confirma fraude.";
-                View.ConfigurePrimary(DeskCommand.Mark,notes.ManualChecks[Page]?"QUITAR MARCA":"MARCAR REVISIÓN",true);
+                View.ConfigurePrimary(DeskCommand.Mark,PhysicalClipboard!=null&&View==PhysicalClipboard.PaperView?(notes.ManualChecks[Page]?"QUITAR":"MARCAR"):(notes.ManualChecks[Page]?"QUITAR MARCA":"MARCAR REVISIÓN"),true);
             } else if(ActiveTool=="Document") {
                 var d=observedRecord.Data;heading="SWIFT / DOCUMENTO";context=d.Id+" / extracto ficticio";
                 title="ORDEN PARA CONTRASTAR";body="Beneficiario: "+Value(d.Beneficiary)+"\nCuenta: "+Value(d.Account)+"\nMonto: USD "+d.Amount.ToString("N0")+"\nIntermediario: "+Value(d.IntermediaryBank);
@@ -303,9 +349,9 @@ namespace Swift.DeskTools
                 var row=Manager.Session.Transactions.Records[Page];var notes=Journal.For(row.Data.Id);
                 heading="SWIFT / REVISIÓN DEL TURNO";context=row.Data.Id+" / explicación posterior";
                 title="DECISIÓN Y CONSECUENCIA";
-                body="Elegiste: "+(notes.ChosenDecision.HasValue?Choice(notes.ChosenDecision.Value):"No registrado")+"\nResultado: "+Status(row.Status)+"\nControl defensivo: "+(row.DefenseOverride?"intervino":"no intervino")+
-                    "\nFuentes abiertas: "+(notes.Sources.Count==0?"ninguna":string.Join(", ",notes.Sources.OrderBy(x=>x)))+
-                    "\nLlamada registrada: "+(notes.PhoneEvidence==null?"no":"sí")+"\nResultado de la consulta: "+(notes.PhoneEvidence??"Sin consulta registrada.");
+                body="Elegiste: "+(notes.ChosenDecision.HasValue?Choice(notes.ChosenDecision.Value):"No registrado")+"\nResultado final: "+Status(row.Status)+"\nControl defensivo: "+(row.DefenseOverride?"intervino":"no intervino")+
+                    "\nFuentes: "+(notes.Sources.Count==0?"ninguna":string.Join(", ",notes.Sources.OrderBy(x=>x)))+"  ·  Llamada: "+(notes.PhoneEvidence==null?"no":"sí")+
+                    "\nConsulta: "+(notes.PhoneEvidence??"Sin consulta registrada.");
                 notice=row.Data.Anomalies==Anomaly.None?"No había discrepancias en las comprobaciones simuladas.":(row.Data.Anomalies&Anomaly.MissingIntermediary)!=0?"La orden no incluía intermediario. El formato y el riesgo requieren revisiones distintas.":"Las observaciones requieren revisión; una coincidencia no demuestra fraude.";
                 View.ConfigurePrimary(DeskCommand.Mark,"SOLO REVISIÓN",false);
             }
@@ -327,8 +373,8 @@ namespace Swift.DeskTools
         static string Value(string value)=>string.IsNullOrWhiteSpace(value)?"No informado":value;
         static string Choice(Decision decision)=>decision==Decision.Approve?"Aprobar":decision==Decision.Hold?"Retener":"Devolver";
         static string Status(TransactionStatus status)=>status==TransactionStatus.Approved?"Aprobada":status==TransactionStatus.Held?"Retenida":status==TransactionStatus.Returned?"Devuelta":"Pendiente";
-        void OnApplicationPause(bool paused){if(paused)CloseInspection();}
-        void OnDisable(){CloseInspection();if(Current==this)Current=null;}
+        void OnApplicationPause(bool paused){if(paused){CloseInspection();PhysicalClipboard?.RestoreImmediately();}}
+        void OnDisable(){CloseInspection();PhysicalClipboard?.RestoreImmediately();if(Current==this)Current=null;}
         void OnDestroy()
         {
             if(Manager!=null){Manager.Changed-=Observe;Manager.DecisionCommitted-=OnDecision;}

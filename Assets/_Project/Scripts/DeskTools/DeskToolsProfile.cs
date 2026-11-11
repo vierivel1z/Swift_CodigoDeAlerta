@@ -7,6 +7,11 @@ namespace Swift.DeskTools
     {
         public bool ClipboardEnabled,PhoneEnabled,SeatPolishEnabled,PrinterFeedbackEnabled,DocumentInspectionEnabled;
         public bool AllowPrototypeCalls;
+        public bool PhysicalClipboardEnabled;
+        public bool Sim003PilotEnabled;
+        public bool Sim003PrinterEnabled;
+        public bool Sim003PrinterFailsInAttack;
+        public bool PolishedClipboardVisual;
         public ReferencePresentation Reference = ReferencePresentation.ClipboardTrial;
         public VerificationCallCatalog Calls;
         public GameObject PhonePrefab;
